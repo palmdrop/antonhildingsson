@@ -3,6 +3,7 @@
 	import '../styles/global.css';
 
 	import Header from "$lib/components/header/Header.svelte";
+	import Footer from '$lib/components/footer/Footer.svelte';
 </script>
 
 <div class="app">
@@ -12,22 +13,26 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>what</p>
-	</footer>
+  <Footer />
 </div>
 
 <style>
 	.app {
+    position: relative;
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+
+    height: 100vh;
+
+    overflow-x: hidden;
 	}
 
 	main {
 		flex: 1;
-		display: flex;
-		flex-direction: column;
 		width: 100%;
+
+    padding: var(--edge-padding);
+    padding-top: var(--top-padding);
+    padding-bottom: var(--bottom-padding);
 	}
 </style>

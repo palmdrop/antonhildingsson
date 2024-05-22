@@ -2,16 +2,35 @@
   --bg: white;
   --fg: black;
 
-  --font: serif;
-  --font-heading: monospace;
+  /*
+  --font: EB Garamond, Garamond, Georgia, serif;
+  */
+  --font: Georgia;
+  --font-heading: var(--font);
+
+  --edge-padding: 0.5em;
+
+  --font-size: clamp(1.0rem, 3vw, 2rem);
+  --paragraph-width: 60ch;
+  --line-height: 1.1em;
+  --letter-spacing: 0.01em;
+
+  --top-padding: 3em;
+  --bottom-padding: 3em;
+
+  --scroll-shadow: 0px 0px 0.1em 0.1em var(--bg);
+}
+
+a {
+  all: unset;
 }
 
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
-a {
-  all: unset;
+html {
+  font-size: var(--font-size);
 }
 
 body {
@@ -19,13 +38,16 @@ body {
 	margin: 0;
 
   font-family: var(--font);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
 
-  font-size: 2em;
-  font-style: italic;
+p {
+  max-width: var(--paragraph-width);
 }
 
 a:hover {

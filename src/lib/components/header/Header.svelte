@@ -7,39 +7,20 @@
       {import.meta.env.VITE_TITLE}
     </a>
   </h1>
-  <nav>
-    <ul>
-      <li>
-        <a href="/about">
-          about
-        </a>
-      </li>
-    </ul>
-  </nav>
 </header>
 
 <style>
   header {
+    position: fixed;
+    width: 100%;
+
     display: flex;
     align-items: center;
-    padding: 1em;
-  }
+    justify-content: flex-end;
 
-  nav  {
-    position: relative;
+    padding: var(--edge-padding);
 
-    margin-left: 2em;
-
-    --border-color: rgba(50, 50, 50, 0.643);
-  }
-
-  ul {
-    display: flex;
-  }
-
-  li {
-    padding: 0.5em;
-    text-align: center;
-    font-size: 1em;
+    background-color: var(--bg);
+    box-shadow: var(--scroll-shadow);
   }
 </style>
