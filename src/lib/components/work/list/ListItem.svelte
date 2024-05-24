@@ -39,7 +39,7 @@
 </li>
 
 <style>
-  a {
+  li, a {
     grid-column: span var(--grid-columns);
   }
 

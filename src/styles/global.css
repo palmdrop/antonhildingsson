@@ -2,17 +2,17 @@
   --bg: white;
   --fg: black;
 
-  --font: Georgia;
+  --font: Baskervville;
   --font-heading: var(--font);
 
   --edge-padding: 0.5em;
 
-  --font-size: clamp(1.0rem, 3vw, 2rem);
+  --font-size: clamp(1.0rem, 3vw, 3.0rem);
   --paragraph-width: 60ch;
-  --line-height: 1.1em;
+  --line-height: 1.3em;
   --letter-spacing: 0.01em;
 
-  --top-padding: 3em;
+  --top-padding: var(--edge-padding);
   --bottom-padding: 3em;
 
   --gap: 0.5em;
@@ -45,9 +45,13 @@ button {
 
 html {
   font-size: var(--font-size);
+
+  scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
+
 	min-height: 100vh;
 	margin: 0;
 

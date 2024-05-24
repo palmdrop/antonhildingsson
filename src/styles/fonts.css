@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/baskervville-regular/Baskervville-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/baskervville-italic/Baskervville-Italic.woff2') format('woff2');
+
+  font-style: italic;
+}

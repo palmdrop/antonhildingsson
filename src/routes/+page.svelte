@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Title from "$lib/components/header/Title.svelte";
 	import ListItem from "$lib/components/work/list/ListItem.svelte";
 	import { type WorkListItem } from '$types/work';
 
@@ -20,6 +21,8 @@
       tags: ['poem']
     }
   ];
+
+  listItems.push(...Array(100).fill(listItems).flat())
 </script>
 
 <svelte:head>
@@ -27,65 +30,29 @@
 	<meta name="description" content="Anton Hildingsson's writing and portfolio." />
 </svelte:head>
 
-<section>
-  <!--
-  { #each { length: 100 } as _, i (i )}
-  <p class={i % 2 === 0 ? 'left' : 'right'}>
-    mina revben är min hjärna är en råttsvans
+<section class="main-grid">
+  <p class="intro">
+    <Title hidden /> is a lump of compacted coal. He lives in concrete walls and eats a lot of spaghetti. 
+    Later this year, he will write a long text.
   </p>
-  { /each }
-  -->
-  <ol>
-    { #each listItems as item (item.id)}
+
+  <ol class="main-grid">
+    { #each listItems as item, i (item.id + i)}
       <ListItem
         item={item}
       />
     { /each }
   </ol>
 </section>
-<!--
-<section class="highlight">
-  <p>
-    sörpla och sleva och sorla
-  </p>
-  <p>
-    jag hör inte vad du säger under vatten
-  </p>
-  <p>
-    fast jag kan ändå formens ord
-  </p>
-</section>
--->
 
 <style>
-  section {
+  section, section > * {
+    grid-column: span var(--grid-columns);
   }
 
-  .left {
-    text-align: left;
-  }
+  .intro {
+    padding-bottom: 1em;
 
-  .right {
-    text-align: right;
-  }
-
-  .highlight {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 2em;
-
-    width: 35ch;
-    max-width: 90vw;
-
-    transform: translate(-50%, -50%);
-
-    background-color: var(--bg);
-    color: var(--fg);
-
-    line-height: 2em;
-    white-space: nowrap;
-
-    font-style: italic;
+    grid-column: span calc(2 * var(--grid-columns) / 3);
   }
 </style>
