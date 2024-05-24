@@ -13,38 +13,47 @@
   </p>
   { /each }
 </section>
+<section class="highlight">
+  <p>
+    sörpla och sleva och sorla
+  </p>
+  <p>
+    jag hör inte vad du säger under vatten
+  </p>
+  <p>
+    fast jag kan ändå formens ord
+  </p>
+</section>
 
 <style>
   section {
-    animation: ribs 10s ease-in-out infinite;
-    animation-direction: alternate;
   }
 
   .left {
     text-align: left;
   }
 
-  .left::after {
-    content: ' /';
-  }
-
   .right {
     text-align: right;
   }
 
-  .right::before {
-    content: '/ ';
-  }
+  .highlight {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 2em;
 
-  @keyframes ribs {
-    0% {
-      line-height: var(--line-height);
-      letter-spacing: calc(8 * var(--letter-spacing));
-    }
+    width: 35ch;
+    max-width: 90vw;
 
-    50% {
-      line-height: 3px;
-      letter-spacing: 0.0em;
-    }
+    transform: translate(-50%, -50%);
+
+    background-color: var(--bg);
+    color: var(--fg);
+
+    line-height: 2em;
+    white-space: nowrap;
+
+    font-style: italic;
   }
 </style>

@@ -24,7 +24,7 @@
   <ul>
     { #each pages as page, i (page.label)}
       <li>
-        <a href={page.href}>
+        <a href={page.href} class="action">
           { page.label }
         </a>
       </li>
@@ -53,5 +53,9 @@
 
   li:last-of-type {
     text-align: right;
+  }
+
+  a {
+    font-style: italic;
   }
 </style>

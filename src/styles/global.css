@@ -2,9 +2,6 @@
   --bg: white;
   --fg: black;
 
-  /*
-  --font: EB Garamond, Garamond, Georgia, serif;
-  */
   --font: Georgia;
   --font-heading: var(--font);
 
@@ -19,10 +16,17 @@
   --bottom-padding: 3em;
 
   --scroll-shadow: 0px 0px 0.1em 0.1em var(--bg);
+
+  --transition-time: 0.3s;
 }
 
 a {
   all: unset;
+}
+
+button {
+  background-color: unset;
+  border: unset;
 }
 
 *, *::before, *::after {
@@ -50,7 +54,15 @@ p {
   max-width: var(--paragraph-width);
 }
 
-a:hover {
-  pointer-events: all;
+button, a, .action {
   cursor: pointer;
+}
+
+.action {
+  text-shadow: 0px 0px 0px var(--bg);
+  transition: var(--transition-time);
+}
+
+.action:hover {
+  text-shadow: 0px 0px 3px var(--fg);
 }
