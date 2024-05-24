@@ -1,7 +1,9 @@
 <script lang="ts">
 </script>
 
-<header>
+<header
+  class="main-grid"
+>
   <a class="dot" href="/">
   </a>
   <h1>
@@ -16,14 +18,10 @@
     position: fixed;
     width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: var(--edge-padding);
-
     background-color: var(--bg);
     box-shadow: var(--scroll-shadow);
+
+    padding: var(--edge-padding);
   }
 
   .dot {
@@ -35,5 +33,13 @@
     border-radius: 100%;
 
     color: var(--bg);
+  }
+
+  h1 {
+    text-align: right;
+  }
+
+  header > * {
+    grid-column: span calc(var(--grid-columns) / 2);
   }
 </style>

@@ -1,4 +1,25 @@
-<script>
+<script lang="ts">
+	import ListItem from "$lib/components/work/list/ListItem.svelte";
+	import { type WorkListItem } from '$types/work';
+
+  const listItems: WorkListItem[] = [
+    {
+      id: "1",
+      href: '/work/1',
+      label: 'A curly rat tail',
+      date: new Date(),
+      links: [],
+      tags: ['poem']
+    },
+    {
+      id: "2",
+      href: '/work/2',
+      label: 'Spooky derailed snob',
+      date: new Date(),
+      links: [],
+      tags: ['poem']
+    }
+  ];
 </script>
 
 <svelte:head>
@@ -7,12 +28,22 @@
 </svelte:head>
 
 <section>
+  <!--
   { #each { length: 100 } as _, i (i )}
   <p class={i % 2 === 0 ? 'left' : 'right'}>
     mina revben är min hjärna är en råttsvans
   </p>
   { /each }
+  -->
+  <ol>
+    { #each listItems as item (item.id)}
+      <ListItem
+        item={item}
+      />
+    { /each }
+  </ol>
 </section>
+<!--
 <section class="highlight">
   <p>
     sörpla och sleva och sorla
@@ -24,6 +55,7 @@
     fast jag kan ändå formens ord
   </p>
 </section>
+-->
 
 <style>
   section {

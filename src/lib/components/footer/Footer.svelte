@@ -1,5 +1,5 @@
 <script lang="ts" >
-	import Navbar from './../navigation/Navbar.svelte';
+	import Navbar from '$lib/components/navigation/Navbar.svelte';
 </script>
 
 <footer>
@@ -16,5 +16,7 @@
 
     background-color: var(--bg);
     box-shadow: var(--scroll-shadow);
+
+    grid-column: span var(--grid-columns);
   }
 </style>
