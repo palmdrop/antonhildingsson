@@ -5,14 +5,9 @@
 
 	import Header from "$lib/components/header/Header.svelte";
 	import Footer from '$lib/components/footer/Footer.svelte';
-	import Title from '$lib/components/header/Title.svelte';
 
   let { children } = $props();
-
-  let scrollY = $state(0);
 </script>
-
-<svelte:window bind:scrollY={scrollY} />
 
 <div class="app main-grid">
   <Header />
