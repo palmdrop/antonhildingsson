@@ -9,7 +9,17 @@ const config = {
     alias: {
       '$types': 'src/types'
     }
-	}
+	},
+  runes: true,
+  vitePlugin:{
+    dynamicCompileOptions({ filename }){
+      if(filename.includes('node_modules')) {
+        return { 
+          runes: undefined 
+        } // or false, check what works
+      }
+    }
+  }
 };
 
 export default config;
