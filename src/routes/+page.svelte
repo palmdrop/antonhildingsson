@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Title from "$lib/components/header/Title.svelte";
+	import Featured from "$lib/components/work/featured/Featured.svelte";
 	import ListItem from "$lib/components/work/list/ListItem.svelte";
 	import { type WorkListItem } from '$types/work';
 
@@ -35,6 +36,8 @@
     <Title hidden /> is a lump of compacted coal. He lives in concrete walls and eats a lot of spaghetti. 
     Later this year, he will write a long text.
   </p>
+
+  <Featured />
 
   <ol class="main-grid">
     { #each listItems as item, i (item.id + i)}
