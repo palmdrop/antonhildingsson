@@ -7,15 +7,23 @@
 	import Footer from '$lib/components/footer/Footer.svelte';
 
   import { setScrollY, isFloating } from '../state/scroll.svelte';
+	import { onMount } from 'svelte';
 
   const { children } = $props();
+
+  const onScrollY = () => {
+    setScrollY(window.scrollY);
+  }
+
+  onMount(() => {
+    setScrollY(window.screenY);
+  });
 </script>
 
-<svelte:window
-  on:scroll={() => {
-    setScrollY(window.scrollY);
-  }}
+<svelte:window 
+  on:scroll={onScrollY}
 />
+
 
 <div class="app main-grid">
   <Header highlighted={isFloating()}/>

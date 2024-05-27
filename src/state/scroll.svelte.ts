@@ -5,9 +5,13 @@ const setScrollY = (y: number) => {
   scrollY = y;
 }
 
-const getScrollY = () => $state.snapshot(screenY);
+const getScrollY = () => {
+  return scrollY;
+}
 
-const isFloating = () => floating;
+const isFloating = () => {
+  return floating;
+}
 
 export {
   setScrollY,
