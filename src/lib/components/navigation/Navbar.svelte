@@ -6,7 +6,7 @@
 
   const pages: Page[] = [
     {
-      label: 'home',
+      label: '↖',
       href: '/'
     },
     {
@@ -14,7 +14,7 @@
       href: '/work'
     },
     {
-      label: 'contact',
+      label: '✉',
       href: '/contact'
     },
   ]

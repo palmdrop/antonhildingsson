@@ -6,11 +6,19 @@
 	import Header from "$lib/components/header/Header.svelte";
 	import Footer from '$lib/components/footer/Footer.svelte';
 
-  let { children } = $props();
+  import { setScrollY, isFloating } from '../state/scroll.svelte';
+
+  const { children } = $props();
 </script>
 
+<svelte:window
+  on:scroll={() => {
+    setScrollY(window.scrollY);
+  }}
+/>
+
 <div class="app main-grid">
-  <Header />
+  <Header highlighted={isFloating()}/>
 
 	<main>
     {@render children()}

@@ -1,13 +1,13 @@
 <script lang="ts">
-	import Title from "./Title.svelte";
+  import Title from "./Title.svelte";
 
-  let scrollY = $state(0);
+  const { 
+    highlighted = false
+  }: { highlighted?: boolean } = $props();
 </script>
 
-<svelte:window bind:scrollY={scrollY} />
-
 <header>
-  <Title highlighted={scrollY > 3} />
+  <Title highlighted={highlighted} />
 </header>
 
 <style>

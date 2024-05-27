@@ -54,5 +54,8 @@
     padding-bottom: 1em;
 
     grid-column: span calc(2 * var(--grid-columns) / 3);
+    opacity: 1;
+
+    transition: 0.3s;
   }
 </style>
