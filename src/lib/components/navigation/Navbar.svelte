@@ -1,10 +1,10 @@
 <script lang="ts">
-  type Page = {
+  type NavPage = {
     label: string,
     href: string
   };
 
-  const pages: Page[] = [
+  const pages: NavPage[] = [
     {
       label: '↖',
       href: '/'
@@ -22,7 +22,7 @@
 
 <nav>
   <ul>
-    { #each pages as page, i (page.label)}
+    { #each pages as page (page.label)}
       <li>
         <a href={page.href} class="action">
           { page.label }

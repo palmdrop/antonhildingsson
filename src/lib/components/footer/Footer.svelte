@@ -1,5 +1,5 @@
-<script lang="ts" >
-	import Navbar from '$lib/components/navigation/Navbar.svelte';
+<script lang="ts">
+  import Navbar from "../navigation/Navbar.svelte";
 </script>
 
 <footer>
