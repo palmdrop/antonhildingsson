@@ -16,7 +16,7 @@
   }
 
   onMount(() => {
-    setScrollY(window.screenY);
+    setScrollY(window.scrollY);
   });
 </script>
 
