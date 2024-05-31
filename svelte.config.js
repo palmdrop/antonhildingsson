@@ -11,7 +11,10 @@ const config = {
 				'.md',
 				'.svelte.md',
 			],
-			smartypants: true
+			smartypants: true,
+      layout: {
+        _: "./src/lib/components/work/Layout.svelte"
+      }
 		})
   ],
   extensions: [

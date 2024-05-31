@@ -1,25 +1,25 @@
 <script lang="ts">
 	import Title from "$lib/components/header/Title.svelte";
-	import Featured from "$lib/components/work/featured/Featured.svelte";
-	import ListItem from "$lib/components/work/list/ListItem.svelte";
-	import { type WorkListItem } from '$types/work';
+	import Featured from "$lib/components/work/Featured.svelte";
+	import ListItem from "$lib/components/work/ListItem.svelte";
+	import { type WorkListItem } from '$lib/types/work';
 
   const listItems: WorkListItem[] = [
     {
       id: "1",
       href: '/work/1',
-      label: 'A curly rat tail',
-      date: new Date(),
-      links: [],
-      tags: ['poem']
+      title: 'A curly rat tail',
+      date: new Date().toISOString(),
+      // links: [],
+      // tags: ['poem']
     },
     {
       id: "2",
       href: '/work/2',
-      label: 'Spooky derailed snob',
-      date: new Date(),
-      links: [],
-      tags: ['poem']
+      title: 'Spooky derailed snob',
+      date: new Date().toISOString(),
+      // links: [],
+      // tags: ['poem']
     }
   ];
 

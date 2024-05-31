@@ -5,7 +5,7 @@
 
 	import Header from "$lib/components/header/Header.svelte";
 
-  import { setScrollY, isFloating } from '../state/scroll.svelte';
+  import { setScrollY, isFloating } from '../lib/state/scroll.svelte';
 	import { onMount } from 'svelte';
 
   const { children } = $props();
