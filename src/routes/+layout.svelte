@@ -4,7 +4,6 @@
 	import '../styles/global.css';
 
 	import Header from "$lib/components/header/Header.svelte";
-	import Footer from '$lib/components/footer/Footer.svelte';
 
   import { setScrollY, isFloating } from '../state/scroll.svelte';
 	import { onMount } from 'svelte';
@@ -31,8 +30,6 @@
 	<main>
     {@render children()}
 	</main>
-
-  <Footer />
 </div>
 
 <style>

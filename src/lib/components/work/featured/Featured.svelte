@@ -8,7 +8,9 @@
 
 <style>
   article {
-    grid-column: 4 / span 3;
+    grid-column: 1 / span 4;
+
+    padding-bottom: 1em;
   }
 </style>
 

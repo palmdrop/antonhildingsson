@@ -1,16 +1,14 @@
 <script lang="ts">
   type Props = { 
-    highlighted?: boolean, 
     hidden?: boolean
   };
 
   const { 
-    highlighted = false,
     hidden = false
   }: Props = $props();
 </script>
 
-<a href="/" class="title action" class:highlighted class:hidden>
+<a href="/" class="title" class:hidden>
   <span class="dot"></span>
   {import.meta.env.VITE_TITLE}
 </a>
@@ -18,27 +16,8 @@
 <style>
   .title {
     font-style: italic;
-  }
 
-  a {
-    margin-top: var(--edge-padding);
-    transition: 1s box-shadow, 1s text-shadow;
-  }
-
-  .highlighted {
-    filter: drop-shadow(0px 0px 5px var(--bg));
-
-    /*
-    --fg: green;
-    */
-
-    text-shadow: 0px 0px 0.15em var(--fg);
-
-    color: var(--fg);
-
-    /*
-    background-color: yellow;
-    */
+    grid-column: span calc(var(--grid-columns) - 1);
   }
 
   .dot {
@@ -55,10 +34,6 @@
 
     color: var(--bg);
     box-shadow: 0px 0px 0.1em 0.05em var(--fg);
-  }
-
-  .highlighted .dot {
-    box-shadow: 0px 0px 0.15em 0.1em var(--fg);
   }
 
   .hidden {
