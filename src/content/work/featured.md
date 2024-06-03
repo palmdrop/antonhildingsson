@@ -1,6 +1,9 @@
 ---
 title: "Featured"
 date: "2024-05-31T11:15:21.284Z"
+tags: ["boogie", "abc"]
+links: []
+preview: "partial"
 ---
 
 This is a markdown file with longerl ines

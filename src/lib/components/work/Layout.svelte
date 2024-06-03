@@ -4,28 +4,27 @@
 
   const { 
     children,
-    date,
-    title,
-    // tags,
-    // links
-  }: WorkFrontmatter & { children: any } = $props();
+    alone = false,
+    ...frontmatter
+  }: WorkFrontmatter & { children: any, alone?: boolean } = $props();
+
+  const renderingMode: WorkFrontmatter['preview'] = alone 
+    ? 'full' 
+    : frontmatter.preview;
 </script>
 
-<article class="main-grid">
-  <Header {date} {title} />
-  <section>
+{ #if renderingMode && renderingMode !== 'none'}
+  <article>
+    {#if alone }
+      <Header { ...frontmatter } />
+    { /if }
     {@render children()}
-  </section>
-</article>
+  </article>
+{ /if }
 
 <style>
   article {
     grid-column: span var(--grid-columns);
     width: 100%;
-  }
-
-  section {
-    grid-column: span var(--grid-columns);
-    padding-left: 1em;
   }
 </style>

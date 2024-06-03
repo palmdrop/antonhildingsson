@@ -35,6 +35,10 @@ a {
 }
 
 button {
+  all: unset;
+}
+
+button {
   background-color: unset;
   border: unset;
 }

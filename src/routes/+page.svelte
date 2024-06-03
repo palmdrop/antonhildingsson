@@ -1,10 +1,24 @@
 <script lang="ts">
 	import Title from "$lib/components/header/Title.svelte";
-	import Featured from "$lib/components/work/Featured.svelte";
+	// import Featured from "$lib/components/work/Featured.svelte";
 	import ListItem from "$lib/components/work/ListItem.svelte";
 	import { type WorkListItem } from '$lib/types/work';
 
+  // const workItems = import.meta.glob('../content/work/*.md', { eager: false });
+
+  // console.log(workItems);
+
+  // TODO: determine these statically? or do pagination somehow?´
   const listItems: WorkListItem[] = [
+    {
+      id: "0",
+      // TODO: deduce href from title?
+      href: '/work/featured',
+      title: 'Featured',
+      date: new Date().toISOString(),
+      // links: [],
+      // tags: ['poem']
+    },
     {
       id: "1",
       href: '/work/1',
@@ -37,7 +51,9 @@
     Later this year, he will write a long text.
   </p>
 
+  <!--
   <Featured />
+  -->
 
   <ol class="main-grid">
     { #each listItems as item, i (item.id + i)}

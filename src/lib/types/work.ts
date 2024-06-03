@@ -3,6 +3,7 @@ export type WorkFrontmatter = {
   title: string,
   tags?: string[],
   links?: string[],
+  preview?: boolean | 'full' | 'partial' | 'none'
 }
 
 export type WorkListItem = WorkFrontmatter & {

@@ -3,7 +3,13 @@
 	import { formatDate } from "$lib/utils/date";
 	import { convertToURLFriendly } from "$lib/utils/url";
 
-  const { title, date }: WorkFrontmatter = $props();
+  const { 
+    title, 
+    date,
+    // links,
+    tags = []
+  }: WorkFrontmatter = $props();
+  
   const url = `work/${convertToURLFriendly(title)}`;
 </script>
 
@@ -15,7 +21,7 @@
     datetime={date}
     class="subitem"
   >
-    {formatDate(new Date(date))}
+    { formatDate(new Date(date)) }
   </time>
   <h2
     class="subitem"
@@ -28,7 +34,11 @@
     <!--
       Set tag in URL parameter, highlight only items with tag
     -->
-    todo
+    { #each tags as tag, i (tag)}
+      <button class:withDeliminator={tags.length > 1}>
+        { tag }
+      </button>
+    { /each }
   </p>
 </a> 
 
@@ -43,5 +53,10 @@
 
   .subitem:last-child {
     text-align: right;
+  }
+
+  .withDeliminator:not(:last-of-type)::after {
+    content: ", ";
+    margin-right: 1ch;
   }
 </style>
