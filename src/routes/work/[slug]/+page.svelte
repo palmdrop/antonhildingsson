@@ -1,7 +1,15 @@
 <script lang="ts">
   const { data } = $props();
+
+
 </script>
 
-<div>
-  { data.slug }
-</div>
+{ #await import(`../../../content/work/${data.slug}.md`) } } 
+  <p>loading...</p>
+{ :then { default: Component } }
+  <Component /> 
+{ :catch error }
+  <p>
+    Error: { error }
+  </p>
+{/await}

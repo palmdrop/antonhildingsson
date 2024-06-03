@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { formatDate } from "$lib/utils/date";
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import Header from "./Header.svelte";
 
@@ -7,10 +6,8 @@
     children,
     date,
     title,
-    /*
-    tags,
-    links
-    */
+    // tags,
+    // links
   }: WorkFrontmatter & { children: any } = $props();
 </script>
 

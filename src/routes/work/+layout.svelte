@@ -3,13 +3,11 @@
 </script>
 
 <div class="app main-grid">
-  <article>
-    {@render children()}
-  </article>
+  {@render children()}
 </div>
 
 <style>
-  article {
+  div {
     padding-top: 2em;
   }
 </style>

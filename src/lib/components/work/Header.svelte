@@ -1,12 +1,14 @@
 <script lang="ts">
   import { type WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
+	import { convertToURLFriendly } from "$lib/utils/url";
 
   const { title, date }: WorkFrontmatter = $props();
+  const url = `work/${convertToURLFriendly(title)}`;
 </script>
 
 <a 
-  href={`/work/todo`}
+  href={url}
   class="main-grid"
 >
   <time 
