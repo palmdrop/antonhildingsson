@@ -13,6 +13,10 @@
 </a>
 
 <style>
+  a {
+    white-space: nowrap;
+  }
+
   a > span {
     font-style: italic;
   }
@@ -26,9 +30,6 @@
   }
 
   a:hover {
-    background-color: yellow;
-  }
-
-  a:hover > span {
+    background-color: var(--accent);
   }
 </style>

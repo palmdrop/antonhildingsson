@@ -46,6 +46,5 @@
 
     padding: var(--edge-padding);
     padding-top: var(--top-padding);
-    padding-bottom: var(--bottom-padding);
 	}
 </style>

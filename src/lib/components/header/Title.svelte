@@ -26,7 +26,7 @@
   }
 
   .dot {
-    display: inline-block;
+    display: none;
 
     background-color: var(--fg);
 
@@ -39,6 +39,12 @@
 
     color: var(--bg);
     box-shadow: 0px 0px 0.1em 0.05em var(--fg);
+  }
+
+  @media screen and (min-width: 500px) {
+    .dot {
+      display: inline-block;
+    }
   }
 
   .hidden {

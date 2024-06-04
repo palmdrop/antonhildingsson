@@ -17,8 +17,15 @@
 
 <section class="main-grid">
   <p class="intro">
-    <Title hidden /> is a lump of compacted coal. He lives in concrete walls and eats a lot of spaghetti. 
-    Later this year, he will write a long text.
+    <!--
+      A small floating element is used to offset the intro paragraph to avoid overlap with navbar
+    -->
+    <span class="float"></span>
+    <Title hidden /> 
+    <span>
+      is a lump of compacted coal. He lives in concrete walls and eats a lot of spaghetti. 
+      Later this year, he will write a long text.
+    </span>
   </p>
 
   <ol class="main-grid">
@@ -42,5 +49,19 @@
     opacity: 1;
 
     transition: 0.3s;
+  }
+
+  .float {
+    top: 0;
+    float: right;
+
+    height: 1em;
+    width: 1.5em;
+  }
+
+  @media screen and (min-width: 380px) {
+    .float {
+      display: none;
+    }
   }
 </style>

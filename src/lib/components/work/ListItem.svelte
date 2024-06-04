@@ -14,5 +14,7 @@
 <style>
   li {
     grid-column: span var(--grid-columns);
+
+    padding: 1em 0em;
   }
 </style>
