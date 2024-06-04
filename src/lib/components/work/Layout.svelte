@@ -21,4 +21,13 @@
     grid-column: span var(--grid-columns);
     width: 100%;
   }
+
+  :global(article img) {
+    height: 600px;
+    max-width: 500px;
+
+    object-fit: cover;
+
+    padding: 1em;
+  }
 </style>

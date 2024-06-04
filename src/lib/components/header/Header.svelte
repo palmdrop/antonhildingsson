@@ -49,6 +49,10 @@
     text-shadow: 0px 0px 0.15em var(--fg);
   }
 
+  .highlighted:hover {
+    filter: none;
+  }
+
   ul {
     display: flex;
     justify-content: flex-end;

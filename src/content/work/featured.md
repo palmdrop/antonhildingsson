@@ -10,6 +10,6 @@ This is a markdown file with longerl ines
 
 Here I write poetry, sometimes with 
 
-/ line breaks
+![zoom 1](/src/content/images/zoom2.jpeg)
 
 Poetry time
