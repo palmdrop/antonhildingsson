@@ -1,43 +1,13 @@
 <script lang="ts">
 	import Title from "$lib/components/header/Title.svelte";
-	// import Featured from "$lib/components/work/Featured.svelte";
 	import ListItem from "$lib/components/work/ListItem.svelte";
-	import { type WorkListItem } from '$lib/types/work';
 
-  // const workItems = import.meta.glob('../content/work/*.md', { eager: false });
+  import workList from '$content/work-list';
 
-  // console.log(workItems);
-
-  // TODO: determine these statically? or do pagination somehow?´
-  const listItems: WorkListItem[] = [
-    {
-      id: "0",
-      // TODO: deduce href from title?
-      href: '/work/featured',
-      title: 'Featured',
-      date: new Date().toISOString(),
-      // links: [],
-      // tags: ['poem']
-    },
-    {
-      id: "1",
-      href: '/work/1',
-      title: 'A curly rat tail',
-      date: new Date().toISOString(),
-      // links: [],
-      // tags: ['poem']
-    },
-    {
-      id: "2",
-      href: '/work/2',
-      title: 'Spooky derailed snob',
-      date: new Date().toISOString(),
-      // links: [],
-      // tags: ['poem']
-    }
-  ];
-
-  listItems.push(...Array(100).fill(listItems).flat())
+  /*
+  workList.push(...Array(20).fill(workList).flat())
+  */
+  const list = Array(20).fill(workList).flat();
 </script>
 
 <svelte:head>
@@ -51,14 +21,10 @@
     Later this year, he will write a long text.
   </p>
 
-  <!--
-  <Featured />
-  -->
-
   <ol class="main-grid">
-    { #each listItems as item, i (item.id + i)}
+    { #each list as item, i (item.frontmatter.title + i)}
       <ListItem
-        item={item}
+        frontmatter={item.frontmatter}
       />
     { /each }
   </ol>

@@ -25,7 +25,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
     alias: {
-      '$types': 'src/types'
+      '$types': 'src/types',
+      '$content': 'src/content'
     }
 	},
   vitePlugin:{

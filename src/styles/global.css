@@ -1,6 +1,7 @@
 :root {
   --bg: white;
   --fg: black;
+  --accent: yellow;
 
   --font: Baskervville;
   --font-heading: var(--font);

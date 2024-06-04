@@ -6,28 +6,33 @@
   const { 
     title, 
     date,
-    // links,
     tags = []
   }: WorkFrontmatter = $props();
   
-  const url = `work/${convertToURLFriendly(title)}`;
+  const url = `/work/${convertToURLFriendly(title)}`;
 </script>
 
-<a 
-  href={url}
-  class="main-grid"
+<div 
+  class="work-header main-grid"
 >
-  <time 
-    datetime={date}
+  <a 
+    href={url}
     class="subitem"
   >
-    { formatDate(new Date(date)) }
-  </time>
-  <h2
+    <time 
+      datetime={date}
+    >
+      { formatDate(new Date(date)) }
+    </time>
+  </a>
+  <a
+    href={url}
     class="subitem"
   >
-    { title }
-  </h2>
+    <h2>
+      { title }
+    </h2>
+  </a>
   <p
     class="subitem"
   >
@@ -40,10 +45,10 @@
       </button>
     { /each }
   </p>
-</a> 
+</div> 
 
 <style>
-  a {
+  .work-header {
     grid-column: span var(--grid-columns);
   }
 

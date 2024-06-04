@@ -3,23 +3,26 @@
 	import { convertToURLFriendly } from "$lib/utils/url";
 
   const {
-    ...workFrontmatter
+    title,
+    preview
   }: WorkFrontmatter = $props();
 
-  const slug = convertToURLFriendly(workFrontmatter.title);
+  const slug = convertToURLFriendly(title);
 </script>
 
-<div>
-  { #await import(`../../../content/work/${slug}.md`) }
-    <p>loading...</p>
-  { :then { default: Component } }
-    <Component /> 
-  { :catch error }
-    <p>
-      Nothing to see here...
-    </p>
-  {/await}
-</div>
+{ #if preview && preview !== 'none'}
+  <div>
+    { #await import(`../../../content/work/${slug}.md`) }
+      <p>loading...</p>
+    { :then { default: Component } }
+      <Component /> 
+    { :catch error }
+      <p>
+        Error fetching work... Retry?
+      </p>
+    {/await}
+  </div>
+{ /if }
 
 <style>
   div {

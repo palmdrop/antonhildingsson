@@ -5,8 +5,3 @@ export type WorkFrontmatter = {
   links?: string[],
   preview?: boolean | 'full' | 'partial' | 'none'
 }
-
-export type WorkListItem = WorkFrontmatter & {
-  id: string,
-  href: string,
-}

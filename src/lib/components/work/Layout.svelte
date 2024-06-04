@@ -4,23 +4,17 @@
 
   const { 
     children,
-    alone = false,
+    alone,
     ...frontmatter
   }: WorkFrontmatter & { children: any, alone?: boolean } = $props();
-
-  const renderingMode: WorkFrontmatter['preview'] = alone 
-    ? 'full' 
-    : frontmatter.preview;
 </script>
 
-{ #if renderingMode && renderingMode !== 'none'}
-  <article>
-    {#if alone }
-      <Header { ...frontmatter } />
-    { /if }
-    {@render children()}
-  </article>
+{ #if alone }
+  <Header { ...frontmatter } />
 { /if }
+<article>
+  {@render children()}
+</article>
 
 <style>
   article {

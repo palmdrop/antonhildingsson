@@ -9,15 +9,20 @@
 </script>
 
 <a href="/" class="title" class:hidden>
-  <span class="dot"></span>
-  {import.meta.env.VITE_TITLE}
+  <span>
+    <span class="dot"></span>
+    {import.meta.env.VITE_TITLE}
+  </span>
 </a>
 
 <style>
   .title {
     font-style: italic;
+    grid-column: span calc(var(--grid-columns) - 2);
+  }
 
-    grid-column: span calc(var(--grid-columns) - 1);
+  .title:hover > :not(.dot) {
+    background-color: var(--accent);
   }
 
   .dot {

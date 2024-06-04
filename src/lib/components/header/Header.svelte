@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NavLink from "../links/NavLink.svelte";
   import Title from "./Title.svelte";
 
   const { 
@@ -11,17 +12,17 @@
     <Title />
     <ul>
       <li>
-        <a href="/contact">
-          contact
-        </a>
+        <NavLink 
+          href="/about" 
+          label="about"
+        />
       </li>
-      <!--
       <li>
-        <a href="/about" class="side">
-          about
-        </a>
+        <NavLink 
+          href="/contact" 
+          label="contact"
+        />
       </li>
-      -->
     </ul>
   </nav>
 </header>
@@ -43,16 +44,14 @@
 
   .highlighted {
     filter: drop-shadow(0px 0px 5px var(--bg));
-
     text-shadow: 0px 0px 0.15em var(--fg);
-
-    /*
-    background-color: yellow;
-    */
   }
 
-
   ul {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--gap);
+
+    grid-column: span 2;
   }
 </style>

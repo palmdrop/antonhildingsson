@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { WorkListItem } from "$lib/types/work";
+	import type { WorkFrontmatter } from "$lib/types/work";
 	import Header from "./Header.svelte";
 	import Preview from "./Preview.svelte";
 
-  export let item: WorkListItem;
+  export let frontmatter: WorkFrontmatter;
 </script>
 
 <li class="main-grid">
-  <Header { ...item } />
-  <Preview { ...item }/>
+  <Header { ...frontmatter } />
+  <Preview { ...frontmatter }/>
 </li>
 
 <style>
