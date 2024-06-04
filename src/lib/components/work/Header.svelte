@@ -15,24 +15,25 @@
 <div 
   class="work-header main-grid"
 >
-  <a 
-    href={url}
+  <time 
+    datetime={date}
     class="subitem"
   >
-    <time 
-      datetime={date}
+    <a 
+      href={url}
     >
-      { formatDate(new Date(date)) }
-    </time>
-  </a>
-  <a
-    href={url}
+    { formatDate(new Date(date)) }
+    </a>
+  </time>
+  <h2
     class="subitem"
   >
-    <h2>
-      { title }
-    </h2>
-  </a>
+    <a href={url}>
+      <span>
+        { title }
+      </span>
+    </a>
+  </h2>
   <p
     class="subitem"
   >
@@ -52,6 +53,10 @@
     grid-column: span var(--grid-columns);
   }
 
+  .work-header:hover h2 span {
+    background-color: var(--accent);
+  }
+
   .subitem {
     grid-column: span calc(var(--grid-columns) / 3);
   }
@@ -63,5 +68,26 @@
   .withDeliminator:not(:last-of-type)::after {
     content: ", ";
     margin-right: 1ch;
+  }
+
+  h2 {
+    font-style: italic;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+
+  h2 span::before {
+    content: "[ ";
+  }
+
+  h2 span::after {
+    content: " ]";
+  }
+
+  h2 span::before, h2 span::after {
+    font-style: normal;
   }
 </style>

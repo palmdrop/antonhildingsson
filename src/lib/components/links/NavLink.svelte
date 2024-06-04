@@ -9,15 +9,12 @@
 </script>
 
 <a {...rest}>
-  <span>{ label }</span>
+  { label }
 </a>
 
 <style>
   a {
     white-space: nowrap;
-  }
-
-  a > span {
     font-style: italic;
   }
 
@@ -27,6 +24,10 @@
 
   a::after {
     content: " ]";
+  }
+
+  a::before, a::after {
+    font-style: normal;
   }
 
   a:hover {
