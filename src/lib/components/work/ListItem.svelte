@@ -6,7 +6,10 @@
   export let frontmatter: WorkFrontmatter;
 </script>
 
-<li class="main-grid">
+<li 
+  class="main-grid" 
+  class:preview={frontmatter.preview && frontmatter.preview !== 'none'}
+>
   <Header { ...frontmatter } />
   <Preview { ...frontmatter }/>
 </li>
@@ -14,7 +17,9 @@
 <style>
   li {
     grid-column: span var(--grid-columns);
+  }
 
-    padding: 1em 0em;
+  .preview {
+    border-bottom: 1px solid var(--fg);
   }
 </style>

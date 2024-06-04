@@ -20,6 +20,8 @@
   article {
     grid-column: span var(--grid-columns);
     width: 100%;
+
+    padding: 1em;
   }
 
   :global(article img) {

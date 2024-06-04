@@ -51,6 +51,8 @@
 <style>
   .work-header {
     grid-column: span var(--grid-columns);
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: 0.5em;
   }
 
   .work-header:hover h2 span {

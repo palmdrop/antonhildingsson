@@ -26,7 +26,6 @@
 
 <style>
   div {
-    padding: 0em 1em;
     grid-column: span var(--grid-columns);
   }
 
