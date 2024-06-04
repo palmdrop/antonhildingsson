@@ -10,6 +10,19 @@ export default [
         "abc"
       ],
       "links": [],
+      "preview": "full"
+    }
+  },
+  {
+    "path": "src/content/work/really-long-one.md",
+    "frontmatter": {
+      "title": "Really long one",
+      "date": "2024-05-31T11:15:21.284Z",
+      "tags": [
+        "long",
+        "123"
+      ],
+      "links": [],
       "preview": "partial"
     }
   },

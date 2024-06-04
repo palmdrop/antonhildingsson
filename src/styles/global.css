@@ -11,6 +11,8 @@
   --line-height: 1.3em;
   --letter-spacing: 0.01em;
 
+  --max-partial-preview-height: 300px;
+
   --edge-padding: 0.5em;
   --top-padding: var(--edge-padding);
 
