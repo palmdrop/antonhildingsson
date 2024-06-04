@@ -34,6 +34,8 @@
     max-height: var(--max-partial-preview-height);
     overflow: hidden;
     position: relative;
+
+    z-index: 0;
   }
 
   .partial::before {
@@ -43,8 +45,6 @@
 
     width: 100%;
     height: 100%;
-
-    z-index: 1;
 
     box-shadow: inset 0px -70px 50px 0px var(--bg);
   }

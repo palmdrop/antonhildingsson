@@ -72,6 +72,7 @@
 
   h2 {
     font-style: italic;
+    white-space: nowrap;
   }
 
   a {

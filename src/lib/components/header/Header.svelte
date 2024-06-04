@@ -32,6 +32,8 @@
     position: fixed;
     width: 100%;
     padding: var(--edge-padding);
+
+    z-index: 1;
   }
 
   nav {
