@@ -8,7 +8,10 @@
 </script>
 
 <header class="main-grid">
-  <nav class="main-grid" class:highlighted>
+  <nav 
+    class="main-grid full-width" 
+    class:highlighted
+  >
     <Title />
     <ul>
       <li>
@@ -37,7 +40,6 @@
   }
 
   nav {
-    grid-column: span var(--grid-columns);
     padding: 0;
     margin: 0;
 

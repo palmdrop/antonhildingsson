@@ -27,7 +27,7 @@
 <div class="app main-grid">
   <Header highlighted={isFloating()}/>
 
-	<main>
+	<main class="main-grid full-width">
     {@render children()}
 	</main>
 </div>
@@ -36,14 +36,10 @@
 	.app {
 		display: flex;
 		flex-direction: column;
-
     height: 100vh;
 	}
 
 	main {
-		flex: 1;
-		width: 100%;
-
     padding: var(--edge-padding);
     padding-top: var(--top-padding);
 	}

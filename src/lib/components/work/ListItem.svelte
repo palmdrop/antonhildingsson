@@ -7,7 +7,7 @@
 </script>
 
 <li 
-  class="main-grid" 
+  class="main-grid full-width" 
   class:preview={frontmatter.preview && frontmatter.preview !== 'none'}
 >
   <Header { ...frontmatter } />
@@ -15,11 +15,8 @@
 </li>
 
 <style>
-  li {
-    grid-column: span var(--grid-columns);
-  }
-
   .preview {
     border-bottom: 1px solid var(--fg);
+    padding-bottom: 2em;
   }
 </style>

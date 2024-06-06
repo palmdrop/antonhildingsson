@@ -11,7 +11,7 @@
 </script>
 
 { #if preview && preview !== 'none'}
-  <div class={`${preview === true ? 'full' : preview}`}>
+  <div class={`${preview === true ? 'full' : preview} full-width`}>
     { #await import(`../../../content/work/${slug}.md`) }
       <p>loading...</p>
     { :then { default: Component } }
@@ -25,10 +25,6 @@
 { /if }
 
 <style>
-  div {
-    grid-column: span var(--grid-columns);
-  }
-
   .partial {
     max-height: var(--max-partial-preview-height);
     overflow: hidden;

@@ -2,7 +2,7 @@
   let { children } = $props();
 </script>
 
-<div class="app main-grid">
+<div class="main-grid full-width">
   {@render children()}
 </div>
 

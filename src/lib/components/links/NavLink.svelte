@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { HTMLAnchorAttributes } from 'svelte/elements';
+
   const { 
     label,
     ...rest 

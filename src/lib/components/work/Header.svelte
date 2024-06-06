@@ -13,7 +13,7 @@
 </script>
 
 <div 
-  class="work-header main-grid"
+  class="work-header main-grid full-width"
 >
   <time 
     datetime={date}
@@ -50,7 +50,6 @@
 
 <style>
   .work-header {
-    grid-column: span var(--grid-columns);
     border-bottom: 1px solid var(--fg);
     padding-bottom: 0.5em;
   }

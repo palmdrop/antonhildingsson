@@ -32,6 +32,10 @@
   gap: var(--gap);
 }
 
+.full-width {
+  grid-column: span var(--grid-columns);
+}
+
 a {
   all: unset;
 }

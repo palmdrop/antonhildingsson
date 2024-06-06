@@ -13,7 +13,8 @@ const config = {
 			],
 			smartypants: true,
       layout: {
-        _: "./src/lib/components/work/Layout.svelte"
+        work: "./src/lib/components/markdown/layout/WorkLayout.svelte",
+        _: "./src/lib/components/markdown/layout/DefaultLayout.svelte"
       }
 		})
   ],
