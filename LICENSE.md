@@ -1,6 +1,17 @@
-MIT License
+# Content
+The contents of `src/content` is directly copyrighted to Anton Hildingsson. All rights reserved.
 
-Copyright (c) 2024 palmdrop
+# Fonts
+The fonts located in `static/fonts` are redistributed under their respective licenses:
+
+* Baskervville and Baskervville Italic are available under the SIL Open Font license, as stated by the authors. Copies of the licenses are included here: `static/fonts/baskervville-regular/LICENSE.txt` and `static/fonts/baskervville-italic/LICENSE.txt`
+
+# Code
+All of the code, with the exception of `src/content`, is distributed under MIT License, see below.
+
+## MIT License
+
+Copyright (c) 2022-2024 Anton Hildingsson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
