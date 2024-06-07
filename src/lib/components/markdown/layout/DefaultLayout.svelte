@@ -1,15 +1,14 @@
+<script context="module" lang="ts">
+  import a from "$lib/components/links/ExternalLink.svelte";
+  export { a };
+</script>
+
 <script lang="ts">
   const { 
     children,
   }: { children: any } = $props();
 </script>
 
-<article class="main-grid full-width">
+<article class="markdown main-grid full-width">
   {@render children()}
 </article>
-
-<style>
-  :global(article > *) {
-    grid-column: span var(--grid-columns); 
-  }
-</style>

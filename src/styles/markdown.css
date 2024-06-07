@@ -1,0 +1,47 @@
+.markdown {
+  width: 100%;
+}
+
+.markdown > * {
+  grid-column: span var(--grid-columns); 
+}
+
+.markdown ul {
+  list-style: circle;
+  list-style-position: inside;
+
+  padding-bottom: 1em;
+}
+
+.markdown img {
+  width: 100%;
+  max-width: 1000px;
+
+  object-fit: cover;
+
+  padding: 1em 0em;
+}
+
+@media screen and (min-width: 500px) {
+  .markdown img {
+    padding: 1em;
+  }
+}
+
+.markdown a {
+  font-style: italic;
+}
+
+.markdown a::before {
+  content: "[ ";
+  font-style: normal;
+}
+
+.markdown a::after {
+  content: " ]";
+  font-style: normal;
+}
+
+.markdown a:hover {
+  background-color: var(--accent);
+}

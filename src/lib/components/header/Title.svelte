@@ -25,6 +25,10 @@
     background-color: var(--accent);
   }
 
+  a::before, a::after {
+    content: none;
+  }
+
   .dot {
     display: none;
 

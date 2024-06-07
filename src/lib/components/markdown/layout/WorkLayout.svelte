@@ -12,31 +12,17 @@
 { #if alone }
   <Header { ...frontmatter } />
 { /if }
-<article class="full-width">
+<article class="markdown full-width">
   {@render children()}
 </article>
 
 <style>
   article {
-    width: 100%;
-    padding: 1em 0em;
-  }
-
-  :global(article img) {
-    width: 100%;
-    max-width: 1000px;
-
-    object-fit: cover;
-
     padding: 1em 0em;
   }
 
   @media screen and (min-width: 500px) {
     article {
-      padding: 1em;
-    }
-
-    :global(article img) {
       padding: 1em;
     }
   }

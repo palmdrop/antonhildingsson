@@ -2,6 +2,7 @@
 	import '../styles/reset.css';
 	import '../styles/fonts.css';
 	import '../styles/global.css';
+	import '../styles/markdown.css';
 
 	import Header from "$lib/components/header/Header.svelte";
 

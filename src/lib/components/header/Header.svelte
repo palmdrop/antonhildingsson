@@ -17,13 +17,13 @@
       <li>
         <NavLink 
           href="/about" 
-          label="about"
+          label="om"
         />
       </li>
       <li>
         <NavLink 
           href="/contact" 
-          label="contact"
+          label="kontakt"
         />
       </li>
     </ul>
