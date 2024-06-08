@@ -10,7 +10,7 @@
     tags = []
   }: WorkFrontmatter = $props();
   
-  const url = `/work/${fileName}`;
+  const url = fileName ? `/work/${fileName}` : '';
 </script>
 
 <div 
@@ -74,7 +74,9 @@
 
   h2 {
     font-style: italic;
+    /*
     white-space: nowrap;
+    */
   }
 
   a {
