@@ -1,6 +1,9 @@
 <script context="module" lang="ts">
   import a from "$lib/components/links/ExternalLink.svelte";
-  export { a };
+
+  export { 
+    a 
+  };
 </script>
 
 <script lang="ts">

@@ -1,18 +1,15 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
-	import { convertToURLFriendly } from "$lib/utils/url";
 
   const {
-    title,
-    preview
+    preview,
+    fileName
   }: WorkFrontmatter = $props();
-
-  const slug = convertToURLFriendly(title);
 </script>
 
 { #if preview && preview !== 'none'}
   <div class={`${preview === true ? 'full' : preview} full-width`}>
-    { #await import(`../../../content/work/${slug}.md`) }
+    { #await import(`$content/work/${fileName}.md`) }
       <p>loading...</p>
     { :then { default: Component } }
       <Component /> 

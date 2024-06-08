@@ -3,5 +3,6 @@ export type WorkFrontmatter = {
   title: string,
   tags?: string[],
   links?: string[],
-  preview?: boolean | 'full' | 'partial' | 'none'
+  preview?: boolean | 'full' | 'partial' | 'none',
+  fileName: string
 }

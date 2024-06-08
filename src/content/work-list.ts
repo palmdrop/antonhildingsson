@@ -10,20 +10,22 @@ export default [
         "abc"
       ],
       "links": [],
-      "preview": "full"
+      "preview": "full",
+      "fileName": "featured"
     }
   },
   {
     "path": "src/content/work/really-long-one.md",
     "frontmatter": {
-      "title": "Really long one",
+      "title": "Super Really long one",
       "date": "2024-05-31T11:15:21.284Z",
       "tags": [
         "long",
         "123"
       ],
       "links": [],
-      "preview": "partial"
+      "preview": "partial",
+      "fileName": "really-long-one"
     }
   },
   {
@@ -35,7 +37,8 @@ export default [
         "boogie"
       ],
       "links": [],
-      "preview": false
+      "preview": false,
+      "fileName": "a-short-poem"
     }
   }
 ] as { path: string, frontmatter: WorkFrontmatter }[];

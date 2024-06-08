@@ -22,6 +22,10 @@ const processWork = async (fileName: string) => {
     })
   );
 
+  frontmatter.fileName = fileName.slice(
+    0, fileName.lastIndexOf(".")
+  );
+
   return {
     path,
     frontmatter

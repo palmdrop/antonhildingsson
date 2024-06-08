@@ -3,7 +3,11 @@
 	import Header from "./Header.svelte";
 	import Preview from "./Preview.svelte";
 
-  export let frontmatter: WorkFrontmatter;
+  const {
+    frontmatter
+  }: {
+    frontmatter: WorkFrontmatter
+  } = $props();
 </script>
 
 <li 

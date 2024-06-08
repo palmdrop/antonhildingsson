@@ -6,10 +6,11 @@
   const { 
     title, 
     date,
+    fileName,
     tags = []
   }: WorkFrontmatter = $props();
   
-  const url = `/work/${convertToURLFriendly(title)}`;
+  const url = `/work/${fileName}`;
 </script>
 
 <div 
