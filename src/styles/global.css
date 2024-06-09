@@ -77,10 +77,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-p {
-  max-width: var(--paragraph-width);
-}
-
 button, a, .action {
   cursor: pointer;
 }

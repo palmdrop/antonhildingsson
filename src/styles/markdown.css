@@ -45,3 +45,7 @@
 .markdown a:hover {
   background-color: var(--accent);
 }
+
+.markdown p {
+  max-width: var(--paragraph-width);
+}
