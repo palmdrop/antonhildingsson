@@ -6,8 +6,11 @@
     title, 
     date,
     fileName,
-    tags = []
-  }: WorkFrontmatter = $props();
+    tags = [],
+    showYear = true
+  }: WorkFrontmatter & { 
+    showYear: boolean
+  } = $props();
   
   const year = new Date(date).getFullYear();
   const url = fileName ? `/work/${year}/${fileName}` : '';
@@ -20,7 +23,7 @@
     <a 
       href={url}
     >
-    { formatDate(new Date(date)) }
+    { formatDate(new Date(date), showYear) }
     </a>
   </time>
   <h2>
@@ -82,18 +85,14 @@
     }
 
     h2 {
-      grid-column: span 3;
+      grid-column: span 2;
       order: 0;
     }
 
     p {
-      grid-column: span 1;
+      grid-column: span 2;
       order: 0;
     }
-  }
-
-  .subitem:last-child {
-    text-align: right;
   }
 
   .withDeliminator:not(:last-of-type)::after {
@@ -112,10 +111,12 @@
 
   h2 span::before {
     content: "[ ";
+    white-space: nowrap;
   }
 
   h2 span::after {
     content: " ]";
+    white-space: nowrap;
   }
 
   h2 span::before, h2 span::after {

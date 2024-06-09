@@ -14,7 +14,7 @@
   class="main-grid full-width" 
   class:preview={frontmatter.preview && frontmatter.preview !== 'none'}
 >
-  <Header { ...frontmatter } />
+  <Header { ...frontmatter }, showYear={true} />
   <Preview { ...frontmatter }/>
 </li>
 
