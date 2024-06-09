@@ -1,6 +1,9 @@
 # Content
 The contents of `src/content` is directly copyrighted to Anton Hildingsson. All rights reserved.
 
+# Images
+The images in `static/images` are directly copyrighted by Anton Hildingsson. All rights reserved.
+
 # Fonts
 The fonts located in `static/fonts` are redistributed under their respective licenses:
 
