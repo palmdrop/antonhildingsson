@@ -16,28 +16,21 @@
 <div 
   class="work-header main-grid full-width"
 >
-  <time 
-    datetime={date}
-    class="subitem"
-  >
+  <time datetime={date}>
     <a 
       href={url}
     >
     { formatDate(new Date(date)) }
     </a>
   </time>
-  <h2
-    class="subitem"
-  >
+  <h2>
     <a href={url}>
       <span>
         { title }
       </span>
     </a>
   </h2>
-  <p
-    class="subitem"
-  >
+  <p>
     <!--
       Set tag in URL parameter, highlight only items with tag
     -->
@@ -61,14 +54,21 @@
     background-color: var(--accent);
   }
 
-  .subitem {
+  time {
+    grid-column: span 2;
     order: 1;
-    grid-column: span calc(var(--grid-columns) / 2);
   }
 
-  .subitem:nth-child(2) {
+  h2 {
     grid-column: span var(--grid-columns);
     order: 0;
+  }
+
+  p {
+    grid-column: span 4;
+    order: 1;
+
+    text-align: right;
   }
 
   @media screen and (min-width: 500px) {
@@ -76,8 +76,18 @@
       gap: var(--gap);
     }
 
-    .subitem, .subitem:nth-child(2) {
-      grid-column: span calc(var(--grid-columns) / 3);
+    time {
+      grid-column: span 2;
+      order: 0;
+    }
+
+    h2 {
+      grid-column: span 3;
+      order: 0;
+    }
+
+    p {
+      grid-column: span 1;
       order: 0;
     }
   }

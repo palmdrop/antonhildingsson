@@ -15,15 +15,12 @@
     setScrollY(window.scrollY);
   }
 
-  onMount(() => {
-    setScrollY(window.scrollY);
-  });
+  onMount(onScrollY);
 </script>
 
 <svelte:window 
   on:scroll={onScrollY}
 />
-
 
 <div class="app main-grid">
   <Header highlighted={isFloating()}/>
