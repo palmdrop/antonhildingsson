@@ -15,4 +15,4 @@ Ni kan även hitta mig på...
 * [palmdrop.site](https://palmdrop.site)
 * [palmdrop.github.io](https://palmdrop.github.io)
 * [are.na](https://are.na/palmdrop)
-* [github](https://are.na/palmdrop)
+* [github](https://github.io/palmdrop)
