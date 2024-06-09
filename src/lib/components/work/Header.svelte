@@ -9,7 +9,8 @@
     tags = []
   }: WorkFrontmatter = $props();
   
-  const url = fileName ? `/work/${fileName}` : '';
+  const year = new Date(date).getFullYear();
+  const url = fileName ? `/work/${year}/${fileName}` : '';
 </script>
 
 <div 
@@ -52,6 +53,8 @@
   .work-header {
     border-bottom: 1px solid var(--fg);
     padding-bottom: 0.5em;
+
+    gap: 3px var(--gap);
   }
 
   .work-header:hover h2 span {
@@ -59,7 +62,24 @@
   }
 
   .subitem {
-    grid-column: span calc(var(--grid-columns) / 3);
+    order: 1;
+    grid-column: span calc(var(--grid-columns) / 2);
+  }
+
+  .subitem:nth-child(2) {
+    grid-column: span var(--grid-columns);
+    order: 0;
+  }
+
+  @media screen and (min-width: 500px) {
+    .work-header {
+      gap: var(--gap);
+    }
+
+    .subitem, .subitem:nth-child(2) {
+      grid-column: span calc(var(--grid-columns) / 3);
+      order: 0;
+    }
   }
 
   .subitem:last-child {

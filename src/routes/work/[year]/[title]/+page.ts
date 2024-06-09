@@ -4,6 +4,7 @@ export const prerender = true;
 
 export const load: PageLoad = ({ params }) => {
   return {
-    slug: params.slug
+    year: params.year,
+    title: params.title
   }
 }

@@ -3,13 +3,19 @@
 
   const {
     preview,
+    date,
     fileName
   }: WorkFrontmatter = $props();
+
+  const year = new Date(date).getFullYear();
+
+  const shouldShow = preview && preview !== 'none';
+  const previewClass = preview === true ? 'full' : preview;
 </script>
 
-{ #if preview && preview !== 'none'}
-  <div class={`${preview === true ? 'full' : preview} full-width`}>
-    { #await import(`$content/work/${fileName}.md`) }
+{ #if shouldShow }
+  <div class={`${previewClass} full-width`}>
+    { #await import(`$content/work/${year}/${fileName}.md`) }
       <p>loading...</p>
     { :then { default: Component } }
       <Component /> 

@@ -4,8 +4,8 @@ const WORK_DIRECTORY = "src/content/work";
 
 const WORK_LIST_OUTPUT = "src/content/work-list.ts";
 
-const processWork = async (fileName: string) => {
-  const path = `${WORK_DIRECTORY}/${fileName}`;
+const processWork = async (year: string, fileName: string) => {
+  const path = `${WORK_DIRECTORY}/${year}/${fileName}`;
 
   const data = await fs.readFile(path, 'utf8');
   const frontmatter = Object.fromEntries(data
@@ -22,6 +22,12 @@ const processWork = async (fileName: string) => {
     })
   );
 
+  if(year !== new Date(frontmatter.date).getFullYear().toString()) {
+    throw new Error(
+      `Year mismatch in ${fileName}: ${year} != ${new Date(frontmatter.date).getFullYear().toString()}`
+    );
+  }
+
   frontmatter.fileName = fileName.slice(
     0, fileName.lastIndexOf(".")
   );
@@ -33,16 +39,26 @@ const processWork = async (fileName: string) => {
 }
 
 const main = async () => {
-  const fileNames = await fs.readdir(WORK_DIRECTORY);
+  const years = await fs.readdir(WORK_DIRECTORY);
 
-  const items = (
-    await Promise.all(fileNames.map(processWork))
-  ).sort(
-    (workItem1, workItem2) => workItem2
-      .frontmatter
-      .date
-      .localeCompare(workItem1.frontmatter.date)
-  );
+  const processYear = async (year: string) => {
+    const workItems = await fs.readdir(`${WORK_DIRECTORY}/${year}`);
+    return Promise.all(
+      workItems.map(fileName => processWork(year, fileName))
+    );
+  }
+
+
+  const items = (await Promise.all(
+    years.map(processYear)
+  ))
+    .flat()
+    .sort(
+      (workItem1, workItem2) => workItem2
+        .frontmatter
+        .date
+        .localeCompare(workItem1.frontmatter.date)
+    );
 
   await fs.writeFile(
     WORK_LIST_OUTPUT, 

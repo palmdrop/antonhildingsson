@@ -2,7 +2,7 @@
   const { data } = $props();
 </script>
 
-{ #await import(`../../../content/work/${data.slug}.md`) } } 
+{ #await import(`$content/work/${data.year}/${data.title}.md`) } 
   <p>loading...</p>
 { :then { default: Component } }
   <Component alone /> 

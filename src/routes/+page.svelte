@@ -3,8 +3,6 @@
 
   import Landing from "$content/landing.md";
   import workList from "$content/work-list";
-
-  const list = Array(20).fill(workList).flat() as typeof workList;
 </script>
 
 <svelte:head>
@@ -16,13 +14,11 @@
   <Landing />
 </section>
 <section class="main-grid full-width">
-  <p class="main-grid full-width">
-    <span>Datum</span>
-    <span>Titel</span>
-    <span>Taggar</span>
+  <p class="full-width">
+    TEXT OCH ANNAT
   </p>
   <ol class="main-grid full-width">
-    { #each list as item, i (item.frontmatter.title + i)}
+    { #each workList as item, i (item.frontmatter.title + i)}
       <ListItem
         frontmatter={item.frontmatter}
       />
@@ -36,15 +32,5 @@
     width: 100%;
     max-width: 100%;
     padding-top: 1em;
-  }
-
-  p > * {
-    grid-column: span 2;
-    text-transform: uppercase;
-    font-style: italic;
-  }
-
-  p > *:last-child {
-    text-align: right;
   }
 </style>
