@@ -1,7 +1,6 @@
 <script lang="ts">
   import { type WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
-	import { convertToURLFriendly } from "$lib/utils/url";
 
   const { 
     title, 
@@ -74,9 +73,6 @@
 
   h2 {
     font-style: italic;
-    /*
-    white-space: nowrap;
-    */
   }
 
   a {
