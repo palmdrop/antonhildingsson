@@ -28,24 +28,6 @@
   }
 }
 
-.markdown a {
-  font-style: italic;
-}
-
-.markdown a::before {
-  content: "[ ";
-  font-style: normal;
-}
-
-.markdown a::after {
-  content: " ]";
-  font-style: normal;
-}
-
-.markdown a:hover {
-  background-color: var(--accent);
-}
-
 .markdown p {
   max-width: var(--paragraph-width);
 }

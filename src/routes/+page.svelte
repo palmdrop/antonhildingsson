@@ -1,9 +1,7 @@
 <script lang="ts">
-	import ListItem from "$lib/components/work/ListItem.svelte";
   import Landing from "$content/landing.md";
-  import workList from "$content/work-list";
-
-  type WorkItem = typeof workList[number];
+	import workList from "$content/work-list";
+  import WorkList from "$lib/components/work/WorkList.svelte";
 </script>
 
 <svelte:head>
@@ -16,15 +14,14 @@
 </section>
 <section class="main-grid full-width">
   <p class="full-width">
-    TEXT OCH ANNAT
+    <a href="/work">
+      TEXT OCH ANNAT
+    </a>
   </p>
-  <ol class="main-grid full-width">
-    { #each workList as item, i (`${item.frontmatter.title}_${i}`) }
-      <ListItem
-        frontmatter={item.frontmatter}
-      />
-    { /each }
-  </ol>
+  <WorkList 
+    workList={workList}
+    showPreviews={true}
+  />
 </section>
 
 <style>

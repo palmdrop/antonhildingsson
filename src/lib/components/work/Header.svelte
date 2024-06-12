@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tagsQuery } from "$lib/state/query.svelte";
   import { type WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
 
@@ -27,8 +28,8 @@
     </a>
   </time>
   <h2>
-    <a href={url}>
-      <span>
+    <a href={url}> 
+      <span class="clickable">
         { title }
       </span>
     </a>
@@ -37,10 +38,15 @@
     <!--
       Set tag in URL parameter, highlight only items with tag
     -->
-    { #each tags as tag, i (tag)}
-      <button class:withDeliminator={tags.length > 1}>
+    { #each tags as tag (tag)}
+      <a 
+        class="tag" 
+        class:withDeliminator={tags.length > 1} 
+        href={`/work?tags=${tag}`}
+        class:active={tagsQuery.value.includes(tag)}
+      >
         { tag }
-      </button>
+      </a>
     { /each }
   </p>
 </div> 
@@ -109,17 +115,16 @@
     width: 100%;
   }
 
-  h2 span::before {
-    content: "[ ";
-    white-space: nowrap;
+  .tag {
+    width: unset;
   }
 
-  h2 span::after {
-    content: " ]";
-    white-space: nowrap;
+  .tag:hover {
+    text-decoration: underline;
   }
 
-  h2 span::before, h2 span::after {
-    font-style: normal;
+  .active {
+    text-decoration: underline;
+    text-shadow: 0px 0px 3px var(--fg);
   }
 </style>

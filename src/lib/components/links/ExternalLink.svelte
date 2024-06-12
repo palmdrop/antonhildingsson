@@ -11,6 +11,7 @@
 
 <a 
   {...rest} 
+  class="clickable"
   target="_blank" 
   rel="noopener noreferrer"
 >

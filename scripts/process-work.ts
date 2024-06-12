@@ -1,10 +1,12 @@
 import fs from "fs/promises";
 
-const WORK_DIRECTORY = "src/content/work";
+const BASE_DIRECTORY = "src/content";
+const WORK_DIRECTORY = `${BASE_DIRECTORY}/work`;
 
-const WORK_LIST_OUTPUT = "src/content/work-list.ts";
+const WORK_LIST_OUTPUT = `${BASE_DIRECTORY}/work-list.ts`;
+const TAGS_OUTPUT = `${BASE_DIRECTORY}/tags.ts`;
 
-const processWork = async (year: string, fileName: string) => {
+const processWorkItem = async (year: string, fileName: string) => {
   const path = `${WORK_DIRECTORY}/${year}/${fileName}`;
 
   const data = await fs.readFile(path, 'utf8');
@@ -38,16 +40,15 @@ const processWork = async (year: string, fileName: string) => {
   }
 }
 
-const main = async () => {
+const processWork = async () => {
   const years = await fs.readdir(WORK_DIRECTORY);
 
   const processYear = async (year: string) => {
     const workItems = await fs.readdir(`${WORK_DIRECTORY}/${year}`);
     return Promise.all(
-      workItems.map(fileName => processWork(year, fileName))
+      workItems.map(fileName => processWorkItem(year, fileName))
     );
   }
-
 
   const items = (await Promise.all(
     years.map(processYear)
@@ -60,10 +61,21 @@ const main = async () => {
         .localeCompare(workItem1.frontmatter.date)
     );
 
-  await fs.writeFile(
-    WORK_LIST_OUTPUT, 
-    `import type { WorkFrontmatter } from "$lib/types/work"; \nexport default ${JSON.stringify(items, null, 2)} as { path: string, frontmatter: WorkFrontmatter }[];`
+  const tags = new Set(
+    items.map(item => item.frontmatter.tags).flat()
   );
+
+  await Promise.all([
+    fs.writeFile(TAGS_OUTPUT, `export const tags = ${JSON.stringify(Array.from(tags))} as const;`),
+    fs.writeFile(
+      WORK_LIST_OUTPUT, 
+      `import type { WorkFrontmatter } from "$lib/types/work"; \nexport default ${JSON.stringify(items, null, 2)} as { path: string, frontmatter: WorkFrontmatter }[];`
+    )
+  ]);
+}
+
+const main = async () => {
+  await processWork()
 }
 
 main();

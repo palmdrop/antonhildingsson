@@ -89,3 +89,28 @@ button, a, .action {
 .action:hover {
   text-shadow: 0px 0px 3px var(--fg);
 }
+
+.clickable {
+  font-style: italic;
+}
+
+.clickable:hover {
+  background-color: var(--accent);
+}
+
+.clickable.active {
+  text-shadow: 0px 0px 3px var(--fg);
+  text-decoration: underline;
+}
+
+.clickable::before {
+  content: "[ ";
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.clickable::after {
+  content: " ]";
+  font-style: normal;
+  white-space: nowrap;
+}

@@ -8,6 +8,7 @@
 
   import { setScrollY, isFloating } from '../lib/state/scroll.svelte';
 	import { onMount } from 'svelte';
+	import { initializeQueryState } from '$lib/state/query.svelte';
 
   const { children } = $props();
 
@@ -15,7 +16,10 @@
     setScrollY(window.scrollY);
   }
 
-  onMount(onScrollY);
+  onMount(() => {
+    onScrollY();
+    initializeQueryState();
+  });
 </script>
 
 <svelte:window 
