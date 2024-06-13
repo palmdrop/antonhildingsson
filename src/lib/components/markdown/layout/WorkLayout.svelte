@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import Header from "$lib/components/work/Header.svelte";
+	import { createTitle } from "$lib/utils/title";
 
   const { 
     children,
@@ -9,20 +10,35 @@
   }: WorkFrontmatter & { children: any, alone?: boolean } = $props();
 </script>
 
-{ #if alone }
-  <Header { ...frontmatter } />
-{ /if }
-<article class="markdown full-width">
-  {@render children()}
+<svelte:head>
+  {#if alone}
+    <title>
+      { createTitle(frontmatter.title) }
+    </title>
+  {/if}
+</svelte:head>
+
+<article class="full-width" class:alone>
+  { #if alone }
+    <Header { ...frontmatter } />
+  { /if }
+  <section class="markdown">
+    {@render children()}
+  </section>
 </article>
 
 <style>
-  article {
+  .alone {
+    border-top: 1px solid var(--fg);
+    padding-top: 0.5em;
+  }
+
+  section {
     padding: 1em 0em;
   }
 
   @media screen and (min-width: 500px) {
-    article {
+    section {
       padding: 1em;
     }
   }

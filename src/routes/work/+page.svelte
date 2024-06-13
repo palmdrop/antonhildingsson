@@ -5,30 +5,48 @@
   import { tags } from "$content/tags";
 	import Tag from "$lib/components/work/Tag.svelte";
 	import { onMount } from "svelte";
+	import { tagsQuery } from "$lib/state/query.svelte";
+	import { createTitle } from "$lib/utils/title";
 
   let mounted = $state(false);
 
   onMount(() => {
     mounted = true;
   })
+
+  const clearTags = () => {
+    tagsQuery.value = [];
+  }
 </script>
+
+<svelte:head>
+	<title>{createTitle("Texter")}</title>
+</svelte:head>
 
 <section class="main-grid full-width">
   <TitleText>
     makes work. He works. Work makes him human. Humans make him work. Does he like to work? Sometimes, sometimes not. He likes it when his work is work.
   </TitleText>
-  <div>
-    <span>KATEGORIER:</span>
-    <ul class="tags">
-      {#each tags as tag}
-        <li>
-          <Tag tag={tag} />
-        </li>
-      {/each}
-    </ul>
-  </div>
+  <h2 class="full-width">
+    KATEGORIER
+  </h2>
+  <ul class="tags">
+    {#each tags as tag}
+      <li>
+        <Tag tag={tag} />
+      </li>
+    {/each}
+    <li>
+      <button class="clickable" onclick={clearTags}>
+        X
+      </button>
+    </li>
+  </ul>
 </section>
 <section class="work main-grid full-width" class:mounted={mounted}>
+  <h2 class="full-width work-title">
+    TEXTER
+  </h2>
   <WorkList 
     workList={workList}
     showPreviews={false}
@@ -36,10 +54,6 @@
 </section>
 
 <style>
-  section {
-    padding-bottom: 1em;
-  }
-
   ul {
     display: flex;
     gap: var(--gap);
@@ -51,5 +65,14 @@
 
   .mounted {
     display: block;
+  }
+
+  h2 {
+    padding-top: 1em;
+    padding-bottom: 0.0em;
+  }
+
+  .work-title {
+    padding-bottom: 0.5em;
   }
 </style>
