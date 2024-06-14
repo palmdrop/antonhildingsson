@@ -1,7 +1,7 @@
 ---
 title: "A short poem"
 date: "2024-04-31T11:15:21.284Z"
-tags: ["boogie"]
+tags: ["poesi"]
 links: []
 preview: false
 ---

@@ -3,13 +3,19 @@
 
   const { 
     label,
+    active,
     ...rest 
   }: {
-    label: string
+    label: string,
+    active?: boolean
   } & HTMLAnchorAttributes = $props();
 </script>
 
-<a  class="clickable" {...rest}>
+<a  
+  class="clickable" 
+  class:active
+  {...rest}
+>
   { label }
 </a>
 
@@ -17,5 +23,4 @@
   a {
     white-space: nowrap;
   }
-
 </style>

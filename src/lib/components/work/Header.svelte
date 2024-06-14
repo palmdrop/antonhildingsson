@@ -40,7 +40,7 @@
     -->
     { #each tags as tag (tag)}
       <a 
-        class="tag" 
+        class="tag neutral-clickable" 
         class:withDeliminator={tags.length > 1} 
         href={`/work?tags=${tag}`}
         class:active={tagsQuery.value.includes(tag)}
@@ -91,12 +91,12 @@
     }
 
     h2 {
-      grid-column: span 2;
+      grid-column: span 3;
       order: 0;
     }
 
     p {
-      grid-column: span 2;
+      grid-column: span 1;
       order: 0;
     }
   }
@@ -121,10 +121,5 @@
 
   .tag:hover {
     text-decoration: underline;
-  }
-
-  .active {
-    text-decoration: underline;
-    text-shadow: 0px 0px 3px var(--fg);
   }
 </style>

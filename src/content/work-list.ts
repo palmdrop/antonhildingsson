@@ -6,8 +6,8 @@ export default [
       "title": "Featured",
       "date": "2024-05-31T11:15:21.284Z",
       "tags": [
-        "boogie",
-        "abc"
+        "poesi",
+        "prosa"
       ],
       "links": [],
       "preview": "full",
@@ -20,8 +20,8 @@ export default [
       "title": "Super Really long one",
       "date": "2024-05-31T11:15:21.284Z",
       "tags": [
-        "long",
-        "123"
+        "essä",
+        "prosa"
       ],
       "links": [],
       "preview": "partial",
@@ -34,7 +34,7 @@ export default [
       "title": "A short poem",
       "date": "2024-04-31T11:15:21.284Z",
       "tags": [
-        "boogie"
+        "poesi"
       ],
       "links": [],
       "preview": false,
@@ -47,7 +47,7 @@ export default [
       "title": "An old one",
       "date": "2023-04-31T11:15:21.284Z",
       "tags": [
-        "scoop"
+        "poesi"
       ],
       "links": [],
       "preview": true,

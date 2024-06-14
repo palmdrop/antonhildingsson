@@ -1,1 +1,1 @@
-export const tags = ["boogie","abc","long","123","scoop"] as const;
+export const tags = ["poesi","prosa","essä"] as const;

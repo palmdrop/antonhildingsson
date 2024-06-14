@@ -1,7 +1,7 @@
 ---
 title: "Super Really long one"
 date: "2024-05-31T11:15:21.284Z"
-tags: ["long", "123"]
+tags: ["prosa", "essä"]
 links: []
 preview: "partial"
 ---

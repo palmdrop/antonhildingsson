@@ -1,10 +1,25 @@
 <script lang="ts">
+	import { page } from "$lib/state/page.svelte";
   import NavLink from "../links/NavLink.svelte";
   import Title from "./Title.svelte";
 
   const { 
     highlighted = false
   }: { highlighted?: boolean } = $props();
+
+  const links: {
+    href: string,
+    label: string
+  }[] = [
+    {
+      href: "/work" ,
+      label: "texter"
+    },
+    {      
+      href: "/about",
+      label: "om"
+    }
+  ];
 </script>
 
 <header class="main-grid">
@@ -14,26 +29,15 @@
   >
     <Title />
     <ul>
-      <li>
-        <NavLink 
-          href="/work" 
-          label="texter"
-        />
-      </li>
-      <li>
-        <NavLink 
-          href="/about" 
-          label="om"
-        />
-      </li>
-      <li>
-        <!--
-        <NavLink 
-          href="/contact" 
-          label="kontakt"
-        />
-        -->
-      </li>
+      { #each links as link (link.href)}
+        <li >
+          <NavLink 
+            href={link.href}
+            label={link.label}
+            active={page.isOnRootPage(link.href)}
+          />
+        </li>
+      {/each}
     </ul>
   </nav>
 </header>
@@ -56,17 +60,24 @@
 
   .highlighted {
     filter: drop-shadow(0px 0px 5px var(--bg));
-    text-shadow: 0px 0px 0.15em var(--fg);
+    text-shadow: var(--text-shadow);
   }
 
   .highlighted:hover {
     filter: none;
   }
 
+  li {
+    margin-right: 0.5em;
+  }
+
+  li:last-child {
+    margin-right: 0em;
+  }
+
   ul {
     display: flex;
     justify-content: flex-end;
-    gap: var(--gap);
 
     grid-column: span 2;
   }

@@ -20,6 +20,7 @@
   --grid-columns: 6;
 
   --scroll-shadow: 0px 0px 0.1em 0.1em var(--bg);
+  --text-shadow: 0px 0px 0.15em var(--fg);
 
   --transition-time: 0.3s;
 
@@ -87,7 +88,7 @@ button, a, .action {
 }
 
 .action:hover {
-  text-shadow: 0px 0px 3px var(--fg);
+  text-shadow: var(--text-shadow);
 }
 
 .clickable {
@@ -98,9 +99,11 @@ button, a, .action {
   background-color: var(--accent);
 }
 
-.clickable.active {
-  text-shadow: 0px 0px 3px var(--fg);
+.clickable.active, .neutral-clickable.active {
+  text-shadow: var(--text-shadow);
+  /*
   text-decoration: underline;
+  */
 }
 
 .clickable::before {

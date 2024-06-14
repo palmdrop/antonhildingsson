@@ -24,6 +24,10 @@ const processWorkItem = async (year: string, fileName: string) => {
     })
   );
 
+  if(frontmatter.tags) {
+    frontmatter.tags = (frontmatter.tags as string[]).sort();
+  }
+
   if(year !== new Date(frontmatter.date).getFullYear().toString()) {
     throw new Error(
       `Year mismatch in ${fileName}: ${year} != ${new Date(frontmatter.date).getFullYear().toString()}`

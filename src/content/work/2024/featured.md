@@ -1,7 +1,7 @@
 ---
 title: "Featured"
 date: "2024-05-31T11:15:21.284Z"
-tags: ["boogie", "abc"]
+tags: ["poesi", "prosa"]
 links: []
 preview: "full"
 ---
