@@ -30,7 +30,7 @@
   <h2 class="full-width">
     KATEGORIER
   </h2>
-  <ul class="tags">
+  <ul class="tags full-width">
     {#each tags as tag}
       <li>
         <Tag tag={tag} />
@@ -74,5 +74,12 @@
 
   .work-title {
     padding-bottom: 0.5em;
+  }
+
+  .tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 </style>

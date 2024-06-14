@@ -67,7 +67,7 @@
   }
 
   time {
-    grid-column: span 2;
+    grid-column: span 3;
     order: 1;
   }
 
@@ -81,7 +81,7 @@
   }
 
   p {
-    grid-column: span 4;
+    grid-column: span 3;
     order: 1;
 
     text-align: right;
