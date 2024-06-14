@@ -6,24 +6,21 @@ links: []
 preview: "partial"
 ---
 
+<pre style="display: flex; width: 100%; align-items: center; justify-content: center;">
 one
-
 two 
+  thrww
+       three 6
+what         is this
+                 gooby
 
-thrww
-
-three 
-
-6
-
-what is this
-
-gooby
-
-singing a song for the sirens
+singing a song 
+   for the sirens
 
 scoffing at grandpa
+    sludge  trudge 
+    crunch churn
 
-sludge trudge crunch churn
-
-cartoon violence
+cartoon 
+   violence
+</pre>

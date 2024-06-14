@@ -5,9 +5,11 @@
 	import Preview from "./Preview.svelte";
 
   const {
-    frontmatter
+    frontmatter,
+    centerTitle = false
   }: {
-    frontmatter: WorkFrontmatter
+    frontmatter: WorkFrontmatter,
+    centerTitle?: boolean
   } = $props();
 
   const shouldShow = $derived(!tagsQuery.value.length || tagsQuery.value.some(tag => frontmatter.tags?.includes(tag)));
@@ -18,7 +20,7 @@
     class="main-grid full-width" 
     class:preview={frontmatter.preview && frontmatter.preview !== 'none'}
   >
-    <Header { ...frontmatter }, showYear={true} />
+    <Header { ...frontmatter }, showYear={true} {centerTitle} />
     <Preview { ...frontmatter }/>
   </li>
 { /if }

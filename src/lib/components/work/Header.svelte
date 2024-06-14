@@ -8,9 +8,11 @@
     date,
     fileName,
     tags = [],
-    showYear = true
+    showYear = true,
+    centerTitle
   }: WorkFrontmatter & { 
-    showYear: boolean
+    showYear: boolean,
+    centerTitle?: boolean
   } = $props();
   
   const year = new Date(date).getFullYear();
@@ -19,6 +21,7 @@
 
 <div 
   class="work-header main-grid full-width"
+  class:centered-title={centerTitle}
 >
   <time datetime={date}>
     <a 
@@ -73,6 +76,10 @@
     order: 0;
   }
 
+  .centered-title h2 {
+    text-align: left;
+  }
+
   p {
     grid-column: span 4;
     order: 1;
@@ -91,23 +98,23 @@
     }
 
     h2 {
-      grid-column: span 3;
+      grid-column: span 2;
       order: 0;
     }
 
     p {
-      grid-column: span 1;
+      grid-column: span 2;
       order: 0;
+    }
+
+    .centered-title h2 {
+      text-align: center;
     }
   }
 
   .withDeliminator:not(:last-of-type)::after {
     content: ", ";
     margin-right: 1ch;
-  }
-
-  h2 {
-    font-style: italic;
   }
 
   a {

@@ -20,7 +20,7 @@
 
 <article class="full-width" class:alone>
   { #if alone }
-    <Header { ...frontmatter } />
+    <Header { ...frontmatter } centerTitle={alone} />
   { /if }
   <section class="markdown">
     {@render children()}

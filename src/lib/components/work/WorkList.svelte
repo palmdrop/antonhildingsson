@@ -15,6 +15,7 @@
         ...item.frontmatter,
         preview: showPreviews
       }}
+      centerTitle={showPreviews}
     />
   { /each }
 </ol>
