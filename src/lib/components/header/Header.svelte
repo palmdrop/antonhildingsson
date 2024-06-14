@@ -16,15 +16,23 @@
     <ul>
       <li>
         <NavLink 
+          href="/work" 
+          label="texter"
+        />
+      </li>
+      <li>
+        <NavLink 
           href="/about" 
           label="om"
         />
       </li>
       <li>
+        <!--
         <NavLink 
           href="/contact" 
           label="kontakt"
         />
+        -->
       </li>
     </ul>
   </nav>

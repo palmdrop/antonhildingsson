@@ -15,9 +15,9 @@
 </section>
 <section class="main-grid full-width">
   <p class="full-width">
-    <a href="/work">
-      TEXT OCH ANNAT
-    </a>
+    <a class="clickable" href="/work">
+      TEXTER
+    </a> 
   </p>
   <WorkList 
     workList={workList}
