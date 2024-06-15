@@ -3,7 +3,7 @@
   --fg: black;
   --accent: yellow;
 
-  --font: Baskervville;
+  --font: Baskervville, serif;
   --font-heading: var(--font);
 
   --font-size: clamp(1.0rem, 3vw, 1.5rem);
