@@ -22,3 +22,13 @@ Ni kan även hitta honom på...
 * [github](https://github.io/palmdrop)
 * [instagram / palmdrop](https://instagram.com/palmdrop)
 * [palmdrop.github.io](https://palmdrop.github.io)
+
+---
+
+Om hemsidan: 
+
+Denna sida sparar ingen personlig information, samlar ingen statistik för reklamsyften, och använder inga cookies.
+
+*TYPSNITT:*
+* [Bakservville](https://en.wikipedia.org/wiki/Baskerville#:~:text=Baskerville%20is%20classified%20as%20a,Transitional%20serif)
+* [???]()
