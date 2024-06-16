@@ -119,3 +119,23 @@ button, a, .action {
   font-style: normal;
   white-space: nowrap;
 }
+
+hr {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  margin-bottom: 1.0em;
+  border: none;
+  border-bottom: 1px solid var(--fg);
+  text-align: center;
+}
+
+hr::after {
+  content: "§§§";
+  display: inline-block;
+  position: relative;
+  top: 0.5em;
+  padding: 0 0.25em;
+  background-color: var(--bg);
+  font-family: var(--font-accent);
+}

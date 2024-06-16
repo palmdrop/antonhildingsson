@@ -36,11 +36,6 @@
   max-width: var(--paragraph-width);
 }
 
-.markdown hr {
-  width: 100%;
-  margin-bottom: 1.0em;
-}
-
 .markdown em {
   font-style: italic;
 }

@@ -3,10 +3,10 @@
 </script>
 
 <TitleText>
-  skriver saker. Han är en klump kompakt kol, en aspirerande råttkung, dumsmart datapoet.
+  skriver prosa och poesi. Han är en klump kompakt kol, en aspirerande råttkung, dumsmart datapoet.
   Han bor i mullen och äter mycket malm.
 </TitleText>
 
-I det spretiga flödet nedan finns tankar och skräp och fragment från sådant han skrivit. Prosa och dikter finns bland <a class="clickable" href="/work">texter</a>.
+I det spretiga <a class="clickable" href="#feed">flödet</a> nedan finns fragment, tankar och bilder, spillor och snuttar från sådant jag har skrivit. Prosa och dikter finns bland <a class="clickable" href="/work">texter</a>.
 
-# FLÖDET
+<div style="padding-bottom: 1em" id="feed"></div>

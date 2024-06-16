@@ -10,6 +10,7 @@
 	import { onMount } from 'svelte';
 	import { initializeQueryState } from '$lib/state/query.svelte';
 	import { initializePageState } from '$lib/state/page.svelte';
+	import { scrollToAnchor } from '$lib/utils/url';
 
   const { children } = $props();
 
@@ -21,6 +22,7 @@
     onScrollY();
     initializeQueryState();
     initializePageState();
+    scrollToAnchor();
   });
 </script>
 

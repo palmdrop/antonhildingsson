@@ -10,3 +10,17 @@ export const convertToURLFriendly = (value: string) => {
     .replace(/\s+/g, "-")            // Replace whitespace with dash
     .toLowerCase();                  // Convert to lowercase
 }
+
+
+export const scrollToAnchor = (retryFrequency = 100) => {
+  const interval = setInterval(() => {
+    if(!window.location.hash || document.readyState !== 'complete') return;
+    
+    const target = document.querySelector(window.location.hash) as HTMLElement | null;
+    if(!target) return;
+
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    clearInterval(interval);
+  }, retryFrequency);
+}
