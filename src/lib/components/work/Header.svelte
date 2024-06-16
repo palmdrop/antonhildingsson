@@ -64,6 +64,9 @@
 
   .work-header:hover h2 span {
     background-color: var(--accent);
+
+    font-family: var(--font-accent);
+    font-style: normal;
   }
 
   time {

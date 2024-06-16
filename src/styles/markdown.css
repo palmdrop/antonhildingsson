@@ -44,3 +44,8 @@
 .markdown em {
   font-style: italic;
 }
+
+.markdown h1, .markdown h2, .markdown h3 {
+  text-transform: uppercase;
+  padding-top: 0.25em;
+}

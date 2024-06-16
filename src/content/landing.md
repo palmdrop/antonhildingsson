@@ -3,8 +3,10 @@
 </script>
 
 <TitleText>
-  är en klump kompakt kol. Han bor i betongväggar och äter mycket malm.
-  Senare i år kommer han skriva en riktigt lång text.
+  skriver saker. Han är en klump kompakt kol, en aspirerande råttkung, dumsmart datapoet.
+  Han bor i mullen och äter mycket malm.
 </TitleText>
 
-Skriver han eller skriver han och varför skriver han, vem skriver han, hur skriver han, vem är han? hur är han? Det finns många frågor och alla har svar, titta under er stol. I manualen. Där finns svar.
+I det spretiga flödet nedan finns tankar och skräp och fragment från sådant han skrivit. Prosa och dikter finns bland <a class="clickable" href="/work">texter</a>.
+
+# FLÖDET
