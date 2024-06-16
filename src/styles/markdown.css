@@ -8,9 +8,13 @@
 
 .markdown ul {
   list-style: circle;
-  list-style-position: inside;
-
   padding-bottom: 1em;
+}
+
+.markdown ul li {
+  list-style-position: outside;
+  max-width: var(--paragraph-width);
+  margin-left: 1.2em;
 }
 
 .markdown img {

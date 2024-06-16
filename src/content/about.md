@@ -31,4 +31,4 @@ Denna sida sparar ingen personlig information, samlar ingen statistik för rekla
 
 *TYPSNITT:*
 * [Bakservville](https://en.wikipedia.org/wiki/Baskerville#:~:text=Baskerville%20is%20classified%20as%20a,Transitional%20serif)
-* [???]()
+* [Degheest (Louise)](https://velvetyne.fr/fonts/degheest/) by Ange Degheest, Camille Depalle, Eugénie Bidaut, Luna Delabre, Mandy Elbé, May Jolivet, Oriane Charvieux, Benjamin Gomez, Justine Herbel. Distributed by [velvetyne.fr](https://velvetyne.fr/).

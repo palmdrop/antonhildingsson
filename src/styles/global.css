@@ -5,6 +5,7 @@
 
   --font: Baskervville, serif;
   --font-heading: var(--font);
+  --font-accent: Louise, serif;
 
   --font-size: clamp(1.0rem, 3vw, 1.5rem);
   --paragraph-width: 60ch;
@@ -97,23 +98,28 @@ button, a, .action {
 
 .clickable:hover {
   background-color: var(--accent);
+
+  font-family: var(--font-accent);
+  font-style: normal;
+
+  letter-spacing: -0.003em;
 }
 
 .clickable.active, .neutral-clickable.active {
   text-shadow: var(--text-shadow);
-  /*
-  text-decoration: underline;
-  */
 }
 
 .clickable::before {
   content: "[ ";
-  font-style: normal;
-  white-space: nowrap;
 }
 
 .clickable::after {
   content: " ]";
+}
+
+.clickable::before, .clickable::after {
   font-style: normal;
   white-space: nowrap;
+
+  opacity: 1.0;
 }
