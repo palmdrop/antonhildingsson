@@ -31,9 +31,7 @@ Ni kan även hitta honom på...
 
 **No personal data**: Ingen personlig information sparas.
 
-**No statistics**: Ingen statistik samlas för reklamsyften.
-
-**No ads**: Ingen reklam.
+**No ads**: Ingen reklam eller statistik insamlad i reklamsyfte.
 
 **No AI**: Innehållet på denna sida *FÅR INTE* användas i syfte att träna AI.
 

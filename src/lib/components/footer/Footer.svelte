@@ -4,17 +4,11 @@
 
 <footer class="full-width">
   <p xmlns:cc="http://creativecommons.org/ns#">
-    <!--
-    <a rel="cc:attributionURL" href="https://antonhildingsson.com">
-      This work
-    </a> 
-    -->
     © 2024
     <a 
       rel="cc:attributionURL dct:creator noopener noreferrer"
       property="cc:attributionName"
-      href="https://palmdrop.site/nodes/about"
-      target="_blank"
+      href="/about"
       class="neutral-clickable"
     >
       <span class="underlined">
