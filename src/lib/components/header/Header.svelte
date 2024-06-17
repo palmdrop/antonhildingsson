@@ -59,7 +59,7 @@
   }
 
   .highlighted {
-    filter: drop-shadow(0px 0px 5px var(--bg));
+    filter: drop-shadow(0px 0px 0.15em var(--bg));
     text-shadow: var(--text-shadow);
   }
 

@@ -44,3 +44,11 @@
   text-transform: uppercase;
   padding-top: 0.25em;
 }
+
+.markdown strong {
+  /*
+  font-weight: bold;
+  text-shadow: var(--text-shadow);
+  */
+  text-decoration: underline;
+}

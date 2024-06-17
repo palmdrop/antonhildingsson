@@ -1,5 +1,8 @@
 :root {
+  /*
   --bg: whitesmoke;
+  */
+  --bg: white;
   --fg: black;
   --accent: yellow;
 
@@ -59,6 +62,7 @@ html {
   font-size: var(--font-size);
 
   scroll-behavior: smooth;
+  background-color: var(--bg);
 }
 
 body {
@@ -101,6 +105,10 @@ button, a, .action {
 
   font-family: var(--font-accent);
   font-style: normal;
+}
+
+.neutral-clickable:hover {
+  background-color: var(--accent);
 }
 
 .clickable.active, .neutral-clickable.active {

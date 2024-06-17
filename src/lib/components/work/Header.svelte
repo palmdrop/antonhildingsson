@@ -115,9 +115,13 @@
     }
   }
 
-  .withDeliminator:not(:last-of-type)::after {
-    content: ", ";
+  .withDeliminator:not(:last-of-type) {
     margin-right: 1ch;
+  }
+
+  .withDeliminator:not(:last-of-type)::after {
+    content: ",";
+    background-color: var(--bg);
   }
 
   a {
@@ -130,6 +134,6 @@
   }
 
   .tag:hover {
-    text-decoration: underline;
+    background-color: var(--accent);
   }
 </style>

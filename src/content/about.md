@@ -27,7 +27,17 @@ Ni kan även hitta honom på...
 
 # *OM HEMSIDAN*
 
-Denna sida sparar ingen personlig information, samlar ingen statistik för reklamsyften, och använder inga cookies.
+**No cookies**: Denna sida använder *inte cookies*.
+
+**No personal data**: Ingen personlig information sparas.
+
+**No statistics**: Ingen statistik samlas för reklamsyften.
+
+**No ads**: Ingen reklam.
+
+**No AI**: Innehållet på denna sida *FÅR INTE* användas i syfte att träna AI.
+
+*I do not consent to the content of this site being used for AI training.*
 
 <br>
 
