@@ -1,5 +1,5 @@
 # Content
-The contents of `src/content` is directly copyrighted to Anton Hildingsson. All rights reserved.
+The contents of `src/content` is licensed to Anton Hildingsson under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 # Images
 The images in `static/images` are directly copyrighted by Anton Hildingsson. All rights reserved.
