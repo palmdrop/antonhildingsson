@@ -26,17 +26,31 @@
       <span class="underlined">
         CC BY-NC-ND 4.0
       </span>
-      <img style="height:22px!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-      <img style="height:22px!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-      <img style="height:22px!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-      <img style="height:22px!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
     </a>
+  </p>
+  <p>
+    <a 
+      href="https://github.com/palmdrop/antonhildingsson"
+      class="underlined neutral-clickable"
+    >
+      Code 
+    </a>
+    is released under the 
+    <a 
+      href="https://github.com/non-ai-licenses/non-ai-licenses/blob/main/NON-AI-MIT"
+      class="underlined neutral-clickable"
+    >
+      MIT NON-AI license
+    </a>.
   </p>
 </footer>
 
 <style>
   footer {
-    margin: var(--gap);
     padding: var(--gap);
 
     display: grid;
@@ -45,6 +59,8 @@
     border-top: 1px solid var(--fg);
 
     margin-top: auto;
+
+    font-size: 0.75em;
   }
 
   .underlined {
