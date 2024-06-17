@@ -10,10 +10,9 @@ The fonts located in `static/fonts` are redistributed under their respective lic
 * Baskervville and Baskervville Italic are available under the SIL Open Font license, as stated by the authors. Copies of the licenses are included here: `static/fonts/baskervville-regular/LICENSE.txt` and `static/fonts/baskervville-italic/LICENSE.txt`
 
 # Code
-All of the code, with the exception of `src/content`, is distributed under MIT License, see below.
+All of the code, with the exception of `src/content`, is distributed under MIT NON-AI License, see below.
 
-## MIT License
-
+## MIT NON-AI License
 Copyright (c) 2022-2024 Anton Hildingsson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,6 +24,18 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+In addition, the following restrictions apply:
+
+1. The Software and any modifications made to it may not be used for the purpose of training or improving machine learning algorithms,
+including but not limited to artificial intelligence, natural language processing, or data mining. This condition applies to any derivatives,
+modifications, or updates based on the Software code. Any usage of the Software in an AI-training dataset is considered a breach of this License.
+
+2. The Software may not be included in any dataset used for training or improving machine learning algorithms,
+including but not limited to artificial intelligence, natural language processing, or data mining.
+
+3. Any person or organization found to be in violation of these restrictions will be subject to legal action and may be held liable
+for any damages resulting from such use.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
