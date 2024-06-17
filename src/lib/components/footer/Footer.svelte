@@ -44,7 +44,6 @@
   footer {
     margin: var(--gap);
     padding: var(--gap);
-    padding-bottom: 0;
 
     display: grid;
     justify-content: center;
