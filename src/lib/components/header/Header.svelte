@@ -63,8 +63,10 @@
     text-shadow: var(--text-shadow);
   }
 
-  .highlighted:hover {
-    filter: none;
+  @media (hover: hover) and (pointer: fine) {
+    .highlighted:hover {
+      filter: none;
+    }
   }
 
   li {

@@ -10,7 +10,7 @@
   font-style: italic;
 }
 
-
+/*
 @font-face {
     font-family: 'Avara_Bold';
     src:    url('/fonts/avara/Bold/Avara-Bold.eot');
@@ -140,6 +140,7 @@
   src: url("/fonts/degheest/Latitude-Regular.woff2") format("woff2"),
     url("/fonts/degheest/Latitude-Regular.woff") format("woff");
 }
+*/
 
 @font-face {
   font-family: "Louise";

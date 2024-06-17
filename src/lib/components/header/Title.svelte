@@ -26,8 +26,11 @@
     padding-right: 0.2em;
   }
 
-  .title:hover :not(.dot) {
-    background-color: var(--accent);
+
+  @media (hover: hover) and (pointer: fine) {
+    .title:hover :not(.dot) {
+      background-color: var(--accent);
+    }
   }
 
   a::before, a::after {

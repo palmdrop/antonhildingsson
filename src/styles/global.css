@@ -83,32 +83,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-button, a, .action {
+button, a {
   cursor: pointer;
-}
-
-.action {
-  text-shadow: 0px 0px 0px var(--bg);
-  transition: var(--transition-time);
-}
-
-.action:hover {
-  text-shadow: var(--text-shadow);
 }
 
 .clickable {
   font-style: italic;
 }
 
-.clickable:hover {
-  background-color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .clickable:hover {
+    background-color: var(--accent);
 
-  font-family: var(--font-accent);
-  font-style: normal;
-}
+    font-family: var(--font-accent);
+    font-style: normal;
+  }
 
-.neutral-clickable:hover {
-  background-color: var(--accent);
+  .neutral-clickable:hover {
+    background-color: var(--accent);
+  }
 }
 
 .clickable.active, .neutral-clickable.active {
