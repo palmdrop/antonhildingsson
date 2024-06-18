@@ -26,10 +26,10 @@
       <span class="underlined">
         CC BY-NC-ND 4.0
       </span>
-      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important;margin-left:3px; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
     </a>
   </p>
   <p>
@@ -55,12 +55,16 @@
 
     display: grid;
     justify-content: center;
+    gap: 0;
+    line-height: 1.1em;
 
     border-top: 1px solid var(--fg);
 
     margin-top: auto;
 
     font-size: 0.75em;
+
+    width: 100%;
   }
 
   .underlined {

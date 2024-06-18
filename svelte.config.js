@@ -14,6 +14,7 @@ const config = {
 			smartypants: true,
       layout: {
         work: "./src/lib/components/markdown/layout/WorkLayout.svelte",
+        sprawl: "./src/lib/components/markdown/layout/SprawlLayout.svelte",
         _: "./src/lib/components/markdown/layout/DefaultLayout.svelte"
       }
 		})

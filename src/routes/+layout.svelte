@@ -48,22 +48,36 @@
   on:scroll={onScrollY}
 />
 
-<div class="app main-grid">
-  <Header highlighted={isFloating()}/>
+<div class="app">
+  <div class="container main-grid">
+    <Header highlighted={isFloating()}/>
 
-	<main class="main-grid full-width">
-    {@render children()}
-	</main>
+    <main class="main-grid full-width">
+      {@render children()}
+    </main>
 
+  </div>
   <Footer />
 </div>
 
 <style>
 	.app {
 		display: flex;
-		flex-direction: column;
-    height: 100vh;
+    flex-direction: column;
+    position: relative;
+
+    align-items: center;
+
+    min-height: 100vh;
 	}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    max-width: var(--max-page-width);
+  }
 
 	main {
     padding: var(--edge-padding);

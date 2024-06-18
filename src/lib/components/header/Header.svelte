@@ -46,6 +46,7 @@
   header {
     position: fixed;
     width: 100%;
+    max-width: var(--max-page-width);
     padding: var(--edge-padding);
 
     z-index: 1;

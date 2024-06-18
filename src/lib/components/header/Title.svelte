@@ -20,9 +20,7 @@
     font-style: italic;
     grid-column: span calc(var(--grid-columns) - 2);
 
-    display: inline-block;
     font-family: var(--font-accent);
-
     padding-right: 0.2em;
   }
 
