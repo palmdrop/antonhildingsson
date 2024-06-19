@@ -62,10 +62,15 @@
     gap: 3px var(--gap);
   }
 
+  .work-header:active h2 span {
+    background-color: var(--accent);
+    font-family: var(--font-accent);
+    font-style: normal;
+  }
+
   @media (hover: hover) and (pointer: fine) {
     .work-header:hover h2 span {
       background-color: var(--accent);
-
       font-family: var(--font-accent);
       font-style: normal;
     }
@@ -133,9 +138,5 @@
 
   .tag {
     width: unset;
-  }
-
-  .tag:hover {
-    background-color: var(--accent);
   }
 </style>

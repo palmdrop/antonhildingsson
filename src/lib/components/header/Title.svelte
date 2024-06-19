@@ -25,6 +25,10 @@
   }
 
 
+  .title:active :not(.dot) {
+    background-color: var(--accent);
+  }
+
   @media (hover: hover) and (pointer: fine) {
     .title:hover :not(.dot) {
       background-color: var(--accent);

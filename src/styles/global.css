@@ -93,10 +93,19 @@ button, a {
   font-style: italic;
 }
 
+.clickable:active {
+  background-color: var(--accent);
+  font-family: var(--font-accent);
+  font-style: normal;
+}
+
+.neutral-clickable:active {
+  background-color: var(--accent);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .clickable:hover {
     background-color: var(--accent);
-
     font-family: var(--font-accent);
     font-style: normal;
   }

@@ -38,6 +38,8 @@
   h2 {
     display: inline-block;
     width: 100%;
+
+    padding-bottom: 0.5em;
   }
 
   span::before {

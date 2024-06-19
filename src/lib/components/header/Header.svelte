@@ -64,6 +64,10 @@
     text-shadow: var(--text-shadow);
   }
 
+  .highlighted:active {
+    filter: none;
+  }
+
   @media (hover: hover) and (pointer: fine) {
     .highlighted:hover {
       filter: none;
