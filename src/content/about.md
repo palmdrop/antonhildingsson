@@ -3,7 +3,7 @@
 </script>
 
 <TitleText>
-  är en simple bloggare som absolut inte använder AI för att skriva dummy-text.
+  skriver prosa och poesi. När han inte studerar jobbar han som mjukvaruutvecklare. 
 </TitleText>
 
 Han drömmer om en värld där alla har en liten kruka av grönt gräs på sitt skrivbord.
@@ -25,20 +25,18 @@ Ni kan även hitta honom på...
 
 ---
 
-# *OM HEMSIDAN*
+# *ABOUT THIS PAGE*
 
-**No cookies**: Denna sida använder *inte cookies*.
+**No cookies**: This page *does not* use cookies.
 
-**No personal data**: Ingen personlig information sparas.
+**No personal data**: None of your personal data is stored.
 
-**No ads**: Ingen reklam eller statistik insamlad i reklamsyfte.
+**No ads**: There will never be ads and no statistics are gathered for marketing purposes.
 
-**No AI**: Innehållet på denna sida *FÅR INTE* användas i syfte att träna AI.
-
-*I do not consent to the content of this site being used for AI training.*
+**No AI**: *I DO NOT consent to the content of this site being used for AI training.*
 
 <br>
 
-## *TYPSNITT*
+## *FONTS*
 * [Bakservville](https://en.wikipedia.org/wiki/Baskerville#:~:text=Baskerville%20is%20classified%20as%20a,Transitional%20serif)
 * [Degheest (Louise)](https://velvetyne.fr/fonts/degheest/) by Ange Degheest, Camille Depalle, Eugénie Bidaut, Luna Delabre, Mandy Elbé, May Jolivet, Oriane Charvieux, Benjamin Gomez, Justine Herbel. Distributed by [velvetyne.fr](https://velvetyne.fr/).

@@ -1,5 +1,7 @@
 .markdown {
   width: 100%;
+
+  counter-reset: figure;
 }
 
 .markdown > * {
@@ -46,9 +48,17 @@
 }
 
 .markdown strong {
-  /*
+  font-style: italic;
   font-weight: bold;
-  text-shadow: var(--text-shadow);
-  */
-  text-decoration: underline;
+}
+
+.markdown figcaption {
+  counter-increment: figure;
+  font-size: 0.75em;
+  font-style: italic;
+  margin-top: -0.5em;
+}
+
+.markdown figcaption::before {
+  content: "Fig." counter(figure) " - ";
 }

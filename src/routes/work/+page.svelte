@@ -8,6 +8,8 @@
 	import { tagsQuery } from "$lib/state/query.svelte";
 	import { createTitle } from "$lib/utils/title";
 
+  import Work from "$content/work.md";
+
   let mounted = $state(false);
 
   onMount(() => {
@@ -24,9 +26,7 @@
 </svelte:head>
 
 <section class="main-grid full-width">
-  <TitleText>
-    makes work. He works. Work makes him human. Humans make him work. Does he like to work? Sometimes, sometimes not. He likes it when his work is work.
-  </TitleText>
+  <Work />
   <h2 class="full-width">
     KATEGORIER
   </h2>

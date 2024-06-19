@@ -1,8 +1,8 @@
 <script lang="ts">
   import Landing from "$content/landing.md";
-	import workList from "$content/work-list";
+	// import workList from "$content/work-list";
 	import SprawlList from "$lib/components/sprawl/SprawlList.svelte";
-  import WorkList from "$lib/components/work/WorkList.svelte";
+  // import WorkList from "$lib/components/work/WorkList.svelte";
 	import { createTitle } from "$lib/utils/title";
 </script>
 
