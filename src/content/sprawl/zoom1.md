@@ -8,6 +8,6 @@ title: "Featured"
 
   ![zoom 1](/images/zoom2.jpeg "zoom 1")
   <figcaption>
-    Ett fragment från en större bild.
+    Ett fragment av en större bild.
   </figcaption>
 </figure>

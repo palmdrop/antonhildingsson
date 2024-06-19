@@ -1,6 +1,5 @@
 <script lang="ts">
 	import workList from "$content/work-list";
-	import TitleText from "$lib/components/text/TitleText.svelte";
   import WorkList from "$lib/components/work/WorkList.svelte";
   import { tags } from "$content/tags";
 	import Tag from "$lib/components/work/Tag.svelte";
