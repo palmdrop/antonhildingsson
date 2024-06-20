@@ -10,7 +10,7 @@ The fonts located in `static/fonts` are redistributed under their respective lic
 * Baskervville and Baskervville Italic are available under the SIL Open Font license, as stated by the authors. Copies of the licenses are included here: `static/fonts/baskervville-regular/LICENSE.txt` and `static/fonts/baskervville-italic/LICENSE.txt`
 
 # Code
-All of the code, with the exception of `src/content`, is distributed under MIT NON-AI License, see below.
+Unless otherwise stated, the code (excluding `src/content`) is distributed under MIT NON-AI License, see below.
 
 ## MIT NON-AI License
 Copyright (c) 2022-2024 Anton Hildingsson

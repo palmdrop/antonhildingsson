@@ -3,8 +3,9 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm install --legacy-peer-deps && npm run process && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
+    "prebuild": "npm i --legacy-peer-deps && npm run process && npm run sync",
 		"process": "tsx ./scripts/process-work.ts",
     "sync": "node ./scripts/download-arena-sprawl.js",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

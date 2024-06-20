@@ -1,9 +1,11 @@
 <script>
   import TitleText from "$lib/components/text/TitleText.svelte";
+  import { getAge } from "$lib/utils/date";
+  const age = getAge(import.meta.env.VITE_BIRTH_DATE);
 </script>
 
 <TitleText>
-  skriver prosa och poesi. När han inte studerar eller skriver så jobbar han som mjukvaruutvecklare. Han är tjugoåtta år och bosatt i Göteborg.
+  skriver prosa och poesi. När han inte studerar eller skriver så jobbar han som mjukvaruutvecklare. Han är {age} år gammal och bosatt i Göteborg.
 </TitleText>
 
 Anton behandlar teman som medvetandet, arbete, hopp och framtiden i sitt skrivande. Han tror att vi måste drömma nya, 

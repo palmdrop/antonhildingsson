@@ -47,7 +47,7 @@
 
 <style>
   section {
-    padding-top: 1.5em;
+    padding-top: 1.75em;
   }
 
   h2 {

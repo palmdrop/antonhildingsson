@@ -4,9 +4,6 @@
   import workList from "$content/work-list";
 
   const latest = workList[0].frontmatter;
-
-  const year = new Date(latest.date).getFullYear();
-  const url = latest.fileName ? `/work/${year}/${latest.fileName}` : '';
 </script>
 
 
