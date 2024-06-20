@@ -36,6 +36,8 @@
     <a 
       href="https://github.com/palmdrop/antonhildingsson"
       class="underlined neutral-clickable"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       Code 
     </a>
@@ -43,6 +45,8 @@
     <a 
       href="https://github.com/non-ai-licenses/non-ai-licenses/blob/main/NON-AI-MIT"
       class="underlined neutral-clickable"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       MIT NON-AI license
     </a>.
