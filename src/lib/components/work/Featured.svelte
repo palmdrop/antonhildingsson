@@ -1,5 +1,18 @@
 <script lang="ts">
-  import FeaturedWork from '../../../content/work/featured.md';
+	import Preview from "$lib/components/work/Preview.svelte";
+  import workList from "$content/work-list";
+
+  const latest = workList[0].frontmatter;
+
+  const year = new Date(latest.date).getFullYear();
+  const url = latest.fileName ? `/work/${year}/${latest.fileName}` : '';
 </script>
 
-<FeaturedWork />
+
+<h2>
+  <a class="clickable" href={url}>
+    SENASTE - {latest.title}
+  </a>
+</h2>
+
+<Preview { ...latest }/>

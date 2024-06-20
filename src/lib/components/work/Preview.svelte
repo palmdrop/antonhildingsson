@@ -43,7 +43,16 @@
 
     width: 100%;
     height: 100%;
+    max-height: var(--max-partial-preview-height);
 
-    box-shadow: inset 0px -70px 50px 0px var(--bg);
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 50%,
+      var(--bg) 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
   }
 </style>

@@ -1,5 +1,6 @@
 <script>
   import TitleText from "$lib/components/text/TitleText.svelte";
+  import Featured from "$lib/components/work/Featured.svelte";
 </script>
 
 <TitleText>
@@ -7,6 +8,16 @@
   Han bor i mullen och äter mycket malm.
 </TitleText>
 
-I det spretiga <a class="clickable" href="#sprawl">flödet</a> nedan finns fragment, tankar och bilder, spillor och snuttar från sådant jag har skrivit. Prosa och dikter finns bland <a class="clickable" href="/work">texter</a>.
+Bland [fragmenten](#sprawl) nedan finns tankar och bilder, spillor och snuttar från sådant jag har skrivit. Prosa och dikter finns bland [texter](/work).
+
+<br>
+
+<Featured />
+
+<br>
+
+<br>
+
+# [*FRAGMENT*](#sprawl)
 
 <div id="sprawl"></div>

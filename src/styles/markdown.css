@@ -1,7 +1,5 @@
 .markdown {
   width: 100%;
-
-  counter-reset: figure;
 }
 
 .markdown > * {

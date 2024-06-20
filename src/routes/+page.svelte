@@ -25,7 +25,4 @@
 </section>
 
 <style>
-  section {
-    padding-bottom: 0.5em;
-  }
 </style>

@@ -10,7 +10,7 @@ export default [
         "prosa"
       ],
       "links": [],
-      "preview": "full",
+      "preview": "partial",
       "fileName": "featured"
     }
   },

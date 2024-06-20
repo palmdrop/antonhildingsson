@@ -3,6 +3,7 @@
 
   const {
     children,
+    href,
     ...rest
   }: {
     children: any
@@ -10,10 +11,11 @@
 </script>
 
 <a 
-  {...rest} 
+  href={href}
   class="clickable"
-  target="_blank" 
+  target={!href || href?.startsWith("#") || href?.startsWith("/") ? "_self" : "_blank"}
   rel="noopener noreferrer"
+  {...rest} 
 >
   { @render children() }
 </a>

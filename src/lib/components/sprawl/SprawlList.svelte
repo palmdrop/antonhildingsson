@@ -1,7 +1,13 @@
 <script lang="ts">
-  const sprawlImport = import.meta.glob("$content/sprawl/*.md", { eager: true });
-  export const sprawlList = (Object.values(sprawlImport) as { default: ConstructorOfATypedSvelteComponent }[])
-    .map(item => ({ Component: item.default }));
+  const sprawlImport = import.meta.glob("$content/sprawl/**/*.md", { eager: true });
+  export const sprawlList = (
+    Object.values(sprawlImport) as { default: ConstructorOfATypedSvelteComponent, metadata: any }[]
+  )
+    .map(item => ({ Component: item.default, metadata: item.metadata }))
+    // TODO: random order?
+    .sort((item1, item2) => {
+      return new Date(item2.metadata.date).getTime() - new Date(item1.metadata.date).getTime();
+    });
 
 </script>
 
@@ -14,21 +20,11 @@
 </ol>
 
 <style>
+  ol {
+    counter-reset: figure;
+  }
+
   li {
     grid-column: span var(--grid-columns);
   }
-
-  /*
-  @media screen and (min-width: 1000px) {
-    li {
-      grid-column: span calc(var(--grid-columns) / 2);
-    }
-  }
-
-  @media screen and (min-width: 1500px) {
-    li {
-      grid-column: span calc(var(--grid-columns) / 3);
-    }
-  }
-  */
 </style>

@@ -33,12 +33,12 @@
     padding-top: 0.5em;
   }
 
-  section {
+  .alone section {
     padding: 1em 0em;
   }
 
   @media screen and (min-width: 500px) {
-    section {
+    .alone section {
       padding: 1em;
     }
   }

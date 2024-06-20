@@ -9,14 +9,19 @@
     link
   }: { children: any, date: string, link?: string, title?: string } = $props();
 
-  const sprawlID = `sprawl-${convertToURLFriendly(formatDate(new Date(date)))}` ;
+  const sprawlID = `sprawl-${convertToURLFriendly(date)}` ;
 </script>
 
 <section 
   id={sprawlID}
 >
+<!--
   <h2 class="full-width main-grid">
-    <a href={link || `#${sprawlID}`} class="clickable full-width">
+    <a 
+      href={link || `#${sprawlID}`} 
+      class="clickable full-width"
+      target={!link || link?.startsWith("/") ? "_self" : "_blank"}
+    >
       <time datetime={date}>
         { formatDate(new Date(date), false) }
       </time>
@@ -25,7 +30,17 @@
       { /if }
     </a>
   </h2>
-  <div class="sprawl markdown">
+-->
+  <h2 class="full-width main-grid">
+    <a 
+      href={link || `#${sprawlID}`} 
+      class="clickable full-width"
+      target={!link || link?.startsWith("/") ? "_self" : "_blank"}
+    >
+      ...
+    </a>
+  </h2>
+  <div class="main-grid full-width sprawl markdown">
     {@render children()}
   </div>
 </section>
