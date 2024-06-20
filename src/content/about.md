@@ -3,29 +3,31 @@
 </script>
 
 <TitleText>
-  skriver prosa och poesi. När han inte studerar jobbar han som mjukvaruutvecklare. 
+  skriver prosa och poesi. När han inte studerar eller skriver så jobbar han som mjukvaruutvecklare. Han är tjugoåtta år och bosatt i Göteborg.
 </TitleText>
 
-Han drömmer om en värld där alla har en liten kruka av grönt gräs på sitt skrivbord.
-Det är viktigt att gräset är stulet från en flådig villa i innerstaden.
+Anton behandlar teman som medvetandet, arbete, hopp och framtiden i sitt skrivande. Han tror att vi måste drömma nya, 
+omstörtande drömmar om vi ska kunna tränga igenom världens nuvarande tillstånd. 
 
-Anton finns på diverse olika platformar och kan kontaktas på diverse olika sätt.
+Han försöker lära sig att vara mindre stressad.
+En dag vill han ha en liten glasburk fylld med levande mossa på sitt skrivbord. 
 
-Kontakta honom...
+## Kontakta honom
 
 * [anton@exlex.se](mailto:anton@exlex.se)
 * [instagram](https://www.instagram.com/__.a.__.n.__.t.__.o.__.n.__/)
 
-Ni kan även hitta honom på...
+## Hitta honom på
+
 * [palmdrop.site](https://palmdrop.site)
+* [palmdrop.github.io](https://palmdrop.github.io)
+* [instagram / palmdrop](https://instagram.com/palmdrop)
 * [are.na](https://are.na/palmdrop)
 * [github](https://github.io/palmdrop)
-* [instagram / palmdrop](https://instagram.com/palmdrop)
-* [palmdrop.github.io](https://palmdrop.github.io)
 
 ---
 
-# *ABOUT THIS PAGE*
+# ABOUT THIS PAGE
 
 **No cookies**: This page *does not* use cookies.
 
@@ -37,6 +39,6 @@ Ni kan även hitta honom på...
 
 <br>
 
-## *FONTS*
+## FONTS
 * [Bakservville](https://en.wikipedia.org/wiki/Baskerville#:~:text=Baskerville%20is%20classified%20as%20a,Transitional%20serif)
 * [Degheest (Louise)](https://velvetyne.fr/fonts/degheest/) by Ange Degheest, Camille Depalle, Eugénie Bidaut, Luna Delabre, Mandy Elbé, May Jolivet, Oriane Charvieux, Benjamin Gomez, Justine Herbel. Distributed by [velvetyne.fr](https://velvetyne.fr/).

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Preview from "$lib/components/work/Preview.svelte";
+	import Header from "$lib/components/work/Header.svelte";
   import workList from "$content/work-list";
 
   const latest = workList[0].frontmatter;
@@ -10,9 +11,11 @@
 
 
 <h2>
-  <a class="clickable" href={url}>
-    SENASTE - {latest.title}
-  </a>
+  SENASTE TEXTEN
 </h2>
 
+<Header { ...latest } centerTitle={true}/>
 <Preview { ...latest }/>
+
+<style>
+</style>

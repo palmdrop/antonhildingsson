@@ -3,5 +3,7 @@
 </script>
 
 <TitleText>
-  skriver. Han arbetar och skriver. Prosa och poesi och dagböcker. Att skriva är svårt och påfrestande, nästan aldrig roligt. Tur att det ändå är värt det.
+  skriver prosa, poesi och dumma dagböcker. Han experimenterar med textuella uttryck på internet.
 </TitleText>
+
+Att skriva är svårt. Det är påfrestande. Nästan aldrig roligt. Tur att det ändå är värt det.

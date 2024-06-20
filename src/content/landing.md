@@ -4,11 +4,11 @@
 </script>
 
 <TitleText>
-  skriver prosa och poesi. Han är en klump kompakt kol, en aspirerande råttkung, dumsmart datapoet.
+  skriver prosa och poesi. Han är en klump kompakt kol, en aspirerande råttkung, naiv cyberpoet.
   Han bor i mullen och äter mycket malm.
 </TitleText>
 
-Bland [fragmenten](#sprawl) nedan finns tankar och bilder, spillor och snuttar från sådant jag har skrivit. Prosa och dikter finns bland [texter](/work).
+Besök [texter](/work) för prosa, poesi och annat. Bland [fragmenten](#sprawl) nedan finns tankar och bilder, spillor och snuttar från sådant jag skrivit.
 
 <br>
 
@@ -16,8 +16,8 @@ Bland [fragmenten](#sprawl) nedan finns tankar och bilder, spillor och snuttar f
 
 <br>
 
-<br>
+***
 
-# [*FRAGMENT*](#sprawl)
+# FRAGMENT
 
 <div id="sprawl"></div>

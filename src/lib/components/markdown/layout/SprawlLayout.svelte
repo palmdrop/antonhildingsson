@@ -47,7 +47,7 @@
 
 <style>
   section {
-    padding-top: 2em;
+    padding-top: 1.5em;
   }
 
   h2 {
@@ -55,6 +55,8 @@
     width: 100%;
 
     padding-bottom: 0.5em;
+
+    padding-left: 1em;
   }
 
   span::before {
@@ -65,7 +67,7 @@
   }
   
   .sprawl {
-    padding-top: 1em;
+    padding-top: 0.25em;
     padding-right: 1em;
 
     /*
