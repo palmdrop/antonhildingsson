@@ -12,9 +12,11 @@
 
 <svelte:head>
   {#if alone}
-    <title>
-      { createTitle(frontmatter.title) }
-    </title>
+    <title>{ createTitle(frontmatter.title) }</title>
+    <meta 
+      name="description" 
+      content={`"${frontmatter.title}" by ${import.meta.env.VITE_TITLE}.`}
+    />
   {/if}
 </svelte:head>
 

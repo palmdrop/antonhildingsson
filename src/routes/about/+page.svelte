@@ -5,6 +5,10 @@
 
 <svelte:head>
 	<title>{createTitle("Om")}</title>
+	<meta 
+    name="description" 
+    content={`Additional information about ${import.meta.env.VITE_TITLE}.`}
+  />
 </svelte:head>
 
 <About />

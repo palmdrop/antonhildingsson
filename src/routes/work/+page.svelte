@@ -22,6 +22,10 @@
 
 <svelte:head>
 	<title>{createTitle("Texter")}</title>
+	<meta 
+    name="description" 
+    content={`A list of ${import.meta.env.VITE_TITLE}'s prose and poetry writing.`}
+  />
 </svelte:head>
 
 <section class="main-grid full-width">

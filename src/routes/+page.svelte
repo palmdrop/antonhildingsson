@@ -8,7 +8,10 @@
 
 <svelte:head>
 	<title>{createTitle()}</title>
-	<meta name="description" content={`${import.meta.env.VITE_TITLE}'s writing and portfolio.`} />
+	<meta 
+    name="description" 
+    content={`${import.meta.env.VITE_TITLE}'s writing and portfolio.`}
+  />
 </svelte:head>
 
 <section class="main-grid full-width">
