@@ -1,6 +1,7 @@
 <script>
   import TitleText from "$lib/components/text/TitleText.svelte";
   import Featured from "$lib/components/work/Featured.svelte";
+  import SprawlHeader from "$lib/components/sprawl/Header.svelte";
 </script>
 
 <TitleText>
@@ -16,8 +17,6 @@ Besök [texter](/work) för prosa, poesi och annat. Bland [fragmenten](#sprawl) 
 
 <br>
 
-***
-
-# FRAGMENT
+<SprawlHeader />
 
 <div id="sprawl"></div>
