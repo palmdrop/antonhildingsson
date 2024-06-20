@@ -45,6 +45,7 @@ const processWorkItem = async (year: string, fileName: string) => {
 }
 
 const processWork = async () => {
+  console.log("Processing work...")
   const years = await fs.readdir(WORK_DIRECTORY);
 
   const processYear = async (year: string) => {
@@ -76,6 +77,7 @@ const processWork = async () => {
       `import type { WorkFrontmatter } from "$lib/types/work"; \nexport default ${JSON.stringify(items, null, 2)} as { path: string, frontmatter: WorkFrontmatter }[];`
     )
   ]);
+  console.log("Done processing work!")
 }
 
 const main = async () => {

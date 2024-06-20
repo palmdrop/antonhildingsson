@@ -60,12 +60,18 @@ const processBlock = async (block, published) => {
   }
 }
 
+console.log("Downloading Sprawl...");
+
 arena
   .channel(slug)
   .get()
   .then(async channel => {
     const blocks = channel.contents;
 
+    console.log("Processing blocks...");
+
     await fs.mkdir("./src/content/sprawl/external", { recursive: true });
     await Promise.all(blocks.map(block => processBlock(block, channel.published)));
+
+    console.log("Done processing blocks!");
   });
