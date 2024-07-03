@@ -8,18 +8,18 @@
   skriver prosa och poesi. När han inte studerar eller skriver så jobbar han som mjukvaruutvecklare. Han är {age} år gammal och bosatt i Göteborg.
 </TitleText>
 
-Anton behandlar teman som medvetandet, arbete, hopp och framtiden i sitt skrivande. Han tror att vi måste drömma nya, 
-omstörtande drömmar om vi ska kunna tränga igenom världens nuvarande tillstånd. 
+I sitt skrivande utforskar Anton medvetandet, ideologi, hopp och framtiden. Han tror att vi behöver drömma nya, omstörtande drömmar 
+för att ha en chans att tränga igenom världens nuvarande tillstånd.
 
-Han försöker lära sig att vara mindre stressad.
-En dag vill han ha en liten glasburk fylld med levande mossa på sitt skrivbord. 
+Anton försöker lära sig att vara mindre stressad, att sova bättre och skriva mer. 
+En dag kommer han ha en liten glasburk fylld med levande mossa på sitt skrivbord.
 
-## Kontakta honom
+## *Kontakta honom via...*
 
-* [anton@exlex.se](mailto:anton@exlex.se)
+* [mail](mailto:anton@exlex.se)
 * [instagram](https://www.instagram.com/__.a.__.n.__.t.__.o.__.n.__/)
 
-## Hitta honom på
+## *Hitta honom på...*
 
 * [palmdrop.site](https://palmdrop.site)
 * [palmdrop.github.io](https://palmdrop.github.io)
