@@ -11,11 +11,13 @@
 
   const shouldShow = preview && preview !== 'none';
   const previewClass = preview === true ? 'full' : preview;
+
+  const componentPromise = import(`$content/work/${year}/${fileName}.md`);
 </script>
 
 { #if shouldShow }
   <div class={`${previewClass} full-width`}>
-    { #await import(`$content/work/${year}/${fileName}.md`) }
+    { #await componentPromise }
       <p>loading...</p>
     { :then { default: Component } }
       <Component /> 

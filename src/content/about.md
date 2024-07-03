@@ -14,12 +14,12 @@ för att ha en chans att tränga igenom världens nuvarande tillstånd.
 Anton försöker lära sig att vara mindre stressad, att sova bättre och skriva mer. 
 En dag kommer han ha en liten glasburk fylld med levande mossa på sitt skrivbord.
 
-## *Kontakta honom via...*
+## Kontakta honom...
 
 * [mail](mailto:anton@exlex.se)
 * [instagram](https://www.instagram.com/__.a.__.n.__.t.__.o.__.n.__/)
 
-## *Hitta honom på...*
+## Hitta honom...
 
 * [palmdrop.site](https://palmdrop.site)
 * [palmdrop.github.io](https://palmdrop.github.io)

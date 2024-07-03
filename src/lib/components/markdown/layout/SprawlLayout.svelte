@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { formatDate } from "$lib/utils/date";
 	import { convertToURLFriendly } from "$lib/utils/url";
 
   const { 
@@ -43,7 +42,7 @@
 
 <style>
   section {
-    padding-top: calc(var(--edge-padding) + 1.5em);
+    padding-top: calc(var(--edge-padding) + 1.75em);
   }
 
   .first {

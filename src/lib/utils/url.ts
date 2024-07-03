@@ -1,3 +1,5 @@
+import { onHydrationComplete } from "./loading";
+
 // Kudos: chat-GPT lol
 export const convertToURLFriendly = (value: string) => {
   // Normalize the string to decompose combined characters into base characters
@@ -12,17 +14,15 @@ export const convertToURLFriendly = (value: string) => {
 }
 
 
-export const scrollToAnchor = (retryFrequency = 100) => {
-  const interval = setInterval(() => {
-    if(!window.location.hash || document.readyState !== 'complete') return;
+export const scrollToAnchor = () => {
+  onHydrationComplete(() => {
+    if(!window.location.hash) return;
     
     const target = document.querySelector(window.location.hash) as HTMLElement | null;
     if(!target) return;
 
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    clearInterval(interval);
-  }, retryFrequency);
+  });
 }
 
 export const getWorkUrl = (date: string | Date, fileName?: string) => {

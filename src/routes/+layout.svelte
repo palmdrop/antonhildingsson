@@ -13,22 +13,32 @@
 	import { scrollToAnchor } from '$lib/utils/url';
 	import { onNavigate } from '$app/navigation';
 	import Footer from '$lib/components/footer/Footer.svelte';
+	import { onHydrationComplete } from '$lib/utils/loading';
+	import { fade } from 'svelte/transition';
 
   const { children } = $props();
+
+  let loading = $state(true);
 
   const onScrollY = () => {
     setScrollY(window.scrollY);
   }
 
   onMount(() => {
+    loading = document.readyState !== 'complete';
+
     onScrollY();
     initializeQueryState();
     initializePageState();
     scrollToAnchor();
 
+    onHydrationComplete(() => {
+      loading = false;
+    });
   });
 
   onNavigate((navigation) => {
+    window.scrollTo(0, 0);
     if (
       !document.startViewTransition ||
       // No animation if the base route is the same
@@ -41,14 +51,21 @@
         await navigation.complete;
       });
     });
-  })
+  });
 </script>
 
 <svelte:window 
   on:scroll={onScrollY}
 />
 
-<div class="app">
+<div class="app" class:done={!loading}>
+  { #if loading }
+    <div class="loader" transition:fade={{ duration: 500 }}>
+      <span class="fade-in">
+        loading...
+      </span>
+    </div>
+  { /if }
   <div class="container main-grid">
     <Header highlighted={isFloating()}/>
 
@@ -70,6 +87,33 @@
 
     min-height: 100vh;
 	}
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg);
+    color: var(--fg);
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: 1500ms ease-in slow-fade-in forwards;
+  }
+
+  .app.done {
+    opacity: 1;
+  }
 
   .container {
     display: flex;
@@ -107,6 +151,20 @@
   @keyframes fade-out {
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes slow-fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    75% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1
     }
   }
 

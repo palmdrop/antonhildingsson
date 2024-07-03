@@ -24,20 +24,10 @@
   }
 
   .float {
-    width: 8em;
-    height: 4em; 
+    width: 5em;
+    height: 2em; 
     float: right;
 
     shape-outside: ellipse(50% 50% at 100% 0%);
-  }
-
-  @media screen and (min-width: 950px) {
-    .float {
-      display: none;
-    }
-
-    p {
-      max-width: var(--paragraph-width);
-    }
   }
 </style>

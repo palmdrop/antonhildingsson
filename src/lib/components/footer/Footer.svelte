@@ -66,7 +66,7 @@
 
     margin-top: auto;
 
-    font-size: 0.75em;
+    font-size: 16px;
 
     width: 100%;
   }
