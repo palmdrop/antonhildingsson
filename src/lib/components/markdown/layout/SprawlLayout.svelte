@@ -6,38 +6,34 @@
     children,
     date,
     title,
-    link
-  }: { children: any, date: string, link?: string, title?: string } = $props();
+    link,
+    first
+  }: { 
+    children: any, 
+    date: string, 
+    link?: string, 
+    title?: string,
+    first?: boolean
+  } = $props();
 
   const sprawlID = `sprawl-${convertToURLFriendly(date)}` ;
+
+  const href = link || `#${sprawlID}`;
+  const internal = !link || link?.startsWith("/");
+  const label = title || "...";
 </script>
 
 <section 
   id={sprawlID}
+  class:first
 >
-<!--
   <h2 class="full-width main-grid">
     <a 
-      href={link || `#${sprawlID}`} 
+      href={href} 
       class="clickable full-width"
-      target={!link || link?.startsWith("/") ? "_self" : "_blank"}
+      target={internal ? "" : "_blank"}
     >
-      <time datetime={date}>
-        { formatDate(new Date(date), false) }
-      </time>
-      { #if title }
-        <span>{ title }</span>
-      { /if }
-    </a>
-  </h2>
--->
-  <h2 class="full-width main-grid">
-    <a 
-      href={link || `#${sprawlID}`} 
-      class="clickable full-width"
-      target={!link || link?.startsWith("/") ? "_self" : "_blank"}
-    >
-      ...
+      {label}
     </a>
   </h2>
   <div class="main-grid full-width sprawl markdown">
@@ -47,7 +43,11 @@
 
 <style>
   section {
-    padding-top: 1.75em;
+    padding-top: calc(var(--edge-padding) + 1.5em);
+  }
+
+  .first {
+    padding-top: 0.5em;
   }
 
   h2 {
@@ -55,47 +55,14 @@
     width: 100%;
 
     padding-bottom: 0.5em;
-
-    padding-left: 1em;
   }
 
-  span::before {
-    content: "—";
-    display: inline-block;
-
-    padding: 0 0.3em;
-  }
-  
   .sprawl {
     padding-top: 0.25em;
     padding-right: 1em;
-
-    /*
-    grid-column: span var(--grid-columns);
-    */
-
-    /*
-    display: grid;
-    justify-content: center;
-    */
   }
 
   :global(.sprawl.markdown img) {
     padding: 0;
   }
-
-  /*
-  @media screen and (min-width: 500px) {
-    time {
-      grid-column: span 1;
-    }
-
-    .sprawl {
-      grid-column: span calc(var(--grid-columns) - 2);
-
-      display: grid;
-      justify-content: center;
-    }
-  }
-    */
 </style>

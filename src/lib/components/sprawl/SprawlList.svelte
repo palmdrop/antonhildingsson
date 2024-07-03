@@ -14,7 +14,7 @@
 <ol class="full-width main-grid">
   { #each sprawlList as { Component }, i (`${1}_${i}`) }
     <li>
-      <Component />
+      <Component first={i === 0}/>
     </li>
   { /each }
 </ol>

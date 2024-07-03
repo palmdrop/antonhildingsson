@@ -13,7 +13,7 @@
 <a 
   href={href}
   class="clickable"
-  target={!href || href?.startsWith("#") || href?.startsWith("/") ? "_self" : "_blank"}
+  target={!href || href?.startsWith("#") || href?.startsWith("/") ? "" : "_blank"}
   rel="noopener noreferrer"
   {...rest} 
 >

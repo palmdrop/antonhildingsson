@@ -17,9 +17,12 @@
 
   --max-partial-preview-height: 300px;
 
+  /*
   --max-page-width: 1100px;
+  */
+  --max-page-width: 100vw;
 
-  --edge-padding: 0.5em;
+  --edge-padding: 1em;
   --top-padding: var(--edge-padding);
 
   --gap: 0.5em;
@@ -136,7 +139,7 @@ hr {
   position: relative;
   overflow: visible;
   width: 100%;
-  margin-bottom: 1.0em;
+  margin-bottom: 2.0em;
   border: none;
   border-bottom: 1px solid var(--fg);
   text-align: center;

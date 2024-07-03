@@ -2,6 +2,7 @@
 	import { tagsQuery } from "$lib/state/query.svelte";
   import { type WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
+	import { getWorkUrl } from "$lib/utils/url";
 
   const { 
     title, 
@@ -15,8 +16,7 @@
     centerTitle?: boolean
   } = $props();
   
-  const year = new Date(date).getFullYear();
-  const url = fileName ? `/work/${year}/${fileName}` : '';
+  const url = getWorkUrl(date, fileName)
 </script>
 
 <div 
