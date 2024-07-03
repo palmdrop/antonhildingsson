@@ -74,4 +74,5 @@ arena
     await Promise.all(blocks.map(block => processBlock(block, channel.published)));
 
     console.log("Done processing blocks!");
-  });
+  })
+  .catch(error => console.error(`Error: ${error.response.statusText}`));
