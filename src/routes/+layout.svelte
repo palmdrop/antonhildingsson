@@ -60,9 +60,9 @@
 
 <div class="app" class:done={!loading}>
   { #if loading }
-    <div class="loader" transition:fade={{ duration: 500 }}>
-      <span class="fade-in">
-        loading...
+    <div class="loader" transition:fade={{ duration: 250 }}>
+      <span class="loader-text">
+        ANTON HILDINGSSON
       </span>
     </div>
   { /if }
@@ -106,9 +106,13 @@
     color: var(--fg);
   }
 
-  .fade-in {
+  .loader-text {
+    font-family: serif;
+    font-style: italic;
     opacity: 0;
-    animation: 1500ms ease-in slow-fade-in forwards;
+    animation: 
+      delayed-fade-in 1500ms ease-in forwards,
+      pulse 1000ms ease-in infinite alternate;
   }
 
   .app.done {
@@ -154,17 +158,27 @@
     }
   }
 
-  @keyframes slow-fade-in {
+  @keyframes delayed-fade-in {
     0% {
       opacity: 0;
     }
 
-    75% {
+    95% {
       opacity: 0;
     }
 
     100% {
       opacity: 1
+    }
+  }
+
+  @keyframes pulse {
+    from {
+      color: var(--fg);
+    }
+
+    to {
+      color: var(--bg);
     }
   }
 
