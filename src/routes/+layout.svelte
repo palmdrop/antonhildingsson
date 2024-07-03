@@ -38,12 +38,11 @@
   });
 
   onNavigate((navigation) => {
+    // Do nothing if the base route is the same
+    if(navigation.from?.route.id === navigation.to?.route.id) return;
     window.scrollTo(0, 0);
-    if (
-      !document.startViewTransition ||
-      // No animation if the base route is the same
-      navigation.from?.route.id === navigation.to?.route.id
-    ) return;
+
+    if (!document.startViewTransition) return;
 
     return new Promise((resolve) => {
       document.startViewTransition(async () => {
