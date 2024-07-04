@@ -5,11 +5,11 @@
 </script>
 
 <TitleText>
-  skriver prosa och poesi. Han är en klump kompakt kol, en aspirerande råttkung, naiv cyberpoet.
+  skriver prosa och poesi. Han är en klump kompakt kol, aspirerande råttkung, naiv cyberpoet.
   Han bor i mullen och äter mycket malm.
 </TitleText>
 
-Besök [texter](/work) för prosa, poesi och annat. Bland [fragmenten](#sprawl) nedan finns tankar och bilder, spillor och snuttar från sådant jag skrivit.
+Besök [texter](/work) för prosa och poesi. Bland [fragmenten](#sprawl) finns tankar och bilder, spillor och snuttar från sådant jag skrivit.
 
 <br>
 

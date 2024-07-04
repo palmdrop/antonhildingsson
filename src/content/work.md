@@ -3,7 +3,5 @@
 </script>
 
 <TitleText>
-  skriver prosa, poesi och dumma dagböcker. Han experimenterar med textuella uttryck på internet.
+  skriver prosa och poesi. Han experimenterar också med textuella uttryck på internet. Här publicerar han texter som inte hamnar någon annanstans.
 </TitleText>
-
-Att skriva är svårt. Det är påfrestande. Nästan aldrig roligt. Tur att det ändå är värt det.

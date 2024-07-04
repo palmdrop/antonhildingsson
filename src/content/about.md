@@ -8,24 +8,22 @@
   skriver prosa och poesi. När han inte studerar eller skriver så jobbar han som mjukvaruutvecklare. Han är {age} år gammal och bosatt i Göteborg.
 </TitleText>
 
-I sitt skrivande utforskar Anton medvetandet, ideologi, hopp och framtiden. Han tror att vi behöver drömma nya, omstörtande drömmar 
-för att ha en chans att tränga igenom världens nuvarande tillstånd.
+I sitt skrivande utforskar Anton kapitalism, medvetandet och framtiden. Han är övertygad om att allting är värre än det ser ut men att det ändå finns en framtid för oss.
 
-Anton försöker lära sig att vara mindre stressad, att sova bättre och skriva mer. 
-En dag kommer han ha en liten glasburk fylld med levande mossa på sitt skrivbord.
+Anton övar på att stressa mindre, sova mer och skriva bättre. En dag ska han ha en liten glasburk fylld med mossa på sitt skrivbord.
 
-## Kontakta honom...
+## Kontakta honom
 
 * [mail](mailto:anton@exlex.se)
 * [instagram](https://www.instagram.com/__.a.__.n.__.t.__.o.__.n.__/)
 
-## Hitta honom...
+## Hitta honom
 
-* [palmdrop.site](https://palmdrop.site)
-* [palmdrop.github.io](https://palmdrop.github.io)
-* [instagram / palmdrop](https://instagram.com/palmdrop)
+* [hemsida](https://palmdrop.site)
+* [digitala projekt](https://palmdrop.github.io)
+* [digital konst](https://instagram.com/palmdrop)
 * [are.na](https://are.na/palmdrop)
-* [github](https://github.io/palmdrop)
+* [github](https://github.com/palmdrop)
 
 ---
 
@@ -35,7 +33,7 @@ En dag kommer han ha en liten glasburk fylld med levande mossa på sitt skrivbor
 
 **No personal data**: None of your personal data is stored.
 
-**No ads**: There will never be ads and no statistics are gathered for marketing purposes.
+**No ads**: This site never display ads and no analytics are gathered for marketing purposes.
 
 **No AI**: *I DO NOT consent to the content of this site being used for AI training.*
 
