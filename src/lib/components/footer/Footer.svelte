@@ -1,10 +1,10 @@
 <script lang="ts">
-
+  const year = new Date().getFullYear();
 </script>
 
 <footer class="full-width">
   <p xmlns:cc="http://creativecommons.org/ns#">
-    © 2024
+    © { year }
     <a 
       rel="cc:attributionURL dct:creator noopener noreferrer"
       property="cc:attributionName"
@@ -31,25 +31,6 @@
       <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
       <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
     </a>
-  </p>
-  <p>
-    <a 
-      href="https://github.com/palmdrop/antonhildingsson"
-      class="underlined neutral-clickable"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Code 
-    </a>
-    is released under the 
-    <a 
-      href="https://github.com/non-ai-licenses/non-ai-licenses/blob/main/NON-AI-MIT"
-      class="underlined neutral-clickable"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      MIT NON-AI license
-    </a>.
   </p>
 </footer>
 
