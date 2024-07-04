@@ -57,6 +57,12 @@
   on:scroll={onScrollY}
 />
 
+<svelte:head>
+  <link rel="preload" as="font" href="/fonts/degheest/Louise-Regular.woff2" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" href="/fonts/baskervville-regular/Baskervville-Regular.woff2" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" href="/fonts/baskervville-italic/Baskervville-Italic.woff2" type="font/woff2" crossorigin="anonymous" />
+</svelte:head>
+
 <div class="app" class:done={!loading}>
   { #if loading }
     <div class="loader" transition:fade={{ duration: 250 }}>
