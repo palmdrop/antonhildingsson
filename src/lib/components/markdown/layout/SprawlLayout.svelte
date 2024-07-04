@@ -19,7 +19,7 @@
 
   const href = link || `#${sprawlID}`;
   const internal = !link || link?.startsWith("/");
-  const label = title || "...";
+  const label = title ? `${title} ${internal ? "" : "🔗"}` : "...";
 </script>
 
 <section 

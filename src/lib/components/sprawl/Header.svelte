@@ -10,7 +10,7 @@
   h2 {
     grid-column: span var(--grid-columns);
 
-    margin-top: 2em;
+    margin-top: 2.25em;
     padding-top: var(--gap);
     padding-bottom: var(--gap);
 
