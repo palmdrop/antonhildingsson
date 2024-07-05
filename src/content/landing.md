@@ -15,8 +15,6 @@ Besök [texter](/work) för prosa och poesi. Bland [fragmenten](#sprawl) finns t
 
 <Featured />
 
-<br>
-
 <span id="sprawl">
 
 <SprawlHeader />
