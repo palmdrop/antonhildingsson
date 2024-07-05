@@ -9,10 +9,9 @@
     date,
     fileName,
     tags = [],
-    showYear = true,
-    centerTitle
+    centerTitle,
+    border = true
   }: WorkFrontmatter & { 
-    showYear: boolean,
     centerTitle?: boolean
   } = $props();
   
@@ -22,12 +21,13 @@
 <div 
   class="work-header main-grid full-width"
   class:centered-title={centerTitle}
+  class:border
 >
   <time datetime={date}>
     <a 
       href={url}
     >
-    { formatDate(new Date(date), showYear) }
+    { formatDate(new Date(date), false) }
     </a>
   </time>
   <h2>
@@ -56,10 +56,13 @@
 
 <style>
   .work-header {
-    border-bottom: 1px solid var(--fg);
     padding-bottom: 0.5em;
 
     gap: 3px var(--gap);
+  }
+
+  .border {
+    border-bottom: 1px solid var(--fg);
   }
 
   .work-header:active h2 span {

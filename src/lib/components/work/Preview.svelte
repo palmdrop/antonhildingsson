@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
+	import { getWorkUrl } from "$lib/utils/url";
 
   const {
     preview,
@@ -16,7 +17,10 @@
 </script>
 
 { #if shouldShow }
-  <div class={`${previewClass} full-width`}>
+  <a 
+    class={`${previewClass} full-width`}
+    href={getWorkUrl(date, fileName)}
+  >
     { #await componentPromise }
       <p>loading...</p>
     { :then { default: Component } }
@@ -26,7 +30,7 @@
         Error fetching work... Retry?
       </p>
     {/await}
-  </div>
+    </a>
 { /if }
 
 <style>

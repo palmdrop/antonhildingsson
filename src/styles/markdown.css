@@ -33,6 +33,7 @@
 
 .markdown p {
   max-width: var(--paragraph-width);
+  padding-bottom: 0.0em;
 }
 
 .markdown em {

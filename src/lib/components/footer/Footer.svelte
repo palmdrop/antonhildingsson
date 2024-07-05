@@ -52,6 +52,12 @@
     width: 100%;
   }
 
+  @media (min-resolution: 2dppx) {
+    footer {
+      font-size: 12px;
+    }
+  }
+
   .underlined {
     text-decoration: underline;
   }

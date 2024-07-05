@@ -16,6 +16,7 @@
         preview: showPreviews
       }}
       centerTitle={showPreviews}
+      last={i === workList.length - 1}
     />
   { /each }
 </ol>

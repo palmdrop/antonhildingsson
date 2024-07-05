@@ -2,14 +2,15 @@
 	import { tagsQuery } from "$lib/state/query.svelte";
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import Header from "./Header.svelte";
-	import Preview from "./Preview.svelte";
 
   const {
     frontmatter,
-    centerTitle = false
+    centerTitle = false,
+    last = false,
   }: {
     frontmatter: WorkFrontmatter,
     centerTitle?: boolean
+    last?: boolean
   } = $props();
 
   const shouldShow = $derived(!tagsQuery.value.length || tagsQuery.value.some(tag => frontmatter.tags?.includes(tag)));
@@ -20,8 +21,7 @@
     class="main-grid full-width" 
     class:preview={frontmatter.preview && frontmatter.preview !== 'none'}
   >
-    <Header { ...frontmatter }, showYear={true} {centerTitle} />
-    <Preview { ...frontmatter }/>
+    <Header { ...frontmatter }, {centerTitle} border={!last} />
   </li>
 { /if }
 

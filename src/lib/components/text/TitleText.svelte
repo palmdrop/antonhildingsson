@@ -12,9 +12,7 @@
   -->
   <span class="float"></span>
   <Title hidden /> 
-  <span class="text">
-    {@render children()}
-  </span>
+  {@render children()}
 </p>
 
 <style>
@@ -24,8 +22,8 @@
   }
 
   .float {
-    width: 5em;
-    height: 2em; 
+    width: 6em;
+    height: 2.5em; 
     float: right;
 
     shape-outside: ellipse(50% 50% at 100% 0%);

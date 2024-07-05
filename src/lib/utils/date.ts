@@ -1,8 +1,8 @@
-export const formatDate = (fullDate: Date, showYear = true) => {
+export const formatDate = (fullDate: Date, showDateNumber = true) => {
   const date = (fullDate.getDate() + "").padStart(2, "0");
   const month = (fullDate.toLocaleString('default', { month: 'short' }));
   const year = (fullDate.getFullYear() + "");
-  return `${date} ${month} ${showYear ? year : ''}`.trim();
+  return `${showDateNumber ? `${date} ` : ""} ${month} ${year}`.trim();
 }
 
 // kudos https://stackoverflow.com/a/7091965

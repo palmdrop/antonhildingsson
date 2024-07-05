@@ -24,7 +24,7 @@
   { #if alone }
     <Header { ...frontmatter } centerTitle={alone} />
   { /if }
-  <section class="markdown">
+  <section class="markdown work-piece">
     {@render children()}
   </section>
 </article>
@@ -39,9 +39,29 @@
     padding: 1em 0em;
   }
 
-  @media screen and (min-width: 500px) {
-    .alone section {
-      padding: 1em;
-    }
+  :global(.work-piece p) {
+    padding-bottom: 0.75em;
+  }
+
+  :global(.work-piece hr) {
+    position: relative;
+    overflow: visible;
+    width: var(--paragraph-width);
+    max-width: var(--paragraph-width);
+
+    border: none;
+
+    margin: 1em 0em;
+    margin-bottom: 2.0em;
+  }
+
+  :global(.work-piece hr::after) {
+    content: "***";
+    display: inline-block;
+    position: relative;
+    top: 0.5em;
+    padding: 0 0.25em;
+    background-color: var(--bg);
+    font-family: var(--font-accent);
   }
 </style>
