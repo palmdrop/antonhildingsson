@@ -70,15 +70,21 @@ const processWork = async () => {
       .flatMap(({ year, fileNames }) => fileNames.map(fileName => processWorkItem(year, fileName)))
   );
 
-  const errors = workItemResults.filter(result => result.status === 'rejected') as PromiseRejectedResult[];
-  const successes = workItemResults.filter(result => result.status === 'fulfilled') as unknown as PromiseFulfilledResult<{ path: string, frontmatter: WorkFrontmatter }>[];
+  const errors = workItemResults
+    .filter(result => result.status === 'rejected') as PromiseRejectedResult[];
+
+  const successes = workItemResults
+    .filter(result => result.status === 'fulfilled') as unknown as PromiseFulfilledResult<{ path: string, frontmatter: WorkFrontmatter }>[];
 
   if(errors.length > 0) {
-    console.error(`Error processing work item(s): ${errors.map(result => result.reason).join(', ')}`);
+    console.error(
+      `Error processing work item(s): ${errors.map(result => result.reason).join(', ')}`
+    );
   }
 
   const items = successes
     .map(success => success.value)
+    .filter(item => item.frontmatter.published)
     .sort(
       (workItem1, workItem2) => workItem2
         .frontmatter
@@ -97,6 +103,7 @@ const processWork = async () => {
       `import type { WorkFrontmatter } from "$lib/types/work"; \nexport default ${JSON.stringify(items, null, 2)} as { path: string, frontmatter: WorkFrontmatter }[];`
     )
   ]);
+
   console.log("Done processing work!")
 }
 
