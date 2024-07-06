@@ -1,14 +1,7 @@
 import fs from 'fs/promises';
-// import Arena from "are.na";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "./.env.local" });
-
-/*
-const arena = new Arena({
-  accessToken: process.env.ARENA_ACCESS_TOKEN
-});
-*/
 
 const slug = "stream-cascade-sprawl";
 
@@ -116,20 +109,12 @@ export const downloadChannel = async (
 
 console.log("Downloading Sprawl...");
 
-/*
-arena
-  .channel(slug)
-  .get()
-  .then(async channel => {
-  */
 downloadChannel(slug).then(async pages => {
-    // const blocks = channel.contents;
     const blocks = pages.flatMap(page => page.contents);
 
     console.log("Processing blocks...");
 
     await fs.mkdir("./src/content/sprawl/external", { recursive: true });
-    // await Promise.all(blocks.map(block => processBlock(block, channel.published)));
     await Promise.all(blocks.map(block => processBlock(block, false)));
 
     console.log("Done processing blocks!");
