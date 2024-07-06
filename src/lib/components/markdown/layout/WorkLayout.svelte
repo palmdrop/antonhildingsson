@@ -46,7 +46,7 @@
   :global(.work-piece hr) {
     position: relative;
     overflow: visible;
-    width: var(--paragraph-width);
+    width: 100%;
     max-width: var(--paragraph-width);
 
     border: none;

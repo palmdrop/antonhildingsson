@@ -1,1 +1,0 @@
-export const tags = ["poesi","prosa","essä"] as const;
