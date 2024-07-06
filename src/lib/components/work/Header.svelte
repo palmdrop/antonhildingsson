@@ -12,7 +12,8 @@
     centerTitle,
     border = true
   }: WorkFrontmatter & { 
-    centerTitle?: boolean
+    centerTitle?: boolean,
+    border?: boolean
   } = $props();
   
   const url = getWorkUrl(date, fileName)
@@ -27,7 +28,7 @@
     <a 
       href={url}
     >
-    { formatDate(new Date(date), false) }
+    { formatDate(new Date(date)) }
     </a>
   </time>
   <h2>
