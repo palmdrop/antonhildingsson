@@ -20,7 +20,7 @@
       href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" 
       target="_blank" 
       rel="license noopener noreferrer" 
-      style="display:inline-block;"
+      style="display: inline-block;"
       class="neutral-clickable"
     >
       <span class="underlined">
@@ -36,25 +36,33 @@
 
 <style>
   footer {
-    padding: var(--gap);
+    padding: min(var(--gap), 12px)  var(--edge-padding);
 
     display: grid;
     justify-content: center;
     gap: 0;
-    line-height: 1.1em;
 
     border-top: 1px solid var(--fg);
-
     margin-top: auto;
-
-    font-size: 16px;
 
     width: 100%;
   }
 
+  p {
+    font-size: 16px;
+    line-height: 1.1em;
+  }
+
   @media (min-resolution: 2dppx) {
-    footer {
+    p {
       font-size: 12px;
+      line-height: 1.1em;
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    p {
+      text-align: center;
     }
   }
 
