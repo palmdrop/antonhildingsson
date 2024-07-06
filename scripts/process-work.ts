@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import { WorkFrontmatter } from '../src/lib/types/work';
 
 const BASE_DIRECTORY = "src/content";
 const WORK_DIRECTORY = `${BASE_DIRECTORY}/work`;
@@ -48,17 +49,36 @@ const processWork = async () => {
   console.log("Processing work...")
   const years = await fs.readdir(WORK_DIRECTORY);
 
-  const processYear = async (year: string) => {
-    const workItems = await fs.readdir(`${WORK_DIRECTORY}/${year}`);
-    return Promise.all(
-      workItems.map(fileName => processWorkItem(year, fileName))
-    );
+  const getYear = async (year: string) => {
+    const fileNames = await fs.readdir(`${WORK_DIRECTORY}/${year}`);
+    // return workItems.map(fileName => processWorkItem(year, fileName))
+    return { year, fileNames };
   }
 
-  const items = (await Promise.all(
-    years.map(processYear)
-  ))
-    .flat()
+  const yearAndFileNames = await Promise.allSettled(years.map(getYear));
+
+  const fulfilledYears = yearAndFileNames
+    .filter(result => result.status === 'fulfilled') as PromiseFulfilledResult<{ year: string, fileNames: string[] }>[];
+
+  if(fulfilledYears.length !== years.length) {
+    console.error(`Error processing year(s): ${years.filter(year => !fulfilledYears.find(result => result.value.year === year)).join(', ')}`);
+  }
+
+  const workItemResults = await Promise.allSettled(
+    fulfilledYears
+      .map(result => result.value)
+      .flatMap(({ year, fileNames }) => fileNames.map(fileName => processWorkItem(year, fileName)))
+  );
+
+  const errors = workItemResults.filter(result => result.status === 'rejected') as PromiseRejectedResult[];
+  const successes = workItemResults.filter(result => result.status === 'fulfilled') as unknown as PromiseFulfilledResult<{ path: string, frontmatter: WorkFrontmatter }>[];
+
+  if(errors.length > 0) {
+    console.error(`Error processing work item(s): ${errors.map(result => result.reason).join(', ')}`);
+  }
+
+  const items = successes
+    .map(success => success.value)
     .sort(
       (workItem1, workItem2) => workItem2
         .frontmatter
