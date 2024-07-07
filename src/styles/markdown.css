@@ -65,3 +65,8 @@
 .markdown figcaption::before {
   content: "Fig." counter(figure) " - ";
 }
+
+.markdown pre {
+  white-space: pre-wrap;
+  line-height: 1.2em;
+}
