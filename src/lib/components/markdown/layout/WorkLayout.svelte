@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
-	import Header from "$lib/components/work/Header.svelte";
 	import { createTitle } from "$lib/utils/title";
+	import { formatDate } from "$lib/utils/date";
+	import { getWorkUrl } from "$lib/utils/url";
 
   const { 
     children,
@@ -22,7 +23,19 @@
 
 <article class="full-width" class:alone>
   { #if alone }
-    <Header { ...frontmatter } centerTitle={alone} />
+    <h1 class="main-grid full-width">
+      <span>
+        <a 
+          href={getWorkUrl(frontmatter.date, frontmatter.fileName)} 
+          class="clickable"
+        >
+          { frontmatter.title }
+        </a>
+      </span>
+      <span>
+        { formatDate(frontmatter.date) }
+      </span>
+    </h1>
   { /if }
   <section class="markdown work-piece">
     {@render children()}
@@ -37,6 +50,19 @@
 
   .alone section {
     padding: 1em 0em;
+  }
+
+  h1 {
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: var(--gap);
+  }
+
+  h1 > * {
+    grid-column: span calc(var(--grid-columns) / 2);
+  }
+
+  h1 > span:last-child {
+    text-align: right;
   }
 
   :global(.work-piece p) {

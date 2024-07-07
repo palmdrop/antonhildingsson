@@ -1,6 +1,7 @@
-export const formatDate = (fullDate: Date) => {
-  const date = fullDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'short'});
-  return `${date.at(0)!.toUpperCase()}${date.slice(1)}`
+export const formatDate = (fullDate: Date | string) => {
+  const date = new Date(fullDate);
+  const localeDate = date.toLocaleDateString('sv-SE', { year: 'numeric', month: 'short'});
+  return `${localeDate.at(0)!.toUpperCase()}${localeDate.slice(1)}`
 }
 
 // kudos https://stackoverflow.com/a/7091965
