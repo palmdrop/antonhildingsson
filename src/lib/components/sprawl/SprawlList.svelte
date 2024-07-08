@@ -22,6 +22,7 @@
 <style>
   ol {
     counter-reset: figure;
+    gap: 1em;
   }
 
   li {

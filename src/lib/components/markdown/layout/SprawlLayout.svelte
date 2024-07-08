@@ -46,20 +46,9 @@
   }
 
   .sprawl {
-    padding-top: 0.25em;
-    padding-right: 1em;
-
-    padding: 2%;
-
     border: 1px solid var(--bg);
   }
 
-  @media screen and (min-width: 700px) {
-    .sprawl {
-      padding: 1em;
-    }
-  }
-  
   a:hover .sprawl {
     border-bottom: 1px solid var(--fg);
 
