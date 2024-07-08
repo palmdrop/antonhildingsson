@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config({ path: "./.env.local" });
 
 const slug = "stream-cascade-sprawl";
+const destination = "./src/content/sprawl/external";
 
 const createBlockLink = id => `https://are.na/block/${id}`;
 
@@ -12,14 +13,12 @@ const createSprawlEntry = async (block, markdown, published) => {
   const date = new Date(block.updated_at).toISOString();
   const link = createBlockLink(id);
   const data = `---
-date: "${date}"
-${(link && published) ? `link: "${link}"` : ''}
+date: "${date}"${(link && published) ? `\nlink: "${link}"` : ''}
 ---
-
 ${markdown}
   `;
 
-  await fs.writeFile(`./src/content/sprawl/external/${id}.md`, data);
+  await fs.writeFile(`${destination}/${id}.md`, data);
 }
 
 const processTextBlock = async (textBlock, published) => {
@@ -48,6 +47,9 @@ const processImageBlock = async (imageBlock, published) => {
 
 
 const processBlock = async (block, published) => {
+  const description = block.description ?? "";
+  if(description.includes("published: false")) return undefined;
+
   switch(block.class) {
     case "Image": return processImageBlock(block, published);
     case "Text":  return processTextBlock(block, published);
@@ -100,12 +102,18 @@ export const downloadChannel = async (
     );
 
     console.log(`Done fetching channel "${channel}"`);
-    console.log(pages)
     return pages;
   } catch (error) {
     console.error(error);
   }
 };
+
+const clearDestination = async () => {
+  await Promise.all(
+    (await fs.readdir(destination))
+      .map(file => fs.unlink(`${destination}/${file}`))
+  );
+}
 
 console.log("Downloading Sprawl...");
 
@@ -114,9 +122,10 @@ downloadChannel(slug).then(async pages => {
 
     console.log("Processing blocks...");
 
-    await fs.mkdir("./src/content/sprawl/external", { recursive: true });
+    await fs.mkdir(destination, { recursive: true });
+    await clearDestination();
     await Promise.all(blocks.map(block => processBlock(block, false)));
 
     console.log("Done processing blocks!");
   })
-  .catch(error => console.error(`Error: ${error.response.statusText}`));
+  .catch(error => console.error(`Error: ${error}`));
