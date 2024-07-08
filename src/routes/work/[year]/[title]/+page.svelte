@@ -1,6 +1,6 @@
 <script lang="ts">
   const { data } = $props();
-  const { year, title, Component } = data;
+  const { Component } = data;
 </script>
 
 <div class="main-grid full-width">
