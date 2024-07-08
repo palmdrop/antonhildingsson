@@ -27,4 +27,16 @@
   li {
     grid-column: span var(--grid-columns);
   }
+
+  @media (min-width: 350px) {
+    li {
+      grid-column: span calc(var(--grid-columns) / 2);
+    }
+  }
+
+  @media (min-width: 2500px) {
+    li {
+      grid-column: span calc(var(--grid-columns) / 3);
+    }
+  }
 </style>

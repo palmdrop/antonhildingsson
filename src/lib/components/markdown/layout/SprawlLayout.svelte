@@ -19,49 +19,58 @@
 
   const href = link || `#${sprawlID}`;
   const internal = !link || link?.startsWith("/");
-  const label = title ? `${title} ${internal ? "" : "🔗"}` : "...";
+  const linkLabel = "🔗";
 </script>
 
-<section 
+<a 
   id={sprawlID}
   class:first
+  href={href}
+  target={internal ? "" : "_blank"}
 >
-  <h2 class="full-width main-grid">
-    <a 
-      href={href} 
-      class="clickable full-width"
-      target={internal ? "" : "_blank"}
-    >
-      {label}
-    </a>
-  </h2>
-  <div class="main-grid full-width sprawl markdown">
+  <div class="sprawl markdown">
     {@render children()}
+    { #if !internal }
+      <p>
+        { linkLabel }
+      </p>
+    { /if }
   </div>
-</section>
+</a>
 
 <style>
-  section {
+  a {
+    display: block;
     padding-top: calc(var(--edge-padding) + 1.75em);
-  }
-
-  .first {
-    padding-top: 0.5em;
-  }
-
-  h2 {
-    display: inline-block;
-    width: 100%;
-
-    padding-bottom: 0.5em;
+    height: 100%;
   }
 
   .sprawl {
     padding-top: 0.25em;
     padding-right: 1em;
+
+    padding: 2%;
+
+    border: 1px solid var(--bg);
+  }
+
+  @media screen and (min-width: 700px) {
+    .sprawl {
+      padding: 1em;
+    }
+  }
+  
+  a:hover .sprawl {
+    border-bottom: 1px solid var(--fg);
+
+    font-family: var(--font-accent);
   }
 
   :global(.sprawl.markdown img) {
     padding: 0;
+  }
+
+  :global(.sprawl.markdown p) {
+    padding-bottom: 0.5em;
   }
 </style>
