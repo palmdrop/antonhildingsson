@@ -11,21 +11,22 @@
 	import { initializeQueryState } from '$lib/state/query.svelte';
 	import { initializePageState } from '$lib/state/page.svelte';
 	import { scrollToAnchor } from '$lib/utils/url';
-	import { onNavigate } from '$app/navigation';
+	import { afterNavigate, beforeNavigate, onNavigate } from '$app/navigation';
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import { onHydrationComplete } from '$lib/utils/loading';
 	import { fade } from 'svelte/transition';
 
   const { children } = $props();
 
-  let loading = $state(true);
+  let loadingInitialPage = $state(true);
+  let isNavigating = $state(false);
 
   const onScrollY = () => {
     setScrollY(window.scrollY);
   }
 
   onMount(() => {
-    loading = document.readyState !== 'complete';
+    loadingInitialPage = document.readyState !== 'complete';
 
     onScrollY();
     initializeQueryState();
@@ -33,7 +34,7 @@
     scrollToAnchor();
 
     onHydrationComplete(() => {
-      loading = false;
+      loadingInitialPage = false;
     });
   });
 
@@ -51,6 +52,20 @@
       });
     });
   });
+
+  beforeNavigate(navigation => {
+    if(navigation.from?.route.id === navigation.to?.route.id) return;
+    isNavigating = true;
+  });
+
+  afterNavigate(navigation => {
+    if(navigation.from?.route.id === navigation.to?.route.id) return;
+    isNavigating = false;
+  });
+
+  $effect(() => {
+    console.log({ isNavigating })
+  })
 </script>
 
 <svelte:window 
@@ -63,8 +78,8 @@
   <link rel="preload" as="font" href="/fonts/baskervville-italic/Baskervville-Italic.woff2" type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
-<div class="app" class:done={!loading}>
-  { #if loading }
+<div class="app" class:done={!loadingInitialPage}>
+  { #if loadingInitialPage }
     <div class="loader" transition:fade={{ duration: 250 }}>
       <span class="loader-text">
         ANTON HILDINGSSON
@@ -72,7 +87,7 @@
     </div>
   { /if }
   <div class="container main-grid">
-    <Header highlighted={isFloating()}/>
+    <Header highlighted={isFloating()} flashing={isNavigating} />
 
     <main class="main-grid full-width">
       {@render children()}
@@ -117,7 +132,7 @@
     opacity: 0;
     animation: 
       delayed-fade-in 1500ms ease-in forwards,
-      pulse 1000ms ease-in infinite alternate;
+      pulse-color 1000ms ease-in infinite alternate;
   }
 
   .app.done {
@@ -174,16 +189,6 @@
 
     100% {
       opacity: 1
-    }
-  }
-
-  @keyframes pulse {
-    from {
-      color: var(--fg);
-    }
-
-    to {
-      color: var(--bg);
     }
   }
 

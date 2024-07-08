@@ -1,17 +1,10 @@
 <script lang="ts">
   const { data } = $props();
+  const { year, title, Component } = data;
 </script>
 
 <div class="main-grid full-width">
-  { #await import(`$content/work/${data.year}/${data.title}.md`) } 
-    <p>loading...</p>
-  { :then { default: Component } }
-    <Component alone /> 
-  { :catch error }
-    <p>
-      Error: { error }
-    </p>
-  {/await}
+  <Component alone />
 </div>
 
 <style>

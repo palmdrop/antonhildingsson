@@ -4,8 +4,12 @@
   import Title from "./Title.svelte";
 
   const { 
-    highlighted = false
-  }: { highlighted?: boolean } = $props();
+    highlighted = false,
+    flashing = false,
+  }: { 
+    highlighted?: boolean, 
+    flashing?: boolean 
+  } = $props();
 
   const links: {
     href: string,
@@ -26,6 +30,7 @@
   <nav 
     class="main-grid full-width" 
     class:highlighted
+    class:flashing
   >
     <Title />
     <ul>
@@ -87,5 +92,10 @@
     justify-content: flex-end;
 
     grid-column: span 2;
+  }
+
+  .flashing {
+    opacity: 1;
+    animation: pulse-opacity 1000ms ease-in infinite alternate;
   }
 </style>

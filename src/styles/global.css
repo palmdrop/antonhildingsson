@@ -154,3 +154,23 @@ hr::after {
   background-color: var(--bg);
   font-family: var(--font-accent);
 }
+
+@keyframes pulse-color {
+  from {
+    color: var(--fg);
+  }
+
+  to {
+    color: var(--bg);
+  }
+}
+
+@keyframes pulse-opacity {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
