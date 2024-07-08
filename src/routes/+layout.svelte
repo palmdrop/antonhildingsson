@@ -62,10 +62,6 @@
     if(navigation.from?.route.id === navigation.to?.route.id) return;
     isNavigating = false;
   });
-
-  $effect(() => {
-    console.log({ isNavigating })
-  })
 </script>
 
 <svelte:window 

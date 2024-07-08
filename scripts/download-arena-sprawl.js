@@ -12,8 +12,11 @@ const createSprawlEntry = async (block, markdown, published) => {
   const id = block.id;
   const date = new Date(block.updated_at).toISOString();
   const link = createBlockLink(id);
+  const descriptionEntries = parseDescription(block.description || ""); 
   const data = `---
-date: "${date}"${(link && published) ? `\nlink: "${link}"` : ''}
+date: "${date}"
+${Object.entries(descriptionEntries).map(([key, value]) => `${key}: ${value}`).join("\n")}
+${(link && published) ? `link: "${link}"` : ''}
 ---
 ${markdown}
   `;
@@ -45,6 +48,22 @@ const processImageBlock = async (imageBlock, published) => {
   createSprawlEntry(imageBlock, markdown, published);
 }
 
+
+const parseDescription = (description) => {
+  return Object.fromEntries(
+    description
+      .trim()
+      .split('\n')
+      .filter(Boolean)
+      .map(line => {
+        const separatorIndex = line.indexOf(':');
+        const key = line.slice(0, separatorIndex).trim();
+        const value = line.slice(separatorIndex + 1).trim();
+
+        return [key, value]
+      })
+  );
+}
 
 const processBlock = async (block, published) => {
   const description = block.description ?? "";

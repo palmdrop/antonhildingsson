@@ -4,14 +4,14 @@
   const { 
     children,
     date,
-    title,
     link,
+    lang,
     first
   }: { 
     children: any, 
     date: string, 
     link?: string, 
-    title?: string,
+    lang?: string,
     first?: boolean
   } = $props();
 
@@ -28,7 +28,10 @@
   href={href}
   target={internal ? "" : "_blank"}
 >
-  <div class="sprawl markdown">
+  <div 
+    class="sprawl markdown" 
+    {lang}
+  >
     {@render children()}
     { #if !internal }
       <p>
