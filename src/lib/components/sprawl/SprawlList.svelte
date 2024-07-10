@@ -23,6 +23,9 @@
   ol {
     counter-reset: figure;
     gap: 1em;
+
+    --item-top-padding: calc(var(--edge-padding) + 1.75em);
+    margin-top: calc(-1 * var(--item-top-padding));
   }
 
   li {

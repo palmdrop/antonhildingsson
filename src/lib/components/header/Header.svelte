@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$lib/state/page.svelte";
+	import { getShouldHide } from "$lib/state/header.svelte";
   import NavLink from "../links/NavLink.svelte";
   import Title from "./Title.svelte";
 
@@ -8,8 +9,10 @@
     flashing = false,
   }: { 
     highlighted?: boolean, 
-    flashing?: boolean 
+    flashing?: boolean,
   } = $props();
+
+  // TODO: also determine if we've scrolled far enough! maybe 150px, less on work pages
 
   const links: {
     href: string,
@@ -26,7 +29,10 @@
   ];
 </script>
 
-<header class="main-grid">
+<header 
+  class="main-grid"
+  class:hidden={getShouldHide()}
+>
   <nav 
     class="main-grid full-width" 
     class:highlighted
@@ -55,6 +61,18 @@
     padding: var(--edge-padding);
 
     z-index: 1;
+
+    transition: 0.5s;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+  }
+
+  @media screen and (min-width: 500px) {
+    .hidden {
+      transform: none;
+    }
   }
 
   nav {

@@ -15,6 +15,7 @@
 	import Footer from '$lib/components/footer/Footer.svelte';
 	import { onHydrationComplete } from '$lib/utils/loading';
 	import { fade } from 'svelte/transition';
+	import { setMinScrollDown } from '$lib/state/header.svelte';
 
   const { children } = $props();
 
@@ -61,6 +62,12 @@
   afterNavigate(navigation => {
     if(navigation.from?.route.id === navigation.to?.route.id) return;
     isNavigating = false;
+
+    if(navigation.to?.route.id?.includes('work/')) {
+      setMinScrollDown(import.meta.env.VITE_MIN_SCROLL_DOWN_WORK);
+    } else {
+      setMinScrollDown(import.meta.env.VITE_MIN_SCROLL_DOWN_DEFAULT);
+    }
   });
 </script>
 
@@ -83,7 +90,10 @@
     </div>
   { /if }
   <div class="container main-grid">
-    <Header highlighted={isFloating()} flashing={isNavigating} />
+    <Header 
+      flashing={isNavigating} 
+      highlighted={isFloating()} 
+    />
 
     <main class="main-grid full-width">
       {@render children()}

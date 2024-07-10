@@ -53,7 +53,7 @@
     line-height: 1.1em;
   }
 
-  @media (min-resolution: 2dppx) {
+  @media screen and (min-resolution: 2dppx) and (max-width: 500px) {
     p {
       font-size: 12px;
       line-height: 1.1em;

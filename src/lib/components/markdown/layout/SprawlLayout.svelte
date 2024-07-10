@@ -44,12 +44,12 @@
 <style>
   a {
     display: block;
-    padding-top: calc(var(--edge-padding) + 1.75em);
     height: 100%;
   }
 
   .sprawl {
     border: 1px solid var(--bg);
+    padding-top: var(--item-top-padding);
   }
 
   a:hover .sprawl {
