@@ -50,9 +50,12 @@
 
     background-color: var(--bg);
     color: var(--fg);
+
+    padding: 1em;
   }
 
   .loader-text {
+    text-align: center;
     animation: 
       delayed-fade-in 1500ms ease-in forwards,
       pulse-color 1000ms ease-in infinite alternate;
