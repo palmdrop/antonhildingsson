@@ -1,1 +1,1 @@
-export const TAGS_QUERY_PARAMETER = 'tags';
+export const TAGS_QUERY_PARAMETER = 'taggar';

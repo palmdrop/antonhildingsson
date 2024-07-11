@@ -63,7 +63,7 @@
     if(navigation.from?.route.id === navigation.to?.route.id) return;
     isNavigating = false;
 
-    if(navigation.to?.route.id?.includes('work/')) {
+    if(navigation.to?.route.id?.includes('texter/')) {
       setMinScrollDown(import.meta.env.VITE_MIN_SCROLL_DOWN_WORK);
     } else {
       setMinScrollDown(import.meta.env.VITE_MIN_SCROLL_DOWN_DEFAULT);
