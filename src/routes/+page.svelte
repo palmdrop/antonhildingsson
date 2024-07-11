@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Landing from "$content/landing.md";
-	import SprawlList from "$lib/components/sprawl/SprawlList.svelte";
 	import { createTitle } from "$lib/utils/title";
 </script>
 
@@ -12,12 +10,7 @@
   />
 </svelte:head>
 
-<section class="main-grid full-width">
-  <Landing />
-</section>
-<section class="main-grid full-width">
-  <SprawlList />
-</section>
+<div></div>
 
 <style>
 </style>
