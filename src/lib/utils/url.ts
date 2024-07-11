@@ -27,6 +27,6 @@ export const scrollToAnchor = () => {
 
 export const getWorkUrl = (date: string | Date, fileName?: string) => {
   const year = new Date(date).getFullYear();
-  const url = fileName ? `/work/${year}/${fileName}` : '';
+  const url = fileName ? `/texter/${year}/${fileName}` : '';
   return url;
 }

@@ -17,11 +17,11 @@
     label: string
   }[] = [
     {
-      href: "/work" ,
+      href: "/texter" ,
       label: "texter"
     },
     {      
-      href: "/about",
+      href: "/om",
       label: "om"
     }
   ];

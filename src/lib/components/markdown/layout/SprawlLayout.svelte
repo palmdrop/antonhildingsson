@@ -15,7 +15,7 @@
     first?: boolean
   } = $props();
 
-  const sprawlID = `sprawl-${convertToURLFriendly(date)}` ;
+  const sprawlID = `fragment-${convertToURLFriendly(date)}` ;
 
   const href = link || `#${sprawlID}`;
   const internal = !link || link?.startsWith("/");

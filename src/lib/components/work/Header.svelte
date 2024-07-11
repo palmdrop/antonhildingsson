@@ -46,7 +46,7 @@
       <a 
         class="tag neutral-clickable" 
         class:withDeliminator={tags.length > 1} 
-        href={`/work?tags=${tag}`}
+        href={`/texter?taggar=${tag}`}
         class:active={tagsQuery.value.includes(tag)}
       >
         { tag }

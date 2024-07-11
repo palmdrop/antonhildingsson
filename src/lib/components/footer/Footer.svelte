@@ -8,7 +8,7 @@
     <a 
       rel="cc:attributionURL dct:creator noopener noreferrer"
       property="cc:attributionName"
-      href="/about"
+      href="/om"
       class="neutral-clickable"
     >
       <span class="underlined">
