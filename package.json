@@ -7,6 +7,7 @@
 		"preview": "vite preview",
 		"prebuild": "npm i --legacy-peer-deps && npm run process && npm run sync",
 		"process": "tsx ./scripts/process-work.ts",
+    "content:push": "git add ./src/content && git commit -m 'Update' && git push",
 		"postbuild": "node ./scripts/create-sitemap.js",
 		"sync": "node ./scripts/download-arena-sprawl.js",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -39,10 +40,10 @@
 		"tsx": "^4.11.2",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3",
-		"vite-plugin-run": "^0.5.2"
+		"vite-plugin-run": "^0.5.2",
+		"mdsvex": "^0.11.1"
 	},
 	"type": "module",
 	"dependencies": {
-		"mdsvex": "^0.11.0"
 	}
 }

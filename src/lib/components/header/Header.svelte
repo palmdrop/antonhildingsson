@@ -12,8 +12,6 @@
     flashing?: boolean,
   } = $props();
 
-  // TODO: also determine if we've scrolled far enough! maybe 150px, less on work pages
-
   const links: {
     href: string,
     label: string

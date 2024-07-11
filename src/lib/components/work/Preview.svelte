@@ -26,9 +26,7 @@
     { :then { default: Component } }
       <Component /> 
     { :catch _ }
-      <p>
-        Error fetching work... Retry?
-      </p>
+      <span></span>
     {/await}
     </a>
 { /if }
