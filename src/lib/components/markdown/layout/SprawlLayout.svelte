@@ -60,6 +60,9 @@
 
   :global(.sprawl.markdown img) {
     padding: 0;
+    width: auto;
+    max-width: 100%;
+    max-height: 1000px;
   }
 
   :global(.sprawl.markdown p) {
