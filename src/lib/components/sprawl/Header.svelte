@@ -1,4 +1,4 @@
-<h2>
+<h2 class="full-width">
   <a href="#fragment">
     <span class="clickable">
       FRAGMENT
@@ -15,6 +15,10 @@
     padding-bottom: var(--gap);
 
     border-bottom: 1px solid var(--fg);
+
+    z-index: 1;
+
+    width: 100%;
   }
 
   a {
