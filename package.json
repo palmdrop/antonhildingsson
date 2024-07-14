@@ -7,7 +7,7 @@
 		"preview": "vite preview",
 		"prebuild": "npm i --legacy-peer-deps && npm run process && npm run sync",
 		"process": "tsx ./scripts/process-work.ts",
-    "content:push": "git add ./src/content && git commit -m 'Update' && git push",
+    "content:push": "cd ./src/content && git add . && git commit -m 'Update' && git push && cd ../..",
 		"postbuild": "node ./scripts/create-sitemap.js",
 		"sync": "node ./scripts/download-arena-sprawl.js",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
