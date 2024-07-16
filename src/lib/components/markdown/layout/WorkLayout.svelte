@@ -37,9 +37,9 @@
       </span>
     </h1>
   { /if }
-  <section class="markdown work-piece">
+  <div class="markdown work-piece">
     {@render children()}
-  </section>
+  </div>
 </article>
 
 <style>
@@ -48,7 +48,7 @@
     padding-top: 0.5em;
   }
 
-  .alone section {
+  .alone .work-piece {
     padding: 1em 0em;
   }
 

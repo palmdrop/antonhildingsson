@@ -28,7 +28,7 @@
   href={href}
   target={internal ? "" : "_blank"}
 >
-  <div 
+  <article 
     class="sprawl markdown" 
     {lang}
   >
@@ -38,7 +38,7 @@
         { linkLabel }
       </p>
     { /if }
-  </div>
+  </article>
 </a>
 
 <style>

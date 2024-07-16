@@ -12,6 +12,6 @@
   }: { children: any } = $props();
 </script>
 
-<article class="markdown main-grid full-width">
+<div class="markdown main-grid full-width">
   {@render children()}
-</article>
+</div>
