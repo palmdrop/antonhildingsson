@@ -52,10 +52,16 @@
     padding-top: var(--item-top-padding);
   }
 
-  a:hover .sprawl {
+  a:active .sprawl {
     border-bottom: 1px solid var(--fg);
-
     font-family: var(--font-accent);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover .sprawl {
+      border-bottom: 1px solid var(--fg);
+      font-family: var(--font-accent);
+    }
   }
 
   :global(.sprawl.markdown img) {

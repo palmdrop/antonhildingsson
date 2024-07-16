@@ -12,7 +12,7 @@
     class="clickable" 
     href={url}
   >
-    { latest.title }
+    SENASTE: { latest.title }
   </a>
 </h2>
 

@@ -14,6 +14,7 @@
   list-style-position: outside;
   max-width: var(--paragraph-width);
   margin-left: 1.2em;
+  padding-bottom: 0.2em;
 }
 
 .markdown img {
