@@ -3,7 +3,7 @@ let lastScrollUp = $state(0);
 
 const floating = $derived(scrollY > import.meta.env.VITE_SCROLL_Y_THRESHOLD);
 const scrollingDown = $derived(
-  lastScrollUp < scrollY &&
+  lastScrollUp <= scrollY &&
   (scrollY - lastScrollUp) >= import.meta.env.VITE_SCROLLING_DOWN_THRESHOLD
 );
 
