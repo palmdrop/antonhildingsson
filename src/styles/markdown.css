@@ -52,8 +52,9 @@
 }
 
 .markdown strong {
-  font-style: italic;
-  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.06em;
 }
 
 .markdown figcaption {
