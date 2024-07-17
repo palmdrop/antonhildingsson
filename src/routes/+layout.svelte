@@ -42,7 +42,6 @@
   onNavigate((navigation) => {
     // Do nothing if the base route is the same
     if(navigation.from?.route.id === navigation.to?.route.id) return;
-    window.scrollTo(0, 0);
 
     if (!document.startViewTransition) return;
 
@@ -61,6 +60,7 @@
 
   afterNavigate(navigation => {
     if(navigation.from?.route.id === navigation.to?.route.id) return;
+    window.scrollTo(0, 0);
     isNavigating = false;
 
     if(navigation.to?.route.id?.includes('texter/')) {
