@@ -22,7 +22,7 @@
     href={getWorkUrl(date, fileName)}
   >
     { #await componentPromise }
-      <p>loading...</p>
+      <p>laddar...</p>
     { :then { default: Component } }
       <Component /> 
     { :catch _ }
@@ -46,8 +46,7 @@
     position: absolute;
 
     width: 100%;
-    height: 100%;
-    max-height: var(--max-partial-preview-height);
+    height: var(--max-partial-preview-height);
 
     background: linear-gradient(
       to bottom,
