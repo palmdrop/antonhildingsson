@@ -4,7 +4,6 @@
     Object.values(sprawlImport) as { default: ConstructorOfATypedSvelteComponent, metadata: any }[]
   )
     .map(item => ({ Component: item.default, metadata: item.metadata }))
-    // TODO: random order?
     .sort((item1, item2) => {
       return new Date(item2.metadata.date).getTime() - new Date(item1.metadata.date).getTime();
     });
