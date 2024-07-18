@@ -9,7 +9,7 @@
 	<title>{createTitle()}</title>
 	<meta 
     name="description" 
-    content={`${import.meta.env.VITE_TITLE}'s writing and portfolio.`}
+    content={`${import.meta.env.VITE_TITLE}s texter och portfolio.`}
   />
 </svelte:head>
 

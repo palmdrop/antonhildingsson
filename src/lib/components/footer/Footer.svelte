@@ -12,7 +12,7 @@
       class="neutral-clickable"
     >
       <span class="underlined">
-        Anton Hildingsson
+        {import.meta.env.VITE_TITLE}
       </span> 
     </a>.
     Licensed under 

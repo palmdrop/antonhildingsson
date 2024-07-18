@@ -16,7 +16,7 @@
     <title>{ createTitle(frontmatter.title) }</title>
     <meta 
       name="description" 
-      content={`"${frontmatter.title}" by ${import.meta.env.VITE_TITLE}.`}
+      content={`"${frontmatter.title}" av ${import.meta.env.VITE_TITLE}.`}
     />
   {/if}
 </svelte:head>

@@ -24,7 +24,7 @@
 	<title>{createTitle("Texter")}</title>
 	<meta 
     name="description" 
-    content={`A list of ${import.meta.env.VITE_TITLE}'s prose and poetry writing.`}
+    content={`En samling av ${import.meta.env.VITE_TITLE}s prosa och poesi.`}
   />
   <link rel="canonical" href="https://antonhildingsson.com/texter">
 </svelte:head>

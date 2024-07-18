@@ -85,7 +85,7 @@
   { #if loadingInitialPage }
     <div class="loader" transition:fade={{ duration: 250 }}>
       <span class="loader-text">
-        ANTON HILDINGSSON
+        {import.meta.env.VITE_TITLE}
       </span>
     </div>
   { /if }
@@ -135,6 +135,7 @@
   .loader-text {
     font-family: serif;
     font-style: italic;
+    text-transform: uppercase;
     opacity: 0;
     animation: 
       delayed-fade-in 1500ms ease-in forwards,
