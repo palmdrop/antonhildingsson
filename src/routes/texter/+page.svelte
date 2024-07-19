@@ -5,7 +5,7 @@
 	import Tag from "$lib/components/work/Tag.svelte";
 	import { onMount } from "svelte";
 	import { tagsQuery } from "$lib/state/query.svelte";
-	import { createTitle } from "$lib/utils/title";
+	import { createTitle } from "$lib/utils/work";
 
   import Work from "$content/work.md";
 

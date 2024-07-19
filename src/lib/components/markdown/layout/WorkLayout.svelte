@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
-	import { createTitle } from "$lib/utils/title";
 	import { formatDate } from "$lib/utils/date";
 	import { getWorkUrl } from "$lib/utils/url";
+	import { createDescription, createTitle } from "$lib/utils/work";
 
   const { 
     children,
@@ -16,7 +16,7 @@
     <title>{ createTitle(frontmatter.title) }</title>
     <meta 
       name="description" 
-      content={`"${frontmatter.title}" av ${import.meta.env.VITE_TITLE}.`}
+      content={createDescription(frontmatter)}
     />
   {/if}
 </svelte:head>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import About from "$content/about.md";
-	import { createTitle } from "$lib/utils/title";
+	import { createTitle } from "$lib/utils/work";
 </script>
 
 <svelte:head>

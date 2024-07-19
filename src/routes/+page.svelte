@@ -2,14 +2,14 @@
   import Landing from "$content/landing.md";
 	import SprawlList from "$lib/components/sprawl/SprawlList.svelte";
   import SprawlHeader from "$lib/components/sprawl/Header.svelte";
-	import { createTitle } from "$lib/utils/title";
+	import { createTitle } from "$lib/utils/work";
 </script>
 
 <svelte:head>
 	<title>{createTitle()}</title>
 	<meta 
     name="description" 
-    content={`${import.meta.env.VITE_TITLE}s texter och portfolio.`}
+    content={import.meta.env.VITE_DESCRIPTION}
   />
 </svelte:head>
 

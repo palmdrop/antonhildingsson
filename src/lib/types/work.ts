@@ -9,7 +9,8 @@ export type WorkFrontmatter = {
   links?: string[],
   preview?: boolean | 'full' | 'partial' | 'none',
   fileName: string,
-  published: boolean
+  published: boolean,
+  description?: string
 }
 
 export type WorkItem = {

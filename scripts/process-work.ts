@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import { WorkFrontmatter } from '../src/lib/types/work';
+import { createRSS } from "./create-rss-feed";
 
 const BASE_DIRECTORY = "src/content";
 const WORK_DIRECTORY = `${BASE_DIRECTORY}/work`;
@@ -91,6 +92,8 @@ const processWork = async () => {
         .date
         .localeCompare(workItem1.frontmatter.date)
     );
+
+  await createRSS(items.map(item => item.frontmatter));
 
   const tags = new Set(
     items.map(item => item.frontmatter.tags).flat()
