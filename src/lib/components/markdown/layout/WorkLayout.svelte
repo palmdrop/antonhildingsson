@@ -73,12 +73,18 @@
     position: relative;
     overflow: visible;
     width: 100%;
-    max-width: var(--paragraph-width);
+    max-width: 100%;
 
     border: none;
 
     margin: 1em 0em;
     margin-bottom: 2.0em;
+  }
+
+  @media screen and (min-width: 2000px) {
+    :global(.work-piece hr) {
+      max-width: var(--paragraph-width);
+    }
   }
 
   :global(.work-piece hr::after) {
