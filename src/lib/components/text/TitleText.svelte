@@ -6,26 +6,28 @@
   }: { children: any } = $props();
 </script>
 
-<p>
+<div class="full-width">
   <!--
     A small floating element is used to offset the intro paragraph to avoid overlap with navbar
   -->
   <span class="float"></span>
-  <Title hidden /> 
-  {@render children()}
-</p>
+  <p>
+    <Title hidden /> 
+    {@render children()}
+  </p>
+</div>
 
 <style>
   p {
     grid-column: span var(--grid-columns);
-    max-width: min(80%, var(--paragraph-width));
+    max-width: min(90%, var(--paragraph-width));
   }
 
   .float {
-    width: 6em;
+    width: 7.5em;
     height: 2.5em; 
     float: right;
 
-    shape-outside: ellipse(50% 50% at 100% 0%);
+    shape-outside: ellipse(50% 50% at 0% 0%);
   }
 </style>
