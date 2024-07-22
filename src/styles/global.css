@@ -1,7 +1,4 @@
 :root {
-  /*
-  --bg: whitesmoke;
-  */
   --bg: white;
   --fg: black;
   --accent: yellow;
@@ -16,10 +13,6 @@
   --letter-spacing: 0.01em;
 
   --max-partial-preview-height: 12em;
-
-  /*
-  --max-page-width: 1100px;
-  */
   --max-page-width: 100vw;
 
   --edge-padding: min(0.75em, 30px);
