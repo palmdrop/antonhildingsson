@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createQueryParameter } from "$lib/state/query.svelte";
+	import { getBlurConfig, getSlideConfig } from "$lib/utils/transitions";
 	import { blur, slide } from "svelte/transition";
 
   type State = 'expanded' | 'collapsed';
@@ -60,23 +61,15 @@
   { #if stateQueryParam.value === 'expanded' }
     <div 
       class="content" 
-      in:slide={{
-        duration: 500
-      }}
+      in:slide={getSlideConfig()}
       out:slide={{
+        ...getSlideConfig(),
         delay: 150,
-        duration: 500
       }}
     >
       <div
-        in:blur={{
-          duration: 500,
-          amount: 5
-        }}
-        out:blur={{
-          duration: 300,
-          amount: 5
-        }}
+        in:blur={getBlurConfig()}
+        out:blur={getBlurConfig(300)}
       >
         {@render children()}
       </div>

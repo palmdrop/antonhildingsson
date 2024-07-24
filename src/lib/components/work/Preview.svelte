@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { WorkFrontmatter } from "$lib/types/work";
+	import { getBlurConfig } from "$lib/utils/transitions";
 	import { getWorkUrl } from "$lib/utils/url";
+	import { blur, fade, slide } from "svelte/transition";
 
   const {
     preview,
@@ -22,22 +24,35 @@
     href={getWorkUrl(date, fileName)}
   >
     { #await componentPromise }
-      <p>laddar...</p>
+      <p class="loader">
+        laddar...
+      </p>
     { :then { default: Component } }
-      <Component /> 
+      <div
+        in:blur={getBlurConfig()}
+      >
+        <Component /> 
+      </div>
     { :catch _ }
       <span></span>
     {/await}
-    </a>
+  </a>
 { /if }
 
 <style>
+  a {
+    display: block;
+  }
+
   .partial {
     max-height: var(--max-partial-preview-height);
+    height: 100%;
     overflow: hidden;
     position: relative;
 
     z-index: 0;
+
+    transition: height 0.5s;
   }
 
   .partial::before {
