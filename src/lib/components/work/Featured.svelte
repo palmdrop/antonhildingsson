@@ -22,5 +22,7 @@
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--fg);
+
+    text-transform: none;
   }
 </style>
