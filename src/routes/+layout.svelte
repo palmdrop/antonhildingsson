@@ -162,14 +162,14 @@
   @keyframes goo-in {
     from {
       opacity: 0;
-      filter: blur(5px) contrast(200%);
+      filter: var(--view-transition-filter);
     }
   }
 
   @keyframes goo-out {
     to {
       opacity: 0;
-      filter: blur(5px) contrast(200%);
+      filter: var(--view-transition-filter);
     }
   }
 
@@ -201,7 +201,7 @@
 
   :root::view-transition-old(root) {
     animation: 
-      210ms ease-in-out both goo-out, 
+      150ms ease-in-out both goo-out, 
       150ms ease-in-out both fade-out;
   }
 
