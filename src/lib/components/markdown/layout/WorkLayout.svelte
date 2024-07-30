@@ -49,7 +49,7 @@
   }
 
   .alone .work-piece {
-    padding: 1em 0em;
+    padding: 0.5em 0em;
   }
 
   h1 {
@@ -67,6 +67,7 @@
 
   :global(.work-piece p) {
     padding-bottom: 0.75em;
+    max-width: var(--work-paragraph-width);
   }
 
   :global(.work-piece hr) {
@@ -83,7 +84,7 @@
 
   @media screen and (min-width: 2000px) {
     :global(.work-piece hr) {
-      max-width: var(--paragraph-width);
+      max-width: var(--work-paragraph-width);
     }
   }
 

@@ -14,9 +14,11 @@
   --font-accent: Louise, serif;
 
   --font-size: clamp(1.0rem, 3vw, 3.75rem);
-  --paragraph-width: 60ch;
   --line-height: 1.3em;
   --letter-spacing: 0.01em;
+
+  --paragraph-width: 50ch;
+  --work-paragraph-width: 60ch;
 
   --max-partial-preview-height: 12em;
   --max-page-width: 100vw;
