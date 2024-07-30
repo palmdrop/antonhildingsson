@@ -2,7 +2,8 @@
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
 	import { getWorkUrl } from "$lib/utils/url";
-	import { createDescription, createTitle } from "$lib/utils/work";
+	import { createDescription } from "$lib/utils/work";
+  import HeadMeta from "$lib/components/util/HeadMeta.svelte";
 
   const { 
     children,
@@ -11,15 +12,13 @@
   }: WorkFrontmatter & { children: any, alone?: boolean } = $props();
 </script>
 
-<svelte:head>
-  {#if alone}
-    <title>{ createTitle(frontmatter.title) }</title>
-    <meta 
-      name="description" 
-      content={createDescription(frontmatter)}
-    />
-  {/if}
-</svelte:head>
+{ #if alone }
+  <HeadMeta
+    title={frontmatter.title} 
+    description={createDescription(frontmatter)}
+    type="article"
+  />
+{ /if }
 
 <article class="full-width" class:alone>
   { #if alone }

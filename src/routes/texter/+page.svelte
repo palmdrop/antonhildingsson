@@ -8,6 +8,7 @@
 	import { createTitle } from "$lib/utils/work";
 
   import Work from "$content/work.md";
+	import HeadMeta from "$lib/components/util/HeadMeta.svelte";
 
   let mounted = $state(false);
 
@@ -20,14 +21,12 @@
   }
 </script>
 
-<svelte:head>
-	<title>{createTitle("Texter")}</title>
-	<meta 
-    name="description" 
-    content={`En samling av ${import.meta.env.VITE_TITLE}s prosa och poesi.`}
-  />
-  <link rel="canonical" href="https://antonhildingsson.com/texter">
-</svelte:head>
+<HeadMeta 
+  title="Texter"
+  description={`En samling av ${import.meta.env.VITE_TITLE}s prosa och poesi.`}
+  route="texter"
+  canonical
+/>
 
 <section class="main-grid full-width">
   <Work />
