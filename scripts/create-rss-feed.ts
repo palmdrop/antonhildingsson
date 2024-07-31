@@ -17,7 +17,7 @@ const createItem = (work: WorkFrontmatter) => {
   const link = `${baseUrl}/texter/${year}/${fileName}`;
 
   return `<item>
-<guid>${baseUrl}/${year}/${fileName}</guid>
+<guid>${link}</guid>
 <title>${title}</title>
 <link>${link}</link>
 <description>${description}</description>
@@ -32,7 +32,7 @@ export const createRSS = async (work: WorkFrontmatter[]) => {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
-<title>Anton Hildingsson</title>
+<title>${process.env.VITE_TITLE}</title>
 <link>${baseUrl}</link>
 <description>${process.env.VITE_DESCRIPTION}</description>
 ${items}
