@@ -5,7 +5,6 @@
 	import Tag from "$lib/components/work/Tag.svelte";
 	import { onMount } from "svelte";
 	import { tagsQuery } from "$lib/state/query.svelte";
-	import { createTitle } from "$lib/utils/work";
 
   import Work from "$content/work.md";
 	import HeadMeta from "$lib/components/util/HeadMeta.svelte";
@@ -25,7 +24,6 @@
   title="Texter"
   description={`En samling av ${import.meta.env.VITE_TITLE}s prosa och poesi.`}
   route="texter"
-  canonical
 />
 
 <section class="main-grid full-width">
