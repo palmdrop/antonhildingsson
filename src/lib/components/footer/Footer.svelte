@@ -36,27 +36,26 @@
 
 <style>
   footer {
-    padding: min(var(--gap), 12px)  var(--edge-padding);
+    padding: min(var(--gap), 12px) var(--edge-padding);
 
     display: grid;
     justify-content: center;
     gap: 0;
 
-    border-top: 1px solid var(--fg);
+    border-top: var(--border);
     margin-top: auto;
 
     width: 100%;
   }
 
   p {
-    font-size: 16px;
+    font-size: max(0.5em, 16px);
     line-height: 1.1em;
   }
 
   @media screen and (min-resolution: 2dppx) and (max-width: 500px) {
     p {
-      font-size: 12px;
-      line-height: 1.1em;
+      font-size: max(0.4em, 12px);
     }
   }
 

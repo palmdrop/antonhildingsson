@@ -63,7 +63,7 @@
   }
 
   .border {
-    border-bottom: 1px solid var(--fg);
+    border-bottom: var(--border);
   }
 
   .work-header:active h2 span {

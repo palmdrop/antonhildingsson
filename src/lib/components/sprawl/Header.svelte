@@ -14,7 +14,7 @@
     padding-top: var(--gap);
     padding-bottom: var(--gap);
 
-    border-bottom: 1px solid var(--fg);
+    border-bottom: var(--border);
 
     z-index: 1;
 

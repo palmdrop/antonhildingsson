@@ -27,7 +27,7 @@
 
 <style>
   .preview {
-    border-bottom: 1px solid var(--fg);
+    border-bottom: var(--border);
     padding-bottom: 2em;
   }
 </style>

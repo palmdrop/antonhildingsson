@@ -151,8 +151,17 @@
     flex-direction: column;
     min-height: 100%;
     width: 100%;
-    max-width: var(--max-page-width);
+    --page-width: 100%;
+    max-width: var(--page-width);
   }
+
+  @media screen and (min-width: 2000px) {
+    .container {
+      --page-width: var(--max-page-width);
+      max-width: var(--page-width);
+    }
+  }
+
 
 	main {
     padding: var(--edge-padding);

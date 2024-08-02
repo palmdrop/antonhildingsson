@@ -53,13 +53,12 @@
 
 .markdown strong {
   text-decoration: underline;
-  text-decoration-thickness: 0.05em;
-  text-underline-offset: 0.06em;
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: calc(1.1 * var(--border-width));
 }
 
 .markdown figcaption {
   counter-increment: figure;
-  font-size: 0.75em;
   font-style: italic;
   margin-top: -0.5em;
 }

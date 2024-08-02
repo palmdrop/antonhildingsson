@@ -13,15 +13,22 @@
   --font-heading: var(--font);
   --font-accent: Louise, serif;
 
+  /*
   --font-size: clamp(1.0rem, 3vw, 3.75rem);
+  */
+  --font-size: clamp(1.0rem, 3vw, 3rem);
   --line-height: 1.3em;
   --letter-spacing: 0.01em;
 
-  --paragraph-width: 50ch;
+  --border-width: 0.05em;
+  --border: var(--border-width) solid var(--fg);
+  --border-inverted: var(--border-width) solid var(--bg);
+
+  --paragraph-width: 54ch;
   --work-paragraph-width: 60ch;
 
   --max-partial-preview-height: 12em;
-  --max-page-width: 100vw;
+  --max-page-width: 1560px;
 
   --edge-padding: min(0.75em, 30px);
   --top-padding: var(--edge-padding);
@@ -33,9 +40,6 @@
   --text-shadow: 0px 0px 0.15em var(--fg);
 
   --transition-time: 0.3s;
-
-  --mobile-breakpoint: 500px;
-
   --view-transition-filter: blur(8px) brightness(80%) contrast(150%);
 }
 
@@ -144,7 +148,7 @@ hr {
   width: 100%;
   margin-bottom: 2.0em;
   border: none;
-  border-bottom: 1px solid var(--fg);
+  border-bottom: var(--border);
   text-align: center;
 }
 

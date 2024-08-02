@@ -43,7 +43,7 @@
 
 <style>
   .alone {
-    border-top: 1px solid var(--fg);
+    border-top: var(--border);
     padding-top: 0.5em;
   }
 
@@ -52,7 +52,7 @@
   }
 
   h1 {
-    border-bottom: 1px solid var(--fg);
+    border-bottom: var(--border);
     padding-bottom: var(--gap);
   }
 

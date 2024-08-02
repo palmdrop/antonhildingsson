@@ -55,7 +55,7 @@
   header {
     position: fixed;
     width: 100%;
-    max-width: var(--max-page-width);
+    max-width: var(--page-width);
     padding: var(--edge-padding);
 
     z-index: 1;

@@ -48,18 +48,18 @@
   }
 
   .sprawl {
-    border: 1px solid var(--bg);
+    border: var(--border-inverted);
     padding-top: var(--item-top-padding);
   }
 
   a:active .sprawl {
-    border-bottom: 1px solid var(--fg);
+    border-bottom: var(--border);
     font-family: var(--font-accent);
   }
 
   @media (hover: hover) and (pointer: fine) {
     a:hover .sprawl {
-      border-bottom: 1px solid var(--fg);
+      border-bottom: var(--border);
       font-family: var(--font-accent);
     }
   }
