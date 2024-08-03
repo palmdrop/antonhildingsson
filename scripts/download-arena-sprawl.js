@@ -56,12 +56,15 @@ const parseDescription = (description) => {
       .split('\n')
       .filter(Boolean)
       .map(line => {
+        if(!line.includes(":")) return undefined;
+
         const separatorIndex = line.indexOf(':');
         const key = line.slice(0, separatorIndex).trim();
         const value = line.slice(separatorIndex + 1).trim();
 
         return [key, value]
       })
+      .filter(Boolean)
   );
 }
 
