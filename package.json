@@ -7,7 +7,7 @@
 		"preview": "vite preview",
 		"prebuild": "npm i && npm run process && npm run sync:sprawl",
 		"process": "tsx ./scripts/process-work.ts",
-    "content:push": "cd ./src/content && git add . && git commit -m 'Update' && git push && cd ../..",
+		"content:push": "cd ./src/content && git add . && git commit -m 'Update' && git push && cd ../..",
 		"postbuild": "node ./scripts/create-sitemap.js",
 		"sync:sprawl": "node ./scripts/download-arena-sprawl.js",
 		"sync:words": "node ./scripts/download-arena-words.js",
@@ -31,6 +31,7 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0-next.4",
+		"mdsvex": "^0.11.1",
 		"node-fetch": "^3.3.2",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -41,10 +42,7 @@
 		"tsx": "^4.11.2",
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3",
-		"vite-plugin-run": "^0.5.2",
-		"mdsvex": "^0.11.1"
+		"vite-plugin-run": "^0.5.2"
 	},
-	"type": "module",
-	"dependencies": {
-	}
+	"type": "module"
 }
