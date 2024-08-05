@@ -26,10 +26,10 @@
       <span class="underlined">
         CC BY-NC-ND 4.0
       </span>
-      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-      <img style="height:1em!important; padding-top: 2px;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+      <img width="64" height="64" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+      <img width="64" height="64" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+      <img width="64" height="64" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+      <img width="64" height="64" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
     </a>
   </p>
 </footer>
@@ -67,5 +67,12 @@
 
   .underlined {
     text-decoration: underline;
+  }
+
+  img {
+    height: 1em;
+    width: auto;
+
+    padding-top: 0.1em;
   }
 </style>

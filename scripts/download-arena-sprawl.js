@@ -70,11 +70,11 @@ const processImageBlock = async (imageBlock, published) => {
 
   const markdown = `
 <script lang="ts">
-  import img from "$content/${ASSETS_SUBDIRECTORY}/${imageName}?enhanced";
+  import img from "$content/${ASSETS_SUBDIRECTORY}/${imageName}?enhanced&w=900;640;400;300";
 </script>
 
 <figure>
-  <enhanced:img src={img} alt="${title}" sizes="min(900px, 100vw)"/>
+  <enhanced:img src={img} alt="${title}" sizes="(min-width: 1500px) 900px, (min-width: 900px) 640px, (min-width: 640px) 400px, (min-width: 400px) 300px"/>
   <figcaption>
     ${title}
   </figcaption>
