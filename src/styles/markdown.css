@@ -60,7 +60,7 @@
 .markdown figcaption {
   counter-increment: figure;
   font-style: italic;
-  margin-top: -0.5em;
+  margin-top: 0.0em;
 }
 
 .markdown figcaption::before {

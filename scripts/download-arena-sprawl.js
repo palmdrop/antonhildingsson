@@ -1,10 +1,38 @@
 import fs from 'fs/promises';
+import { createWriteStream } from 'fs';
 import dotenv from "dotenv";
+import https from "https";
+
+export const downloadImage = async (url, filename) => {
+  const file = createWriteStream(filename);
+  https.get(url, response => {
+    response.pipe(file)
+
+    file.on("finish", () => {
+      file.close();
+      console.log(`Image "${filename} downloaded...`)
+    })
+  }).on("error", error => {
+    console.error(`Error downloading image "${filename}": ${error}`);
+    fs.unlink(filename, unlinkError => {
+      if(!unlinkError) return;
+      console.log(`Error deleting image: ${unlinkError}`);
+    });
+
+    throw error;
+  });
+
+  return file;
+}
 
 dotenv.config({ path: "./.env.local" });
 
-const slug = "stream-cascade-sprawl";
-const destination = "./src/content/sprawl/external";
+const CHANNEL_SLUG = "stream-cascade-sprawl";
+
+const BASE_DIRECTORY = "./src/content"
+const OUTPUT_DIRECTORY = `${BASE_DIRECTORY}/sprawl/external`;
+const ASSETS_SUBDIRECTORY = "assets";
+const ASSETS_DIRECTORY = `${BASE_DIRECTORY}/${ASSETS_SUBDIRECTORY}`;
 
 const createBlockLink = id => `https://are.na/block/${id}`;
 
@@ -21,7 +49,7 @@ ${(link && published) ? `link: "${link}"` : ''}
 ${markdown}
   `;
 
-  await fs.writeFile(`${destination}/${id}.md`, data);
+  await fs.writeFile(`${OUTPUT_DIRECTORY}/${id}.md`, data);
 }
 
 const processTextBlock = async (textBlock, published) => {
@@ -29,23 +57,32 @@ const processTextBlock = async (textBlock, published) => {
 ${textBlock.content}
   `;
 
-  createSprawlEntry(textBlock, markdown, published);
+  await createSprawlEntry(textBlock, markdown, published);
 }
 
 const processImageBlock = async (imageBlock, published) => {
-  const title = imageBlock.title ?? imageBlock.id;
+  const title = imageBlock.title ?? "Namnlös";
+  const extension = imageBlock.image.filename.split('.').at(-1);
+  const imageUrl = imageBlock.image.display.url;
+  const imageName = `${imageBlock.id}.${extension}`;
+  const imagePath = `${ASSETS_DIRECTORY}/${imageName}`;
+
+  await downloadImage(imageUrl, imagePath);
+
   const markdown = `
+<script lang="ts">
+  import img from "$content/${ASSETS_SUBDIRECTORY}/${imageName}?enhanced";
+</script>
+
 <figure>
-
-![${title}](${imageBlock.image.display.url} "${title}")
-
+  <enhanced:img src={img} alt="${title}" />
   <figcaption>
-    ${imageBlock.title ?? "Namnlös"}
+    ${title}
   </figcaption>
 </figure>
 `;
 
-  createSprawlEntry(imageBlock, markdown, published);
+  await createSprawlEntry(imageBlock, markdown, published);
 }
 
 
@@ -132,19 +169,19 @@ export const downloadChannel = async (
 
 const clearDestination = async () => {
   await Promise.all(
-    (await fs.readdir(destination))
-      .map(file => fs.unlink(`${destination}/${file}`))
+    (await fs.readdir(OUTPUT_DIRECTORY))
+      .map(file => fs.unlink(`${OUTPUT_DIRECTORY}/${file}`))
   );
 }
 
 console.log("Downloading Sprawl...");
 
-downloadChannel(slug).then(async pages => {
+downloadChannel(CHANNEL_SLUG).then(async pages => {
     const blocks = pages.flatMap(page => page.contents);
 
     console.log("Processing blocks...");
 
-    await fs.mkdir(destination, { recursive: true });
+    await fs.mkdir(OUTPUT_DIRECTORY, { recursive: true });
     await clearDestination();
     await Promise.all(blocks.map(block => processBlock(block, false)));
 

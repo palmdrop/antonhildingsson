@@ -4,18 +4,18 @@
 	import '../styles/global.css';
 	import '../styles/markdown.css';
 
-	import Header from "$lib/components/header/Header.svelte";
-
   import { setScrollY, isFloating } from '../lib/state/scroll.svelte';
 	import { onMount } from 'svelte';
 	import { initializeQueryState } from '$lib/state/query.svelte';
 	import { initializePageState } from '$lib/state/page.svelte';
 	import { scrollToAnchor } from '$lib/utils/url';
 	import { afterNavigate, beforeNavigate, onNavigate } from '$app/navigation';
-	import Footer from '$lib/components/footer/Footer.svelte';
 	import { onHydrationComplete } from '$lib/utils/loading';
 	import { fade } from 'svelte/transition';
 	import { setMinScrollDown } from '$lib/state/header.svelte';
+
+	import Header from "$lib/components/header/Header.svelte";
+	import Footer from '$lib/components/footer/Footer.svelte';
 
   const { children } = $props();
 

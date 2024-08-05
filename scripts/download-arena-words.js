@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
-const slug = "stupid-office-words";
-const destination = "./src/content/sprawl/words";
+const CHANNEL_SLUG = "stupid-office-words";
+const OUTPUT_DIRECTORY = "./src/content/sprawl/words";
 
 const downloadChannel = async (
   channel,
@@ -52,12 +52,12 @@ const downloadChannel = async (
   }
 };
 
-downloadChannel(slug).then(async pages => {
+downloadChannel(CHANNEL_SLUG).then(async pages => {
     const blocks = pages.flatMap(page => page.contents);
 
     console.log("Processing blocks...");
 
-    await fs.mkdir(destination, { recursive: true });
+    await fs.mkdir(OUTPUT_DIRECTORY, { recursive: true });
 
     const words = blocks
       .filter(block => block.class === "Text")
@@ -68,7 +68,7 @@ downloadChannel(slug).then(async pages => {
 export const words = ${JSON.stringify(words, null, 2)} as const; 
     `;
 
-    await fs.writeFile(`${destination}/words.ts`, data);
+    await fs.writeFile(`${OUTPUT_DIRECTORY}/words.ts`, data);
 
     console.log("Done processing blocks!");
   })

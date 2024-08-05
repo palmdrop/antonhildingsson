@@ -52,7 +52,6 @@ const processWork = async () => {
 
   const getYear = async (year: string) => {
     const fileNames = await fs.readdir(`${WORK_DIRECTORY}/${year}`);
-    // return workItems.map(fileName => processWorkItem(year, fileName))
     return { year, fileNames };
   }
 
