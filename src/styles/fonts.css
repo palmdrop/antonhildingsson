@@ -1,16 +1,19 @@
 @font-face {
   font-family: 'Baskervville';
   src: url('/fonts/baskervville-regular/Baskervville-Regular.woff2') format('woff2');
+  -subfont-text: '0123456789';
 }
 
 @font-face {
   font-family: 'Baskervville';
   src: url('/fonts/baskervville-italic/Baskervville-Italic.woff2') format('woff2');
   font-style: italic;
+  -subfont-text: '0123456789';
 }
 
 @font-face {
   font-family: "Louise";
   src: url("/fonts/degheest/Louise-Regular.woff2") format("woff2"),
     url("/fonts/degheest/Louise-Regular.woff") format("woff");
+  -subfont-text: '0123456789';
 }
