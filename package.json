@@ -15,7 +15,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"subset": "npx subfont build/*.html -i --inline-css"
+		"subset": "node ./scripts/subset-fonts.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -33,6 +33,7 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0-next.4",
+		"fast-glob": "^3.3.2",
 		"mdsvex": "^0.11.1",
 		"node-fetch": "^3.3.2",
 		"prettier": "^3.1.1",
