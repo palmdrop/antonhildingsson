@@ -3,7 +3,7 @@ import { createWriteStream } from 'fs';
 import dotenv from "dotenv";
 import https from "https";
 
-export const downloadImage = async (url, filename) => {
+export const downloadImage = (url, filename) => new Promise((resolve, reject) => {
   const file = createWriteStream(filename);
   https.get(url, response => {
     response.pipe(file)
@@ -11,6 +11,7 @@ export const downloadImage = async (url, filename) => {
     file.on("finish", () => {
       file.close();
       console.log(`Image "${filename} downloaded...`)
+      resolve()
     })
   }).on("error", error => {
     console.error(`Error downloading image "${filename}": ${error}`);
@@ -19,11 +20,9 @@ export const downloadImage = async (url, filename) => {
       console.log(`Error deleting image: ${unlinkError}`);
     });
 
-    throw error;
+    reject(error);
   });
-
-  return file;
-}
+});
 
 dotenv.config({ path: "./.env.local" });
 
