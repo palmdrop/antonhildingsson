@@ -74,7 +74,7 @@ const processImageBlock = async (imageBlock, published) => {
 </script>
 
 <figure>
-  <enhanced:img src={img} alt="${title}" />
+  <enhanced:img src={img} alt="${title}" sizes="min(900px, 100vw)"/>
   <figcaption>
     ${title}
   </figcaption>
