@@ -2,7 +2,7 @@
   const year = new Date().getFullYear();
 </script>
 
-<footer class="full-width">
+<footer class="full-width" lang="en">
   <p xmlns:cc="http://creativecommons.org/ns#">
     © { year }
     <a 
