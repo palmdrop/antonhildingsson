@@ -20,7 +20,10 @@
   />
 { /if }
 
-<article class="full-width" class:alone>
+<article 
+  class={`full-width ${frontmatter.tags?.map(tag => `work-${tag}`).join(' ')}`} 
+  class:alone
+>
   { #if alone }
     <h1 class="main-grid full-width">
       <span>
@@ -95,5 +98,19 @@
     padding: 0 0.25em;
     background-color: var(--bg);
     font-family: var(--font-accent);
+  }
+
+  :global(.work-prosa) {
+    text-align: justify;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  @media screen and (min-width: 460px) {
+    :global(.work-prosa) {
+      text-align: left;
+      overflow-wrap: normal;
+      hyphens: none;
+    }
   }
 </style>
