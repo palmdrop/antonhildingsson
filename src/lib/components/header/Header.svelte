@@ -60,7 +60,8 @@
 
     z-index: 1;
 
-    transition: 0.5s;
+    transition: 0.78s;
+    transition-timing-function: var(--transition-timing-function);
   }
 
   .hidden {

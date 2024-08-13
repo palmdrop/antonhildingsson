@@ -40,6 +40,8 @@
   --text-shadow: 0px 0px 0.15em var(--fg);
 
   --transition-time: 0.3s;
+  --transition-timing-function: cubic-bezier(.8,.04,.12,.15);
+
   --view-transition-filter: blur(8px) brightness(80%) contrast(150%);
 }
 
