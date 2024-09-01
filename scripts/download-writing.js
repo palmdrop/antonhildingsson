@@ -64,7 +64,7 @@ const CLONE_COMMAND = `
       .filter(([key]) => FRONTMATTER_PROPERTIES.includes(key));
 
     const isPoem = category === 'poetry';
-    const data = `--- 
+    const data = `---
 ${frontmatterEntries.map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join("\n")}
 ---
 
