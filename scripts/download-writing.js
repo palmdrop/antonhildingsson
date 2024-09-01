@@ -6,15 +6,17 @@ const TMP_FOLDER="./.tmp"
 const DEST_FOLDER="./src/content/work";
 const FRONTMATTER_PROPERTIES = ["title", "date", "tags", "links", "preview", "published"]
 const WRITING_NOTES = /writing\.(prose|poetry)\.([0-9]+)\.([a-z-_]+)\.md/;
+const CLONE_COMMAND = `
+  cd ${TMP_FOLDER} && \
+  ssh-agent bash -c 'ssh-add ~/.ssh/palmdrop_rsa; git -C mindspace pull || git clone git@palmdrop.github.com:palmdrop/mindspace.git mindspace'
+`;
 
 (async () => {
   if(!existsSync(TMP_FOLDER)) {
     await fs.mkdir(TMP_FOLDER);
   }
   
-  execSync(
-    `cd ${TMP_FOLDER} && ssh-agent bash -c 'ssh-add ~/.ssh/palmdrop_rsa; git -C mindspace pull || git clone git@palmdrop.github.com:palmdrop/mindspace.git mindspace'`
-  );
+  execSync(CLONE_COMMAND);
 
   const files = await fs.readdir(`${TMP_FOLDER}/mindspace/vault`);
   
@@ -22,7 +24,7 @@ const WRITING_NOTES = /writing\.(prose|poetry)\.([0-9]+)\.([a-z-_]+)\.md/;
     const match = WRITING_NOTES.exec(file);
     if(!match) continue;
 
-    const [,, year, fileName] = match;
+    const [, category, year, fileName] = match;
 
     const rawData = await fs.readFile(`${TMP_FOLDER}/mindspace/vault/${file}`, 'utf8');
 
@@ -61,13 +63,12 @@ const WRITING_NOTES = /writing\.(prose|poetry)\.([0-9]+)\.([a-z-_]+)\.md/;
       .entries(frontmatter)
       .filter(([key]) => FRONTMATTER_PROPERTIES.includes(key));
 
+    const isPoem = category === 'poetry';
     const data = `--- 
 ${frontmatterEntries.map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join("\n")}
 ---
 
-<pre>
-${text.trim()}
-</pre>
+${isPoem ? '<pre>\n' : ''}${text.trim()}${isPoem ? '\n</pre>' : ''}
   `;
 
     await fs.unlink(destination);
