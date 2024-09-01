@@ -45,8 +45,7 @@
   }
 
   .partial {
-    max-height: var(--max-partial-preview-height);
-    height: 100%;
+    height: var(--max-partial-preview-height);
     overflow: hidden;
     position: relative;
 
