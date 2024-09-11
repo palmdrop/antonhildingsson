@@ -1,7 +1,9 @@
 <script lang="ts">
+	import type { Component } from "svelte/compiler";
+
   const sprawlImport = import.meta.glob("$content/sprawl/**/*.md", { eager: true });
   export const sprawlList = (
-    Object.values(sprawlImport) as { default: ConstructorOfATypedSvelteComponent, metadata: any }[]
+    Object.values(sprawlImport) as { default: Component, metadata: any }[]
   )
     .map(item => ({ Component: item.default, metadata: item.metadata }))
     .sort((item1, item2) => {

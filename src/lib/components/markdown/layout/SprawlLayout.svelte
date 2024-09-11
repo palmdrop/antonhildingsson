@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
 	import { convertToURLFriendly } from "$lib/utils/url";
 
   const { 
@@ -8,11 +9,11 @@
     lang,
     first
   }: { 
-    children: any, 
     date: string, 
     link?: string, 
     lang?: string,
-    first?: boolean
+    first?: boolean,
+    children: Snippet
   } = $props();
 
   const sprawlID = `fragment-${convertToURLFriendly(date)}` ;

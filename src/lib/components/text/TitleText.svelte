@@ -1,9 +1,10 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
   import Title from "../header/Title.svelte";
 
   const {
     children
-  }: { children: any } = $props();
+  }: { children: Snippet } = $props();
 </script>
 
 <div class="full-width">

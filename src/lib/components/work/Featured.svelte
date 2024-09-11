@@ -1,22 +1,31 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
 	import Preview from "$lib/components/work/Preview.svelte";
-  import workList from "$content/work-list";
 	import { getWorkUrl } from "$lib/utils/url";
+	import type { WorkFrontmatter } from "$lib/types/work";
 
-  const latest = workList[0].frontmatter;
-  const url = getWorkUrl(latest.date, latest.fileName)
+  const { frontmatter, children }: { 
+    frontmatter: WorkFrontmatter,
+    children: Snippet
+  } = $props();
+
+  const url = getWorkUrl(frontmatter.date, frontmatter.fileName)
 </script>
 
-<h2>
+<h2 class="full-width">
   <a 
     class="clickable" 
     href={url}
   >
-    SENASTE: { latest.title }
+    SENASTE: { frontmatter.title }
   </a>
 </h2>
 
-<Preview { ...latest }/>
+<Preview 
+  {...frontmatter}
+>
+  { @render children() }
+</Preview>
 
 <style>
   h2 {
@@ -24,5 +33,7 @@
     border-bottom: var(--border);
 
     text-transform: none;
+
+    padding-top: 1em;
   }
 </style>

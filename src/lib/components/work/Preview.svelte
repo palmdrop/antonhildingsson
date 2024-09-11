@@ -1,21 +1,17 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
 	import type { WorkFrontmatter } from "$lib/types/work";
-	import { getBlurConfig } from "$lib/utils/transitions";
 	import { getWorkUrl } from "$lib/utils/url";
-	import { blur, fade, slide } from "svelte/transition";
 
   const {
     preview,
     date,
-    fileName
-  }: WorkFrontmatter = $props();
-
-  const year = new Date(date).getFullYear();
+    fileName,
+    children,
+  }: WorkFrontmatter & { children: Snippet }= $props();
 
   const shouldShow = preview && preview !== 'none';
   const previewClass = preview === true ? 'full' : preview;
-
-  const componentPromise = import(`$content/work/${year}/${fileName}.md`);
 </script>
 
 { #if shouldShow }
@@ -23,19 +19,7 @@
     class={`${previewClass} full-width`}
     href={getWorkUrl(date, fileName)}
   >
-    { #await componentPromise }
-      <p class="loader">
-        laddar...
-      </p>
-    { :then { default: Component } }
-      <div
-        in:blur={getBlurConfig()}
-      >
-        <Component /> 
-      </div>
-    { :catch _ }
-      <span></span>
-    {/await}
+    { @render children() }
   </a>
 { /if }
 

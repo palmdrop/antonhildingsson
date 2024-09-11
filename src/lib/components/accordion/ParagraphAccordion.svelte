@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
 	import { createQueryParameter } from "$lib/state/query.svelte";
 	import { getBlurConfig, getSlideConfig } from "$lib/utils/transitions";
 	import { blur, slide } from "svelte/transition";
@@ -9,15 +10,15 @@
     beforeButton,
     afterButton,
     buttonContent,
+    queryParamId,
     children,
-    queryParamId
   }: {
     beforeButton?: string | [string, string]
     afterButton?: string | [string, string],
     buttonContent: string | [string, string],
-    children: any,
     initialState?: State,
-    queryParamId: string
+    queryParamId: string,
+    children: Snippet
   } = $props();
 
   const stateQueryParam = createQueryParameter<State>({

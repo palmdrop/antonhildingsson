@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Snippet } from "svelte";
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import { formatDate } from "$lib/utils/date";
 	import { getWorkUrl } from "$lib/utils/url";
@@ -6,10 +7,10 @@
   import HeadMeta from "$lib/components/util/HeadMeta.svelte";
 
   const { 
-    children,
     alone,
+    children,
     ...frontmatter
-  }: WorkFrontmatter & { children: any, alone?: boolean } = $props();
+  }: WorkFrontmatter & { alone?: boolean, children: Snippet } = $props();
 </script>
 
 { #if alone }

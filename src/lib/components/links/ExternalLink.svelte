@@ -1,12 +1,13 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
   import type { HTMLAnchorAttributes } from 'svelte/elements';
 
   const {
-    children,
     href,
+    children,
     ...rest
   }: {
-    children: any
+    children: Snippet
   } & HTMLAnchorAttributes = $props();
 </script>
 
