@@ -71,7 +71,10 @@ ${frontmatterEntries.map(([key, value]) => `${key}: ${JSON.stringify(value)}`).j
 ${isPoem ? '<pre>\n' : ''}${text.trim()}${isPoem ? '\n</pre>' : ''}
   `;
 
-    await fs.unlink(destination);
+    if(existsSync(destination)) {
+      await fs.unlink(destination);
+    }
+
     await fs.writeFile(destination, data);
   }
 })();
