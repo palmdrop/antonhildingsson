@@ -64,7 +64,7 @@
 }
 
 .markdown figcaption::before {
-  content: "Fig." counter(figure) " - ";
+  content: "fig." counter(figure) " - ";
 }
 
 .markdown pre {
