@@ -8,9 +8,11 @@ export type WorkFrontmatter = {
   tags?: Tag[],
   links?: string[],
   preview?: boolean | 'full' | 'partial' | 'none',
+  previewStart?: string,
+  previewLength?: string,
   fileName: string,
   published: boolean,
-  description?: string
+  description?: string,
 }
 
 export type WorkItem = {
