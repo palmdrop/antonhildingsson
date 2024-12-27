@@ -7,6 +7,8 @@
     preview,
     date,
     fileName,
+    previewLength,
+    previewStart = '0px',
     children,
   }: WorkFrontmatter & { children: Snippet }= $props();
 
@@ -18,18 +20,25 @@
   <a 
     class={`${previewClass} full-width`}
     href={getWorkUrl(date, fileName)}
+    style={`
+      ${typeof previewLength === 'string' ? `--preview-length: ${previewLength}` : ''}; 
+      --preview-start: ${previewStart}`
+    }
   >
-    { @render children() }
+    <div class="offset">
+      { @render children() }
+    </div>
   </a>
 { /if }
 
 <style>
   a {
     display: block;
+    position: relative;
   }
 
   .partial {
-    height: var(--max-partial-preview-height);
+    height: var(--preview-length, var(--max-partial-preview-height));
     overflow: hidden;
     position: relative;
 
@@ -44,7 +53,7 @@
     position: absolute;
 
     width: 100%;
-    height: var(--max-partial-preview-height);
+    height: var(--preview-length, var(--max-partial-preview-height));
 
     background: linear-gradient(
       to bottom,
@@ -55,5 +64,10 @@
 
     z-index: 1;
     pointer-events: none;
+  }
+
+  .offset {
+    top: calc(-1 * var(--preview-start));
+    position: relative;
   }
 </style>
