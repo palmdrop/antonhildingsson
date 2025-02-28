@@ -114,6 +114,7 @@
     h2 {
       grid-column: span 2;
       order: 0;
+      white-space: nowrap;
     }
 
     p {
