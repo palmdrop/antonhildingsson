@@ -1,3 +1,11 @@
+<script lang="ts" context="module">
+  import a from "$lib/components/links/ExternalLink.svelte";
+
+  export { 
+    a 
+  };
+</script>
+
 <script lang="ts">
 	import type { Snippet } from "svelte";
 	import type { WorkFrontmatter } from "$lib/types/work";

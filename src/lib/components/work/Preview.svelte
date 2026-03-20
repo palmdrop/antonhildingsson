@@ -2,6 +2,7 @@
 	import type { Snippet } from "svelte";
 	import type { WorkFrontmatter } from "$lib/types/work";
 	import { getWorkUrl } from "$lib/utils/url";
+  import { goto } from "$app/navigation";
 
   const {
     preview,
@@ -17,9 +18,10 @@
 </script>
 
 { #if shouldShow }
-  <a 
+  <button 
     class={`${previewClass} full-width`}
-    href={getWorkUrl(date, fileName)}
+    onclick={() => goto(getWorkUrl(date, fileName))}
+    role="link"
     style={`
       ${typeof previewLength === 'string' ? `--preview-length: ${previewLength}` : ''}; 
       --preview-start: ${previewStart}`
@@ -28,11 +30,11 @@
     <div class="offset">
       { @render children() }
     </div>
-  </a>
+  </button>
 { /if }
 
 <style>
-  a {
+  button {
     display: block;
     position: relative;
   }

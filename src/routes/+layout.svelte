@@ -127,9 +127,8 @@
   }
 
   .loader-text {
-    font-family: serif;
+    font-family: var(--font-accent);
     font-style: italic;
-    text-transform: uppercase;
     opacity: 0;
     animation: 
       delayed-fade-in 1500ms ease-in forwards,
